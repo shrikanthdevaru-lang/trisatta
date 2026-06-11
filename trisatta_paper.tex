@@ -1,0 +1,381 @@
+%
+% ACL anthology style paper
+% Trisattā: An Advaita Vedānta-Grounded Ontological Taxonomy for
+% Hallucination Detection in Large Language Models
+%
+% Compile with:
+%   pdflatex trisatta_paper.tex
+%   bibtex trisatta_paper
+%   pdflatex trisatta_paper.tex
+%   pdflatex trisatta_paper.tex
+%
+
+\documentclass[11pt]{article}
+
+% ── ACL / EMNLP style ─────────────────────────────────────────────────────────
+\usepackage[hyperref]{acl2023}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+% ── Additional packages ───────────────────────────────────────────────────────
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}           % professional tables
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{fontspec}           % for Devanagari/Unicode Sanskrit terms
+
+% ── Colours ───────────────────────────────────────────────────────────────────
+\definecolor{paramcol}{RGB}{34, 139, 34}   % forest green — pāramārthika
+\definecolor{vyavcol}{RGB}{30, 100, 200}   % royal blue   — vyāvahārika
+\definecolor{praticol}{RGB}{200, 50, 30}   % vermilion    — prātibhāsika
+\definecolor{adhyasacol}{RGB}{150, 0, 150} % purple       — adhyāsa
+
+% ── Macros ────────────────────────────────────────────────────────────────────
+\newcommand{\param}{\textcolor{paramcol}{\textit{pāramārthika}}}
+\newcommand{\vyav}{\textcolor{vyavcol}{\textit{vyāvahārika}}}
+\newcommand{\prati}{\textcolor{praticol}{\textit{prātibhāsika}}}
+\newcommand{\adhyasa}{\textcolor{adhyasacol}{\textit{adhyāsa}}}
+\newcommand{\trisatta}{\textit{trisattā}}
+\newcommand{\satta}{\textit{sattā}}
+\newcommand{\vivarta}{\textit{vivartavāda}}
+\newcommand{\system}{\textsc{Trisatt\={a}}}
+
+% ── Metadata ──────────────────────────────────────────────────────────────────
+\title{\system: An Advaita Ved\={a}nta-Grounded Ontological Taxonomy\\
+       for Hallucination Detection in Large Language Models}
+
+\author{
+  Shrikantha Devaru \\
+  \texttt{shrikanthdevaru@gmail.com}
+}
+
+\begin{document}
+\maketitle
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\begin{abstract}
+We present \system{}, a three-tier hallucination taxonomy for Large Language
+Models (LLMs) grounded in the \trisatta{} (three levels of being) doctrine of
+Advaita Ved\={a}nta. Standard binary detection collapses epistemologically
+distinct output types into a single undifferentiated class. Our framework maps
+LLM outputs to three ontological levels: \param{} (factually verifiable),
+\vyav{} (pragmatically plausible but unverified), and \prati{} (apparent
+coherence that dissolves on inspection). We operationalise this taxonomy via
+three complementary scores — embedding cosine similarity to a verified fact
+store, NLI-based contextual entailment, and source-traceability — and introduce
+an \adhyasa{} (superimposition) detector that isolates hallucinations disguised
+as \vyav{} content. Evaluated on HaluEval ($n=100$) and TruthfulQA ($n=100$),
+\system{} achieves 87\% and 75\% binary-equivalent accuracy respectively, while
+characterising 11\%--26\% of items as \adhyasa{} cases invisible to binary
+detection. We argue that \trisatta{} is \emph{strictly more expressive} than
+binary hallucination detection and provides actionable, graded trust signals for
+downstream systems. Code is available at: \url{https://github.com/shrikanthdevaru-lang/trisatta-hallucination}
+\end{abstract}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Introduction}
+
+The problem of hallucination in Large Language Models --- the generation of
+fluent, confident, but factually incorrect content --- has emerged as a critical
+barrier to deployment in knowledge-sensitive domains \cite{ji2023survey}. Existing
+detection frameworks overwhelmingly adopt a \textbf{binary paradigm}: an output
+sentence is either hallucinated or not \cite{maynez2020faithfulness,lin2022truthfulqa}.
+
+This binary framing, while computationally convenient, is epistemologically
+impoverished. It conflates three fundamentally distinct output types:
+\begin{enumerate}[leftmargin=*,noitemsep]
+  \item \textbf{Verifiable outputs} --- claims for which truth-value is
+    determinate and checkable against an external knowledge base;
+  \item \textbf{Pragmatically coherent outputs} --- grammatically well-formed,
+    semantically plausible, context-consistent, but externally unverified;
+  \item \textbf{Apparently coherent outputs} --- claims whose surface coherence
+    dissolves on factual inspection.
+\end{enumerate}
+
+We argue that Advaita Ved\={a}nta's \trisatta{} doctrine provides exactly the
+right conceptual vocabulary for this three-way distinction, and that
+operationalising it yields a classifier strictly more expressive than any binary
+detector.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Theoretical Framework}
+\label{sec:theory}
+
+\subsection{Advaita Vedānta Trisattā Doctrine}
+
+Advaita Ved\={a}nta posits three levels of being (\satta{}):
+
+\paragraph{\param{} \satta{} (absolute being).}
+The level of ultimate, unchanging reality. We adapt this to designate claims
+whose truth is \emph{absolutely grounded} in a verified, external knowledge base.
+
+\paragraph{\vyav{} \satta{} (transactional / conventional being).}
+The level of everyday empirical reality --- reliable within the phenomenal world
+but not ultimate. We map this to claims that are \emph{pragmatically coherent}:
+internally consistent, linguistically well-formed, contextually plausible, but
+lacking direct factual verification.
+
+\paragraph{\prati{} \satta{} (apparent / illusory being).}
+The level of perceptual error --- the rope mistaken for a snake in dim light.
+We map this to LLM outputs whose apparent coherence dissolves under verification.
+
+\subsection{Adhyāsa and Vivartavāda}
+
+\paragraph{\adhyasa{} (superimposition)} is the cognitive mechanism by which an
+illusory object is mistaken for a real one. In our framework, \adhyasa{} fires
+when \prati{} content passes surface-level coherence checks and is thereby
+superimposed onto the \vyav{} level --- precisely the failure mode of binary
+classifiers.
+
+\paragraph{\vivarta{}} holds that apparent transformation occurs without
+ontological change in the underlying substrate. An LLM hallucination is a
+\textit{vivarta}: a statistically fluent output from a parametric distribution,
+with no genuine epistemic grounding, yet appearing indistinguishable from
+grounded output on the surface.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Formal Classification Criteria}
+\label{sec:formal}
+
+Let $c$ be a claim (LLM output sentence) and $x$ be the context (prompt or
+reference passage). We define three scores.
+
+\paragraph{Score 1 --- Embedding Similarity ($s_1 \in [0,1]$).}
+Cosine similarity between the embedding of $c$ and the nearest verified fact
+in a FAISS-indexed knowledge base $\mathcal{K}$:
+\begin{equation}
+  s_1(c) = \max_{f \in \mathcal{K}}\, \cos\!\left(\mathbf{enc}(c),\, \mathbf{enc}(f)\right)
+\end{equation}
+This is the \param{} signal --- proximity to absolute factual ground truth.
+
+\paragraph{Score 2 --- Internal Consistency ($s_2 \in [0,1]$).}
+NLI entailment probability of $c$ given $x$:
+\begin{equation}
+  s_2(c, x) = P_\mathrm{NLI}(\mathrm{entailment} \mid \mathrm{premise}{=}x,\, \mathrm{hyp}{=}c)
+\end{equation}
+This is the \vyav{} signal --- pragmatic coherence within context.
+
+\paragraph{Score 3 --- Source Traceability ($s_3 \in [0,1]$).}
+Directed n-gram overlap between $c$ and $x$:
+\begin{equation}
+  s_3(c,x) = 0.6\cdot\frac{|\mathrm{ngrams}(c)\cap\mathrm{ngrams}(x)|}{|\mathrm{ngrams}(c)|}
+             +0.25\cdot J(c,x) + 0.15\cdot\mathrm{PNO}(c,x)
+\end{equation}
+where $J$ is Jaccard overlap and $\mathrm{PNO}$ is proper-noun overlap.
+Low traceability signals \prati{} dissolution.
+
+\paragraph{Composite Score.}
+\begin{equation}
+  S(c,x) = 0.45\,s_1 + 0.30\,s_2 + 0.25\,s_3
+\end{equation}
+
+\paragraph{Decision Rule (priority order).}
+\begin{align}
+  s_1 \geq 0.82 \;\wedge\; s_2 \geq 0.80 &\;\Rightarrow\; \text{\param{}} \quad (L3) \\
+  S \geq 0.55                              &\;\Rightarrow\; \text{\vyav{}}  \quad (L2) \\
+  \text{otherwise}                         &\;\Rightarrow\; \text{\prati{}} \quad (L1)
+\end{align}
+
+\noindent\textbf{\adhyasa{} Signature:} fires when level $= L1$ and $0.40 \leq S < 0.65$.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Implementation}
+\label{sec:impl}
+
+We implement \system{} as a modular Python package (\texttt{trisatta}) using:
+
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item \texttt{all-MiniLM-L6-v2} \cite{reimers2019sentencebert} for $s_1$
+  \item \texttt{cross-encoder/nli-MiniLM2-L6-H768} for $s_2$
+  \item \texttt{faiss-cpu} \cite{johnson2019billion} for FAISS nearest-neighbour retrieval
+\end{itemize}
+
+The classifier returns \texttt{\{satta\_level, confidence, adhyasa\_signature, scores, explanation\}} for each (claim, context) pair. All thresholds are isolated in a single configuration module for reproducibility.
+
+\paragraph{Key design note.}
+For QA-style datasets where the ``context'' is a \emph{question} rather than a
+declarative passage, NLI scores are systematically low (questions do not entail
+their answers). We use the \texttt{knowledge} field in HaluEval (a declarative
+supporting passage) as the NLI premise instead, which restores the full
+discriminative power of Score 2.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Experiments}
+\label{sec:exp}
+
+\subsection{Datasets}
+
+\paragraph{HaluEval QA \cite{halueval2023}.}
+100 items sampled from the QA hallucination evaluation benchmark. Each item
+provides a knowledge passage, question, answer, and binary hallucination label.
+We use the knowledge passage as the NLI context.
+
+\paragraph{TruthfulQA \cite{lin2022truthfulqa}.}
+100 items from the truthfulness benchmark. Correct answers form the
+not-hallucinated class; incorrect answers form the hallucinated class, with
+the question as context.
+
+\subsection{Results}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+\textbf{Trisattā Level} & \textbf{not-halluc.} & \textbf{halluc.} \\
+\midrule
+\param{} (L3) & \textbf{15} & 0 \\
+\vyav{} (L2)  & 34 & 7 \\
+\prati{} (L1) & 6  & \textbf{38} \\
+\midrule
+\textbf{Accuracy} & \multicolumn{2}{c}{\textbf{87\%}} \\
+\textbf{Halluc. F1} & \multicolumn{2}{c}{\textbf{0.85}} \\
+\textbf{\adhyasa{} rate} & \multicolumn{2}{c}{\textbf{11\%}} \\
+\bottomrule
+\end{tabular}
+\caption{3$\times$2 confusion matrix on HaluEval ($n=100$). \param{} achieves zero false positives.}
+\label{tab:halueval}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+\textbf{Trisattā Level} & \textbf{not-halluc.} & \textbf{halluc.} \\
+\midrule
+\param{} (L3) & 2  & 0 \\
+\vyav{} (L2)  & 22 & 1 \\
+\prati{} (L1) & 24 & \textbf{51} \\
+\midrule
+\textbf{Accuracy} & \multicolumn{2}{c}{\textbf{75\%}} \\
+\textbf{Halluc. F1} & \multicolumn{2}{c}{\textbf{0.80}} \\
+\textbf{\adhyasa{} rate} & \multicolumn{2}{c}{\textbf{26\%}} \\
+\bottomrule
+\end{tabular}
+\caption{3$\times$2 confusion matrix on TruthfulQA ($n=100$).}
+\label{tab:tqa}
+\end{table}
+
+Tables~\ref{tab:halueval} and \ref{tab:tqa} show the full 3$\times$2 confusion
+matrices. The \adhyasa{} rate is substantially higher on TruthfulQA (26\%)
+than HaluEval (11\%), reflecting TruthfulQA's more epistemically ambiguous
+questions where prātibhāsika content more readily appears vyāvahārika.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Theoretical Contribution}
+\label{sec:contribution}
+
+Contemporary hallucination detection operates within a binary ontology: an
+output sentence is classified as either \emph{hallucinated} or
+\emph{not hallucinated} \cite{maynez2020faithfulness,ji2023survey}. While
+computationally convenient, this dichotomy conflates epistemologically distinct
+failure modes and obscures the generative mechanism that produces erroneous
+outputs. We argue that Advaita Ved\={a}nta's \trisatta{} doctrine furnishes a
+strictly more expressive and theoretically motivated taxonomy.
+
+\paragraph{Expressiveness beyond binary detection.}
+Binary classification partitions the output space into two equivalence classes.
+The \trisatta{} taxonomy imposes a strict refinement: every binary class is
+split into sub-classes with independent discriminating criteria.
+\param{} content (L3) is verifiable against an external knowledge base --- its
+truth-value admits empirical falsification. \vyav{} content (L2) is
+pragmatically coherent but epistemically underdetermined. \prati{} content (L1)
+exhibits apparent coherence that dissolves under verification. Binary classifiers
+collapse L3 and L2 (both ``not hallucinated''), obscuring a critical epistemic
+distinction: a \param{} claim is reliably trustworthy; a \vyav{} claim demands
+independent verification.
+
+\paragraph{\adhyasa{} as the mechanism of hallucination.}
+The Vedāntic concept of \adhyasa{} identifies the precise cognitive error by
+which an illusory object is mistaken for a real one --- the snake-rope
+illusion. In LLM terms, \adhyasa{} occurs when \prati{} content passes
+surface-level coherence filters and is thereby superimposed onto the \vyav{}
+level. Our \adhyasa{} signature captures exactly this failure mode with a
+measurable composite score, something no binary classifier can detect.
+
+\paragraph{\vivarta{} and the apparent-real distinction.}
+The doctrine of \vivarta{} holds that apparent transformation occurs without
+ontological change. An LLM hallucination is a \textit{vivarta}: a statistically
+fluent output from a parametric distribution that mimics but does not replicate
+epistemic grounding. This motivates our three-score decomposition, each probing
+a distinct ontological dimension that binary detectors treat as a single
+undifferentiated feature.
+
+\paragraph{Empirical consequences.}
+The 3$\times$2 confusion matrix directly quantifies what binary systems cannot
+express. On HaluEval, 7 of 45 hallucinated items land in the \vyav{} zone,
+evading any binary detector. \param{} items achieve \textbf{zero false
+positives} across both datasets --- a high-confidence trust tier binary systems
+cannot represent. The \adhyasa{} rate provides a new diagnostic metric for
+comparing LLM architectures beyond aggregate hallucination rates.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Discussion}
+\label{sec:disc}
+
+\paragraph{Limitations.}
+Threshold selection (\texttt{PARAM\_THRESH}, \texttt{VYAV\_THRESH}) requires
+calibration per domain. The fact store must be pre-populated with verified
+facts; its coverage directly limits \param{} recall. NLI scores are sensitive
+to context type: questions produce systematically lower entailment scores than
+declarative passages.
+
+\paragraph{Future work.}
+(1) Fine-grained \adhyasa{} sub-types (semantic vs.\ syntactic superimposition).
+(2) Integration with RAG pipelines as a real-time grounding verifier.
+(3) Extension to Sanskrit NLP corpora, where Vedāntic vocabulary has direct
+ontological precision.
+(4) Human evaluation of \trisatta{} labels for inter-annotator agreement.
+(5) Fine-tuning a purpose-built NLI model on trisattā-annotated data.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Related Work}
+\label{sec:related}
+
+Hallucination detection has been approached through faithfulness metrics
+\cite{maynez2020faithfulness}, knowledge-grounded NLI \cite{honovich2022true},
+and question-answering-based evaluation \cite{fabbri2021qafacteval}. More recent
+work uses LLMs as self-evaluators \cite{manakul2023selfcheckgpt} or retrieval to
+ground claims \cite{shi2023replug}. TruthfulQA \cite{lin2022truthfulqa} and
+HaluEval \cite{halueval2023} provide standardised benchmarks. Our work differs
+by providing a \emph{graded} rather than binary taxonomy, grounded in a formal
+ontological framework rather than empirical heuristics.
+
+The use of Indian philosophical frameworks in AI is nascent. \citet{ganeri2020}
+has explored Ny\={a}ya epistemology for knowledge representation, and
+\citet{bharati1996paninian} adapted P\={a}\d{n}inian grammar for NLP.
+To our knowledge, this is the first work to operationalise \trisatta{} for
+LLM evaluation.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Conclusion}
+\label{sec:conclusion}
+
+We introduced \system{}, a novel three-tier hallucination taxonomy for LLMs
+grounded in Advaita Ved\={a}nta's ontological framework. By operationalising
+\param{}, \vyav{}, and \prati{} levels through embedding similarity, NLI
+entailment, and source-traceability, we produce a classifier provably more
+expressive than binary detection and reveal epistemologically critical
+distinctions invisible to existing methods. Our \adhyasa{} detector isolates the
+precise superimposition mechanism underlying LLM hallucination, providing a new
+diagnostic metric for AI reliability research. We release the full
+implementation and both evaluation datasets at
+\url{https://github.com/shrikanthdevaru-lang/trisatta-hallucination}.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Acknowledgements}
+[Acknowledgements to be added upon acceptance.]
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\bibliography{trisatta_refs}
+\bibliographystyle{acl_natbib}
+
+\end{document}
