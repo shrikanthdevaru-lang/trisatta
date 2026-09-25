@@ -656,7 +656,7 @@ footer::before{
       grounded in Pāṇini's Aṣṭādhyāyī and Advaita trisattā doctrine.
     </p>
     <p class="ft-stack">
-      Advaita Vedānta trisattā · Pāṇini's Aṣṭādhyāyī · Nyāya pramāṇa theory · Gemini 3.6 Flash · FAISS semantic search
+      Advaita Vedānta trisattā · Pāṇini's Aṣṭādhyāyī · Nyāya pramāṇa theory · Qwen 27B (Groq) · FAISS semantic search
     </p>
     <div class="ft-legend">
       <div class="ft-item"><span class="ft-dot" style="background:var(--para);box-shadow:0 0 6px rgba(52,199,132,.55)"></span>Pāramārthika</div>
@@ -670,7 +670,7 @@ footer::before{
 
 <script>
   /* ── Smart redirect: Netlify → tunnel (same-origin = no CORS issues) ── */
-  const TUNNEL_URL = "https://api.trycloudflare.com";
+  const TUNNEL_URL = "https://flush-plants-beautiful-flights.trycloudflare.com";
   if (window.location.hostname.includes("netlify.app")) {
     window.location.replace(TUNNEL_URL);
   }
@@ -932,7 +932,7 @@ footer::before{
     document.getElementById('stats-bar').innerHTML = `
       <span class="stat-pill"><strong>${secElapsed} s</strong> analysis time</span>
       <span class="stat-pill"><strong>${secCount}</strong> Pāṇinian sections</span>
-      <span class="stat-pill"><strong>Gemini 3.6 Flash</strong> Anumāna</span>
+      <span class="stat-pill"><strong>Qwen 27B (Groq)</strong> Anumāna</span>
     `;
 
     /* ── Sūtras panel ── */
