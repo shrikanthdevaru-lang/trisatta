@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+*.log
+
+# Cloudflare binary
+cloudflared
+
+# Temporary test/patch scripts
+test_*.py
+patch_*.py
+fix_*.py
+reorder_*.py
+revert_*.py
+use_groq.py
+debug_groq.py
+super_patch.sh
+patch.sh
+
+# Large binary files
+*.pdf
+*.ttf
+
+# Netlify deploy folder (we'll use GitHub Pages / Vercel instead)
+netlify-deploy/
+
+# Output folders
+output/
+output_tqa/

@@ -1,0 +1,315 @@
+:root {
+    --bg-deep: #FCF9F2; /* Ivory / Birch bark paper */
+    --gold: #D4AF37;
+    --gold-light: #B8860B; /* Darker gold for light background */
+    --saffron: #E65C00; /* Rich, authentic saffron */
+    --text-light: #2A1B14; /* Deep brownish black */
+    --text-muted: #5A4A42;
+    --border-subtle: rgba(230, 92, 0, 0.25);
+    --border-strong: rgba(230, 92, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+}
+
+/* Screen styles */
+.print-controls {
+    text-align: center;
+    padding: 40px 20px;
+    background: #000;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 40px;
+}
+
+.print-controls h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.print-btn {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.print-btn:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+.back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+/* Poster Layout (A4 Proportion) */
+.poster-page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto 50px auto;
+    background: var(--bg-deep);
+    position: relative;
+    padding: 25mm; /* Massive elegant padding */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    page-break-after: always;
+    overflow: hidden;
+}
+
+/* Outer ornate framing */
+.poster-page::before {
+    content: '';
+    position: absolute;
+    top: 10mm;
+    left: 10mm;
+    right: 10mm;
+    bottom: 10mm;
+    border: 1px solid var(--border-subtle);
+    pointer-events: none;
+    z-index: 5;
+}
+.poster-page::after {
+    content: '';
+    position: absolute;
+    top: 12mm;
+    left: 12mm;
+    right: 12mm;
+    bottom: 12mm;
+    border: 1px solid var(--border-strong);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Corner Accents */
+.corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--saffron);
+    z-index: 10;
+}
+.corner-tl { top: 12mm; left: 12mm; border-bottom: none; border-right: none; }
+.corner-tr { top: 12mm; right: 12mm; border-bottom: none; border-left: none; }
+.corner-bl { bottom: 12mm; left: 12mm; border-top: none; border-right: none; }
+.corner-br { bottom: 12mm; right: 12mm; border-top: none; border-left: none; }
+
+/* Giant Background Watermark */
+.watermark {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    font-family: 'Cinzel', serif;
+    font-size: 350px;
+    font-weight: 800;
+    color: rgba(230, 92, 0, 0.04);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.poster-content-wrapper {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.poster-header {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+}
+
+.poster-title {
+    font-size: 52px;
+    color: var(--saffron);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.metadata-tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.meta-tag {
+    background: rgba(230, 92, 0, 0.08);
+    border: 1px solid var(--border-subtle);
+    color: var(--gold-light);
+    padding: 6px 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+/* Editorial Body Layout */
+.poster-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 2-Column layout for main text */
+.editorial-text {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid var(--border-subtle);
+    text-align: justify;
+}
+
+.content-block {
+    margin-bottom: 25px;
+    break-inside: avoid;
+}
+
+.content-block h3 {
+    font-size: 18px;
+    color: var(--saffron);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--border-subtle);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.content-block p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Drop cap for the first paragraph */
+.content-block:first-child p::first-letter {
+    font-family: 'Cinzel', serif;
+    color: var(--saffron);
+    font-size: 55px;
+    float: left;
+    line-height: 45px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+/* Works Section (spans full width at bottom) */
+.works-section {
+    margin-top: auto;
+    background: rgba(230, 92, 0, 0.03);
+    padding: 25px;
+    border: 1px solid var(--border-subtle);
+}
+
+.works-section h3 {
+    font-size: 16px;
+    color: var(--saffron);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.works-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+}
+
+.works-list li {
+    font-size: 14px;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.works-list li::before {
+    content: '◈';
+    color: var(--saffron);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 12px;
+}
+
+/* Footer */
+.poster-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.iitg-branding {
+    font-family: 'Cinzel', serif;
+    color: var(--saffron);
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+/* Print Settings */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+    
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: var(--bg-deep);
+    }
+
+    .print-controls {
+        display: none;
+    }
+
+    .poster-page {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+        background-color: var(--bg-deep) !important;
+    }
+}

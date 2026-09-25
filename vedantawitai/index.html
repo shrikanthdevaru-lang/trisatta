@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedantawitai — Pāṇinian Sanskrit Grammar AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-main">Vedantawitai</span>
+                <span class="logo-sub">Pāṇinian AI</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Aṣṭādhyāyī</a>
+                <a href="#" class="nav-link">Kāvya Library</a>
+                <a href="#" class="nav-link">Amarakośa</a>
+            </nav>
+            <button class="btn-secondary">Settings</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Sanskrit Grammar AI</h1>
+            <p>Paste any śloka or Sanskrit sentence and get a complete traditional vyākaraṇa analysis grounded in Pāṇinian sūtras.</p>
+        </section>
+
+        <section class="input-section glass-panel">
+            <div class="input-wrapper">
+                <textarea 
+                    id="sloka-input" 
+                    class="sloka-input sanskrit-text" 
+                    placeholder="Enter Sanskrit text in Devanagari or IAST..."
+                    rows="3"
+                ></textarea>
+            </div>
+            <div class="input-actions">
+                <div class="input-tools">
+                    <button class="btn-secondary" title="Voice Dictation">🎙️ Dictate</button>
+                    <button class="btn-secondary" title="Upload Image (OCR)">📷 OCR</button>
+                </div>
+                <button id="analyze-btn" class="btn-primary">Analyze Śloka</button>
+            </div>
+        </section>
+
+        <section id="analysis-dashboard" class="analysis-dashboard glass-panel">
+            <div class="tabs">
+                <button class="tab active" data-target="padaccheda">पदच्छेदः (Padaccheda)</button>
+                <button class="tab" data-target="sandhi">सन्धिः (Sandhi)</button>
+                <button class="tab" data-target="samasa">समासः (Samāsa)</button>
+                <button class="tab" data-target="shabdarupa">शब्दरूप (Śabdarūpa)</button>
+                <button class="tab" data-target="anvaya">अन्वयः (Anvaya)</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="padaccheda" class="tab-content active">
+                <div class="analysis-grid" id="padaccheda-results">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div id="sandhi" class="tab-content">
+                <div class="analysis-grid" id="sandhi-results">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div id="samasa" class="tab-content">
+                <div class="analysis-grid" id="samasa-results">
+                     <!-- Populated by JS -->
+                </div>
+            </div>
+            
+            <div id="shabdarupa" class="tab-content">
+                <div class="analysis-grid" id="shabdarupa-results">
+                     <!-- Populated by JS -->
+                </div>
+            </div>
+            
+            <div id="anvaya" class="tab-content">
+                <div class="analysis-card">
+                    <h3 class="sanskrit-text">अन्वयः (Prose Order)</h3>
+                    <p id="anvaya-results" class="sanskrit-text" style="font-size: 1.25rem; line-height: 2;">
+                        <!-- Populated by JS -->
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Vedantawitai — Inspired by Shaabdabodha. Pāṇinian Sanskrit Grammar AI.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

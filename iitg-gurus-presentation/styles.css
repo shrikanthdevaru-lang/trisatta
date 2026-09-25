@@ -1,0 +1,510 @@
+:root {
+    --bg-deep: #0B0C10;
+    --gold: #D4AF37;
+    --gold-dim: rgba(212, 175, 55, 0.6);
+    --saffron: #FF9933;
+    --saffron-dim: rgba(255, 153, 51, 0.6);
+    --text-light: #F0F2F5;
+    --text-muted: #A0AAB5;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-bg-hover: rgba(212, 175, 55, 0.08);
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+/* Background Effects */
+.cosmic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.mandala-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, rgba(11,12,16,0) 70%);
+    border-radius: 50%;
+    animation: pulse 10s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+/* Glassmorphism Utilities */
+.glass-nav {
+    background: rgba(11, 12, 16, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(212,175,55,0.1) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+}
+
+.glass-card:hover {
+    background: var(--glass-bg-hover);
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--gold);
+    box-shadow: 0 15px 45px rgba(212, 175, 55, 0.15);
+}
+
+.glass-card:hover::before {
+    left: 200%;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.iitg-logo {
+    color: var(--text-light);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--gold-dim);
+}
+
+.subtitle {
+    color: var(--gold);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0; /* For GSAP */
+    transform: translateY(30px); /* For GSAP */
+}
+
+.highlight-gold {
+    color: var(--gold);
+    background: linear-gradient(45deg, var(--gold), var(--saffron));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; /* For GSAP */
+}
+
+.explore-btn {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    opacity: 0; /* For GSAP */
+}
+
+.explore-btn:hover {
+    background: var(--gold);
+    color: var(--bg-deep);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Gurus Grid Section */
+/* Informational Sections (Academic Validation & Activities) */
+.academic-validation,
+.activities-section,
+.gurus-section {
+    padding: 5rem 5%;
+}
+
+.academic-validation,
+.activities-section {
+    background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(11, 12, 16, 0.4) 100%);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.academic-grid,
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.academic-card,
+.activity-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.academic-card h3,
+.activity-card h3 {
+    color: var(--saffron);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.activity-domain {
+    color: var(--gold);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.academic-card p,
+.activity-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.source-tag {
+    font-size: 0.85rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1rem;
+}
+    padding: 5rem 5%;
+    min-height: 100vh;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.gurus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.guru-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+}
+
+.guru-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(212, 175, 55, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: color 0.3s ease;
+}
+
+.guru-card:hover .guru-number {
+    color: rgba(212, 175, 55, 0.3);
+}
+
+.guru-name {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.guru-era {
+    font-size: 0.85rem;
+    color: var(--saffron-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.guru-domain {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: auto;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 12, 16, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--bg-deep);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 20px;
+    position: relative;
+    overflow-y: auto;
+    border: 1px solid var(--gold);
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--gold-dim);
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: var(--gold);
+}
+
+.modal-body {
+    padding: 3rem;
+}
+
+.modal-name {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+}
+
+.modal-era {
+    font-size: 1rem;
+    color: var(--saffron);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section h3 {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-section h3::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.modal-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.works-list {
+    list-style: none;
+}
+
+.works-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.works-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-body {
+        padding: 2rem;
+    }
+    .modal-name {
+        font-size: 2rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .header {
+        justify-content: center;
+    }
+}

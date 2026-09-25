@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #2a110a;
+            --gold: #b38446;
+            --dark-red: #4a0d0d;
+            --parchment: #f4ecd8;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { background: #222; }
+
+        .a1-poster {
+            width: 2245px; height: 3179px;
+            background: #222; /* Outside arch */
+            padding: 50px 80px 0 80px; 
+            font-family: 'Outfit', sans-serif; color: var(--ink);
+        }
+
+        .poster-inner {
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #fbf7ef 0%, #e8d0a9 100%);
+            border-radius: 1042px 1042px 0 0; /* Half of 2085px width */
+            border: 12px solid var(--dark-red);
+            position: relative;
+            display: flex; flex-direction: column;
+            padding: 150px 120px 80px 120px;
+        }
+
+        .poster-inner::after {
+            content: ''; position: absolute;
+            top: 25px; left: 25px; right: 25px; bottom: 25px;
+            border-radius: 1017px 1017px 0 0;
+            border: 4px solid var(--gold);
+            pointer-events: none;
+        }
+        
+        /* Top Ornament */
+        .top-ornament {
+            position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+            width: 180px; height: 180px; border-radius: 50%;
+            background: var(--parchment); border: 8px solid var(--dark-red);
+            box-shadow: 0 0 0 6px var(--gold);
+            display: flex; justify-content: center; align-items: center; z-index: 10;
+        }
+
+        .header-section { text-align: center; margin-top: 50px; margin-bottom: 40px; }
+        .main-title { font-family: 'Cinzel', serif; font-size: 150px; font-weight: 900; color: var(--dark-red); line-height: 1.1; letter-spacing: 5px; }
+        .sub-title { font-family: 'Cinzel', serif; font-size: 45px; color: var(--ink); letter-spacing: 8px; font-weight: 700; display: inline-block; padding-bottom: 15px; border-bottom: 3px solid var(--gold); }
+
+        .shloka-block { text-align: center; margin-bottom: 40px; padding: 0 150px; }
+        .shloka-sanskrit { font-size: 50px; font-weight: 700; color: var(--dark-red); margin-bottom: 15px; }
+        .shloka-trans { font-size: 38px; font-style: italic; color: var(--ink); }
+
+        .quote-block {
+            font-size: 45px; font-style: italic; font-weight: 500; text-align: center; line-height: 1.5;
+            margin: 0 150px 50px 150px; position: relative; padding: 30px 40px;
+        }
+        .quote-block::before { content: '❝'; position: absolute; top: -20px; left: -40px; font-size: 100px; color: var(--gold); }
+        .quote-block::after { content: '❞'; position: absolute; bottom: -60px; right: -40px; font-size: 100px; color: var(--gold); }
+
+        .main-body-cols {
+            display: flex; width: 100%; flex: 1; gap: 80px; margin-bottom: 40px;
+        }
+
+        .col-left { width: 40%; display: flex; flex-direction: column; align-items: center; }
+        .col-right { width: 60%; display: flex; flex-direction: column; }
+
+        /* Beautiful empty frame for user's own portrait */
+        .portrait-frame {
+            width: 100%; aspect-ratio: 3/4; border-radius: 40px;
+            background: rgba(74, 13, 13, 0.05);
+            border: 6px dashed var(--gold);
+            display: flex; justify-content: center; align-items: center;
+            flex-direction: column; color: var(--dark-red); text-align: center; padding: 40px;
+        }
+        .portrait-frame svg { width: 120px; height: 120px; opacity: 0.5; margin-bottom: 20px; fill: var(--gold); }
+        .portrait-frame p { font-family: 'Cinzel', serif; font-size: 40px; font-weight: 700; opacity: 0.7; }
+        .portrait-frame span { font-size: 28px; opacity: 0.6; margin-top: 10px; }
+
+        .section-banner {
+            background: var(--dark-red); color: var(--parchment); font-family: 'Cinzel', serif;
+            font-size: 40px; font-weight: 700; text-align: center; padding: 15px 0;
+            border-radius: 50px; margin-bottom: 35px; letter-spacing: 5px; position: relative;
+        }
+        .section-banner::before, .section-banner::after {
+            content: '✦'; position: absolute; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 30px;
+        }
+        .section-banner::before { left: 40px; }
+        .section-banner::after { right: 40px; }
+        
+        .who-was { font-size: 40px; line-height: 1.5; text-align: justify; margin-bottom: 50px; font-weight: 400; }
+
+        .contributions-list { display: flex; flex-direction: column; gap: 35px; }
+        .contrib-item { display: flex; align-items: flex-start; }
+        .contrib-icon {
+            width: 80px; height: 80px; border-radius: 50%; background: var(--parchment);
+            border: 4px solid var(--dark-red); display: flex; justify-content: center; align-items: center;
+            margin-right: 30px; flex-shrink: 0; box-shadow: 0 0 0 3px var(--gold);
+        }
+        .contrib-icon svg { width: 40px; height: 40px; fill: var(--dark-red); }
+        .contrib-text { flex: 1; }
+        .contrib-text h4 { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 900; color: var(--dark-red); margin-bottom: 8px; }
+        .contrib-text p { font-size: 32px; line-height: 1.4; color: var(--ink); }
+
+        .influence-section { width: 100%; margin-top: auto; }
+        .influence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; padding-bottom: 30px; }
+        .influence-item { display: flex; flex-direction: column; align-items: center; }
+        .influence-icon { width: 90px; height: 90px; margin-bottom: 20px; color: var(--dark-red); }
+        .influence-item h4 { font-family: 'Cinzel', serif; font-size: 32px; font-weight: 900; margin-bottom: 10px; color: var(--dark-red); }
+        .influence-item p { font-size: 28px; line-height: 1.4; }
+
+        .footer {
+            width: 100%; border-top: 4px solid var(--gold); padding-top: 30px;
+            display: flex; justify-content: center; align-items: center;
+            font-family: 'Cinzel', serif; font-size: 45px; letter-spacing: 10px; font-weight: 700; color: var(--dark-red);
+        }
+    </style>
+</head>
+<body>
+    <div class="a1-poster">
+        <div class="poster-inner">
+            <div class="top-ornament">
+                <svg viewBox="0 0 24 24" fill="var(--dark-red)" style="width:80px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+            </div>
+            
+            <div class="header-section">
+                <h1 class="main-title">BHARATA MUNI</h1>
+                <h2 class="sub-title">THE FATHER OF INDIAN PERFORMING ARTS</h2>
+            </div>
+
+            <div class="shloka-block">
+                <div class="shloka-sanskrit">नाट्यं भिन्नरुचेर्जनस्य बहुधाप्येकं समाराधनम् ।</div>
+                <div class="shloka-trans">Natyam bhinnarucer loke nanadharmopadesajanam.</div>
+            </div>
+
+            <div class="quote-block">
+                I have composed the Natyasastra for the people of varied tastes, to instruct them in different duties of life through the medium of drama.
+            </div>
+
+            <div class="main-body-cols">
+                <div class="col-left">
+                    <div class="portrait-frame">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                        <p>BHARATA MUNI</p>
+                        <span>Portrait Placeholder</span>
+                    </div>
+                </div>
+
+                <div class="col-right">
+                    <div class="section-banner">WHO WAS BHARATA MUNI?</div>
+                    <p class="who-was">Bharata Muni, the sage of ancient India, is revered as the author of the Natyasastra, the foundational treatise on the performing arts. He systematized drama, dance, music, and stagecraft into a comprehensive science for the upliftment and education of society.</p>
+
+                    <div class="section-banner">MAJOR CONTRIBUTIONS</div>
+                    <div class="contributions-list">
+                        <div class="contrib-item">
+                            <div class="contrib-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg></div>
+                            <div class="contrib-text"><h4>Natya (Drama)</h4><p>Origin, structure, types and purpose of drama.</p></div>
+                        </div>
+                        <div class="contrib-item">
+                            <div class="contrib-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg></div>
+                            <div class="contrib-text"><h4>Rasa Theory</h4><p>The doctrine of Rasa - the essence of emotional experience in art.</p></div>
+                        </div>
+                        <div class="contrib-item">
+                            <div class="contrib-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg></div>
+                            <div class="contrib-text"><h4>Sangita (Music)</h4><p>Theory of music, notes, scales and instruments.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="influence-section">
+                <div class="section-banner">INFLUENCE THAT CONTINUES</div>
+                <div class="influence-grid">
+                    <div class="influence-item">
+                        <svg class="influence-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        <h4>Classical Dances</h4><p>Bharatanatyam, Kathak, Kuchipudi</p>
+                    </div>
+                    <div class="influence-item">
+                        <svg class="influence-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                        <h4>Indian Cinema</h4><p>Storytelling and acting</p>
+                    </div>
+                    <div class="influence-item">
+                        <svg class="influence-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <h4>Theatre & Acting</h4><p>Modern theatre practices</p>
+                    </div>
+                    <div class="influence-item">
+                        <svg class="influence-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg>
+                        <h4>A Global Legacy</h4><p>His wisdom shapes performing arts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <svg viewBox="0 0 24 24" fill="var(--dark-red)" style="width:50px; margin-right: 20px;"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                CENTER FOR INDIAN KNOWLEDGE SYSTEMS
+                <svg viewBox="0 0 24 24" fill="var(--dark-red)" style="width:50px; margin-left: 20px;"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharata Muni - Exhibition Poster</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-deep: #FCF9F2;
+            --gold: #D4AF37;
+            --gold-light: #B8860B;
+            --saffron: #E65C00;
+            --text-light: #2A1B14;
+            --text-muted: #5A4A42;
+            --border-subtle: rgba(230, 92, 0, 0.25);
+            --border-strong: rgba(230, 92, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .controls {
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .controls h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--saffron);
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            background: var(--saffron);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        .save-btn:hover {
+            background: var(--gold-light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+        }
+
+        .poster-page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--bg-deep);
+            position: relative;
+            padding: 25mm;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .poster-page::before {
+            content: '';
+            position: absolute;
+            top: 10mm; left: 10mm; right: 10mm; bottom: 10mm;
+            border: 1px solid var(--border-subtle);
+            pointer-events: none;
+            z-index: 5;
+        }
+        .poster-page::after {
+            content: '';
+            position: absolute;
+            top: 12mm; left: 12mm; right: 12mm; bottom: 12mm;
+            border: 1px solid var(--border-strong);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--saffron);
+            z-index: 10;
+        }
+        .corner-tl { top: 12mm; left: 12mm; border-bottom: none; border-right: none; }
+        .corner-tr { top: 12mm; right: 12mm; border-bottom: none; border-left: none; }
+        .corner-bl { bottom: 12mm; left: 12mm; border-top: none; border-right: none; }
+        .corner-br { bottom: 12mm; right: 12mm; border-top: none; border-left: none; }
+
+        .watermark {
+            position: absolute;
+            top: -50px;
+            right: -20px;
+            font-family: 'Cinzel', serif;
+            font-size: 350px;
+            font-weight: 800;
+            color: rgba(230, 92, 0, 0.04);
+            line-height: 1;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .poster-content-wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poster-header {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+        }
+
+        .poster-title {
+            font-size: 52px;
+            color: var(--saffron);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .metadata-tags {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: rgba(230, 92, 0, 0.08);
+            border: 1px solid var(--border-subtle);
+            color: var(--gold-light);
+            padding: 6px 15px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+
+        .poster-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .editorial-text {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid var(--border-subtle);
+            text-align: justify;
+        }
+
+        .content-block {
+            margin-bottom: 25px;
+            break-inside: avoid;
+        }
+
+        .content-block h3 {
+            font-size: 18px;
+            color: var(--saffron);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .content-block p {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .content-block:first-child p::first-letter {
+            font-family: 'Cinzel', serif;
+            color: var(--saffron);
+            font-size: 55px;
+            float: left;
+            line-height: 45px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+        }
+
+        .works-section {
+            margin-top: auto;
+            background: rgba(230, 92, 0, 0.03);
+            padding: 25px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .works-section h3 {
+            font-size: 16px;
+            color: var(--saffron);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .works-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 30px;
+        }
+
+        .works-list li {
+            font-size: 14px;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+
+        .works-list li::before {
+            content: '◈';
+            color: var(--saffron);
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-size: 12px;
+        }
+
+        .poster-footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .iitg-branding {
+            font-family: 'Cinzel', serif;
+            color: var(--saffron);
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            body {
+                background: var(--bg-deep);
+                padding: 0;
+                display: block;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .controls { display: none; }
+            .poster-page {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <h2>Bharata Muni Poster</h2>
+        <p>This is a standalone poster file. To save it as a PDF or Print it to share:</p>
+        <button class="save-btn" onclick="window.print()">Save as PDF / Print</button>
+    </div>
+
+    <div class="poster-page">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        
+        <div class="watermark">24</div>
+        
+        <div class="poster-content-wrapper">
+            <div class="poster-header">
+                <h1 class="poster-title">Bharata Muni</h1>
+                <div class="metadata-tags">
+                    <span class="meta-tag">Era: Antiquity</span>
+                    <span class="meta-tag">Vidyāsthāna: Nāṭya Śāstra, Alaṃkāra Śāstra (Aesthetics)</span>
+                </div>
+            </div>
+            
+            <div class="poster-body">
+                <div class="editorial-text">
+                    <div class="content-block">
+                        <h3>Life & Context</h3>
+                        <p>Revered as a semi-divine sage, he was requested by Brahmā to create a 'Pañcama Veda' (Fifth Veda) utilizing audio-visual arts to make high spiritual truths accessible to all people (Sādhāraṇīkaraṇa), regardless of their Varna or education.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>Key Contributions</h3>
+                        <p>He composed the Nāṭyaśāstra, a massive encyclopedia governing stage design, music, dance mudras, and acting. Most profoundly, he formulated the 'Rasa Siddhānta' (Rasa Theory), arguing that the ultimate purpose of art is to evoke a transcendental state of aesthetic bliss in the spectator.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>Legacy</h3>
+                        <p>Bharata Muni is the absolute patriarch of all Indian classical performing arts (music, dance, theatre). His psychological and physiological analysis of human emotion (Bhāva) and its aesthetic culmination (Rasa) remains a globally studied masterpiece of art philosophy.</p>
+                    </div>
+                </div>
+                
+                <div class="works-section">
+                    <h3>Complete Works</h3>
+                    <ul class="works-list">
+                        <li>Nāṭyaśāstra</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="poster-footer">
+                <p class="iitg-branding">IIT GUWAHATI &nbsp;◈&nbsp; INDIC KNOWLEDGE SYSTEMS &nbsp;◈&nbsp; THE ETERNAL GURUS OF BHĀRATA</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

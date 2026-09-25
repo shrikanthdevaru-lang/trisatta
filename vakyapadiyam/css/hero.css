@@ -1,0 +1,160 @@
+/* ============================================================
+   VĀKYAPADĪYAM — Hero & Landing Page Styles
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--sp-2xl) var(--sp-xl);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, 
+    rgba(8, 6, 26, 0.4) 0%,
+    rgba(8, 6, 26, 0.8) 70%,
+    var(--clr-bg) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-title {
+  margin-bottom: var(--sp-sm);
+  text-shadow: var(--shadow-gold);
+}
+
+.hero-subtitle {
+  letter-spacing: 0.3em;
+  color: var(--clr-gold);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--sp-md);
+  justify-content: center;
+}
+
+/* Cards Grid */
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--sp-lg);
+}
+
+.kanda-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-lg);
+  border-radius: var(--r-lg);
+  text-decoration: none;
+  transition: all var(--t-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.kanda-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 100%;
+  background: linear-gradient(135deg, rgba(201,169,110,0.1), transparent 50%);
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+
+.kanda-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card), 0 0 30px rgba(201,169,110,0.1);
+  border-color: var(--clr-border-2);
+}
+
+.kanda-card:hover::before {
+  opacity: 1;
+}
+
+.kanda-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--sp-md);
+}
+
+.kanda-card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.kanda-card h4 {
+  color: var(--clr-text);
+  font-size: 1.25rem;
+}
+
+.text-sm {
+  font-size: 0.95rem;
+}
+
+.kanda-meta {
+  margin-top: auto;
+  padding-top: var(--sp-md);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--clr-border);
+}
+
+/* Featured Verse */
+.bg-glass-panel {
+  background: linear-gradient(180deg, transparent, rgba(13, 10, 40, 0.4), transparent);
+}
+
+.featured-verse {
+  border-radius: var(--r-lg);
+  padding: var(--sp-2xl);
+  position: relative;
+}
+
+.featured-verse::before,
+.featured-verse::after {
+  content: '॥';
+  position: absolute;
+  font-family: var(--font-deva);
+  font-size: 4rem;
+  color: var(--clr-gold-glow);
+  opacity: 0.2;
+}
+
+.featured-verse::before { top: var(--sp-lg); left: var(--sp-lg); }
+.featured-verse::after { bottom: var(--sp-lg); right: var(--sp-lg); }
+
+.text-lg { font-size: 1.1rem; }
+.p-lg { padding: var(--sp-2xl); }

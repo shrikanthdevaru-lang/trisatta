@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A1 Exhibition Poster | IIT Guwahati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0B0C10;
+            --gold: #D4AF37;
+            --saffron: #FF9933;
+            --ivory: #FDFBF7;
+            --text-light: #F0F2F5;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            /* Hide scrollbar for clean presentation but allow scrolling */
+            overflow-x: auto;
+        }
+
+        /* EXACT A1 DIMENSIONS FOR PRINT (Portrait) */
+        .a1-poster {
+            width: 594mm;
+            height: 841mm;
+            /* High-end Canva-like cosmic gradient background */
+            background: radial-gradient(circle at 50% 30%, #1A1A1F 0%, var(--bg-deep) 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            font-family: 'Outfit', sans-serif;
+            color: var(--ivory);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50mm 40mm;
+            /* Force exact sizing for print */
+            flex-shrink: 0; 
+        }
+
+        /* Abstract Premium Canva Design Elements */
+        .glow-orb-1 {
+            position: absolute;
+            top: -10%; right: -10%;
+            width: 400mm; height: 400mm;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        .glow-orb-2 {
+            position: absolute;
+            bottom: -10%; left: -10%;
+            width: 500mm; height: 500mm;
+            background: radial-gradient(circle, rgba(255,153,51,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(50px);
+        }
+
+        .concentric-circles {
+            position: absolute;
+            top: 40%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600mm; height: 600mm;
+            border: 1px solid rgba(212,175,55,0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .concentric-circles::before {
+            content: ''; position: absolute;
+            top: 10%; left: 10%; right: 10%; bottom: 10%;
+            border: 1px dashed rgba(255,153,51,0.15);
+            border-radius: 50%;
+        }
+
+        .content-layer {
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .top-tagline {
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-size: 12mm;
+            color: var(--saffron);
+            font-weight: 500;
+            margin-bottom: 25mm;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10mm;
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 65mm;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 10mm;
+            background: linear-gradient(135deg, var(--ivory) 20%, var(--gold) 50%, var(--saffron) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+        }
+
+        .sub-title {
+            font-family: 'Cinzel', serif;
+            font-size: 22mm;
+            color: var(--gold);
+            letter-spacing: 8px;
+            margin-bottom: 40mm;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+        }
+
+        .description {
+            font-size: 15mm;
+            line-height: 1.7;
+            max-width: 450mm;
+            color: rgba(253, 251, 247, 0.85);
+            font-weight: 300;
+            margin-bottom: auto; /* Pushes everything below it down */
+        }
+
+        /* Glassmorphism Feature Grid */
+        .glass-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15mm;
+            width: 100%;
+            margin-bottom: 40mm;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8mm;
+            padding: 15mm;
+            text-align: left;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--saffron);
+            font-size: 14mm;
+            margin-bottom: 6mm;
+            border-bottom: 1px solid rgba(212,175,55,0.3);
+            padding-bottom: 4mm;
+        }
+
+        .glass-card p {
+            font-size: 10mm;
+            line-height: 1.5;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        /* Footer Section */
+        .footer-banner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 2px solid rgba(212,175,55,0.4);
+            padding-top: 15mm;
+        }
+
+        .event-details {
+            text-align: left;
+        }
+        
+        .event-details .date {
+            font-size: 16mm;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 2mm;
+        }
+        
+        .event-details .venue {
+            font-size: 11mm;
+            color: var(--ivory);
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .host-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 20mm;
+            font-weight: 800;
+            color: var(--ivory);
+            letter-spacing: 6px;
+            text-align: right;
+        }
+        
+        .host-logo span {
+            display: block;
+            font-size: 10mm;
+            color: var(--saffron);
+            letter-spacing: 4px;
+            font-family: 'Outfit', sans-serif;
+            margin-top: 2mm;
+        }
+
+        /* Print Specific Overrides */
+        @media print {
+            body { padding: 0; background: none; }
+            .a1-poster { box-shadow: none; margin: 0; }
+            /* Force background graphics to print in Chrome/Safari */
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="a1-poster">
+        <!-- Abstract Canva Design Elements -->
+        <div class="glow-orb-1"></div>
+        <div class="glow-orb-2"></div>
+        <div class="concentric-circles"></div>
+
+        <div class="content-layer">
+            <div class="top-tagline">Indian Institute of Technology Guwahati</div>
+            
+            <h1 class="main-title">The Eternal<br>Gurus of<br>Bhārata</h1>
+            <h2 class="sub-title">An Exhibition of Scientific Primacy</h2>
+            
+            <p class="description">
+                Journey through the profound legacy of 30 ancient visionaries who shaped human knowledge. Discover the rigorously validated academic foundations of India's greatest minds—from Pāṇini's linguistics to Mādhava's mathematics.
+            </p>
+
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <h3>Interactive Exhibits</h3>
+                    <p>Compile Sanskrit syntax algorithms, construct ancient geometric altars, and visualize mathematical infinity in real-time.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>Deep Academic Validation</h3>
+                    <p>Explore 15,000+ words of peer-reviewed research revealing the ancient Darśana and Pramāṇa behind modern science.</p>
+                </div>
+            </div>
+
+            <div class="footer-banner">
+                <div class="event-details">
+                    <div class="date">Opening: August 15, 2026</div>
+                    <div class="venue">Main Auditorium Gallery, IITG Campus</div>
+                </div>
+                <div class="host-logo">
+                    IIT GUWAHATI
+                    <span>Indic Knowledge Systems</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIT Guwahati - Ancient Indian Gurus Exhibition Posters (A3 Edition)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Noto+Serif+Devanagari:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS RESET & VARIABLES */
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-accent-light: #F4ECE1;
+      --saffron-primary: #B83A00;
+      --saffron-dark: #8A2B00;
+      --gold-accent: #C59B27;
+      --gold-deep: #9E7915;
+      --navy-dark: #141E28;
+      --text-main: #241E19;
+      --text-muted: #574D44;
+      --border-gold: rgba(197, 155, 39, 0.4);
+      --border-saffron: rgba(184, 58, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #1a1a1a;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* SCREEN ONLY NAVBAR / CONTROLS */
+    @media screen {
+      .app-header {
+        width: 100%;
+        background: #0f141c;
+        color: #fff;
+        padding: 16px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--gold-accent);
+      }
+
+      .app-title-group h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 20px;
+        color: #f5cf68;
+        letter-spacing: 1px;
+      }
+      .app-title-group p {
+        font-size: 12px;
+        color: #9aa8b8;
+        margin-top: 2px;
+      }
+
+      .controls-group {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      select.guru-selector {
+        background: #1e2836;
+        color: #fff;
+        border: 1px solid var(--gold-accent);
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .btn {
+        background: var(--saffron-primary);
+        color: #fff;
+        border: none;
+        padding: 9px 18px;
+        border-radius: 6px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .btn:hover {
+        background: var(--saffron-dark);
+      }
+
+      .main-container {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      .poster-view-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    /* PRINT SPECIFIC STYLES FOR EXACT A3 PRINTING */
+    @media print {
+      @page {
+        size: 297mm 420mm;
+        margin: 0;
+      }
+      body {
+        background: none !important;
+        padding: 0 !important;
+      }
+      .app-header {
+        display: none !important;
+      }
+      .main-container {
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .poster-page {
+        page-break-after: always;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+
+    /* A3 POSTER SPECIFIC CSS (EXACT DIMENSIONS 297mm x 420mm) */
+    .poster-page {
+      width: 297mm;
+      height: 420mm;
+      background: var(--bg-cream);
+      position: relative;
+      padding: 16mm 18mm 14mm 18mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      overflow: hidden;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(197, 155, 39, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(184, 58, 0, 0.04) 0%, transparent 40%);
+    }
+
+    /* Decorative Double Border Frame */
+    .poster-frame {
+      position: absolute;
+      top: 8mm;
+      left: 8mm;
+      right: 8mm;
+      bottom: 8mm;
+      border: 2px solid var(--gold-accent);
+      pointer-events: none;
+      z-index: 10;
+    }
+    .poster-frame-inner {
+      position: absolute;
+      top: 10mm;
+      left: 10mm;
+      right: 10mm;
+      bottom: 10mm;
+      border: 1px solid var(--border-saffron);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Corner Motifs */
+    .corner-motif {
+      position: absolute;
+      width: 14mm;
+      height: 14mm;
+      border-color: var(--gold-accent);
+      border-style: solid;
+      pointer-events: none;
+      z-index: 11;
+    }
+    .corner-tl { top: 7.5mm; left: 7.5mm; border-width: 3px 0 0 3px; }
+    .corner-tr { top: 7.5mm; right: 7.5mm; border-width: 3px 3px 0 0; }
+    .corner-bl { bottom: 7.5mm; left: 7.5mm; border-width: 0 0 3px 3px; }
+    .corner-br { bottom: 7.5mm; right: 7.5mm; border-width: 0 3px 3px 0; }
+
+    /* POSTER HEADER */
+    .poster-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3mm;
+      margin-bottom: 2mm;
+    }
+
+    .institution-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 3.2mm;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--saffron-primary);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+    .institution-tag::before, .institution-tag::after {
+      content: '❖';
+      font-size: 2.5mm;
+      color: var(--gold-accent);
+    }
+
+    .guru-name {
+      font-family: 'Cinzel', serif;
+      font-size: 9.2mm;
+      font-weight: 800;
+      color: var(--navy-dark);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .badges-row {
+      display: flex;
+      gap: 4mm;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 1mm;
+    }
+
+    .badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2mm;
+      font-weight: 600;
+      padding: 1.2mm 4mm;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+    }
+    .badge-domain {
+      background: var(--navy-dark);
+      color: #F7E7C4;
+      border: 1px solid var(--gold-accent);
+    }
+    .badge-era {
+      background: var(--saffron-primary);
+      color: #FFFFFF;
+    }
+
+    /* SHLOKA & TRANSLATION SECTION */
+    .shloka-box {
+      background: var(--bg-card);
+      border: 1.5px solid var(--gold-accent);
+      border-radius: 6px;
+      padding: 4mm 6mm;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+      margin-bottom: 2mm;
+      position: relative;
+    }
+
+    .shloka-text {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 4.6mm;
+      font-weight: 700;
+      color: var(--saffron-dark);
+      line-height: 1.45;
+      letter-spacing: 0.2px;
+    }
+
+    .shloka-translation {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.3mm;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.35;
+      border-top: 1px dashed var(--border-gold);
+      padding-top: 2mm;
+    }
+
+    /* QUOTE CARD */
+    .quote-box {
+      background: linear-gradient(135deg, #FFF9EF 0%, #F5EBDC 100%);
+      border-left: 4px solid var(--saffron-primary);
+      border-radius: 0 6px 6px 0;
+      padding: 3.5mm 5mm;
+      margin-bottom: 2mm;
+      display: flex;
+      align-items: flex-start;
+      gap: 3mm;
+    }
+    .quote-mark {
+      font-family: 'Cinzel', serif;
+      font-size: 7mm;
+      line-height: 1;
+      color: var(--gold-accent);
+      font-weight: 900;
+    }
+    .quote-content {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5mm;
+      font-weight: 600;
+      color: var(--navy-dark);
+      line-height: 1.35;
+      font-style: italic;
+    }
+
+    /* ABOUT SECTION */
+    .about-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 6px;
+      padding: 4mm 5.5mm;
+      margin-bottom: 2mm;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3.6mm;
+      font-weight: 700;
+      color: var(--saffron-primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2mm;
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-gold);
+    }
+    .about-text {
+      font-size: 3.3mm;
+      line-height: 1.45;
+      color: var(--text-main);
+      text-align: justify;
+    }
+
+    /* TWO COLUMN GRID FOR CONTRIBUTIONS & LEGACY */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 4mm;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .column-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 6px;
+      padding: 4mm 5mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2mm;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .bullet-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6mm;
+    }
+
+    .item-header {
+      display: flex;
+      align-items: baseline;
+      gap: 2mm;
+    }
+
+    .item-icon {
+      font-size: 2.8mm;
+      color: var(--saffron-primary);
+      flex-shrink: 0;
+    }
+
+    .item-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.3mm;
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1.2;
+    }
+
+    .item-desc {
+      font-size: 3.1mm;
+      line-height: 1.35;
+      color: var(--text-muted);
+      padding-left: 4.5mm;
+    }
+
+    /* POSTER FOOTER */
+    .poster-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-gold);
+      padding-top: 2.5mm;
+      margin-top: 2mm;
+      font-size: 2.8mm;
+      color: var(--text-muted);
+      font-family: 'Cinzel', serif;
+    }
+    .footer-left {
+      font-weight: 600;
+      color: var(--saffron-primary);
+    }
+    .footer-center {
+      color: var(--gold-deep);
+      letter-spacing: 1px;
+    }
+    .footer-right {
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Load Data Directly via JS -->
+  <script src="gurus_data.js"></script>
+</head>
+<body>
+
+  <!-- SCREEN CONTROLS HEADER -->
+  <header class="app-header">
+    <div class="app-title-group">
+      <h1>IIT GUWAHATI • IKS EXHIBITION POSTERS</h1>
+      <p>30 High-Resolution A3 Presentation Posters (Print Ready - 297mm × 420mm)</p>
+    </div>
+    <div class="controls-group">
+      <select id="guruSelect" class="guru-selector" onchange="onGuruChange(this.value)">
+        <option value="ALL">-- Display All 30 Posters (Print View) --</option>
+      </select>
+      <button class="btn" onclick="window.print()">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2m-4 0v4H8v-4"></path></svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN POSTER CONTAINER -->
+  <main id="mainContainer" class="main-container">
+    <div id="posterList" class="poster-view-wrapper">
+      <!-- Posters rendered via JavaScript -->
+    </div>
+  </main>
+
+  <script>
+    const gurusData = window.GURUS_DATA || [];
+
+    function init() {
+      populateSelector();
+      renderPosters(gurusData);
+    }
+
+    function populateSelector() {
+      const selector = document.getElementById('guruSelect');
+      selector.innerHTML = '<option value="ALL">-- Display All 30 Posters (Print View) --</option>';
+      
+      gurusData.forEach((guru, idx) => {
+        const opt = document.createElement('option');
+        opt.value = guru.id;
+        opt.textContent = `${idx + 1}. ${guru.name} (${guru.era})`;
+        selector.appendChild(opt);
+      });
+    }
+
+    function onGuruChange(value) {
+      if (value === 'ALL') {
+        renderPosters(gurusData);
+      } else {
+        const selected = gurusData.filter(g => g.id === value);
+        renderPosters(selected);
+      }
+    }
+
+    function createPosterHTML(guru, index) {
+      const contribHTML = guru.contributions.map(c => `
+        <div class="bullet-item">
+          <div class="item-header">
+            <span class="item-icon">◈</span>
+            <span class="item-title">${escapeHTML(c.title || 'Contribution')}</span>
+          </div>
+          <div class="item-desc">${escapeHTML(c.desc)}</div>
+        </div>
+      `).join('');
+
+      const legacyHTML = guru.legacy.map(l => `
+        <div class="bullet-item">
+          <div class="item-header">
+            <span class="item-icon">◆</span>
+            <span class="item-title">${escapeHTML(l.title || 'Legacy')}</span>
+          </div>
+          <div class="item-desc">${escapeHTML(l.desc)}</div>
+        </div>
+      `).join('');
+
+      return `
+        <div class="poster-page" id="poster-${guru.id}">
+          <!-- Double Ornamental Frame -->
+          <div class="poster-frame"></div>
+          <div class="poster-frame-inner"></div>
+          <div class="corner-motif corner-tl"></div>
+          <div class="corner-motif corner-tr"></div>
+          <div class="corner-motif corner-bl"></div>
+          <div class="corner-motif corner-br"></div>
+
+          <!-- Poster Header -->
+          <div class="poster-header">
+            <div class="institution-tag">IIT Guwahati • Indian Knowledge Systems</div>
+            <h1 class="guru-name">${escapeHTML(guru.name)}</h1>
+            <div class="badges-row">
+              <span class="badge badge-domain"><strong>DOMAIN:</strong> ${escapeHTML(guru.domain)}</span>
+              <span class="badge badge-era"><strong>ERA:</strong> ${escapeHTML(guru.era)}</span>
+            </div>
+          </div>
+
+          <!-- Sacred Shloka & Translation -->
+          <div class="shloka-box">
+            <div class="shloka-text">${escapeHTML(guru.shloka)}</div>
+            <div class="shloka-translation">"${escapeHTML(guru.translation)}"</div>
+          </div>
+
+          <!-- Quote Section -->
+          <div class="quote-box">
+            <span class="quote-mark">“</span>
+            <div class="quote-content">${escapeHTML(guru.quote.replace(/^"|"$/g, ''))}</div>
+          </div>
+
+          <!-- About / Context -->
+          <div class="about-box">
+            <div class="section-title">About the Guru & Context</div>
+            <div class="about-text">${escapeHTML(guru.about)}</div>
+          </div>
+
+          <!-- 2-Column Grid: Contributions & Legacy -->
+          <div class="grid-2col">
+            <!-- Left Column: Major Contributions -->
+            <div class="column-box">
+              <div class="section-title">Major Contributions</div>
+              <div class="bullet-list">
+                ${contribHTML}
+              </div>
+            </div>
+
+            <!-- Right Column: Influence & Legacy -->
+            <div class="column-box">
+              <div class="section-title">Influence & Legacy</div>
+              <div class="bullet-list">
+                ${legacyHTML}
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster Footer -->
+          <div class="poster-footer">
+            <span class="footer-left">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</span>
+            <span class="footer-center">❖ IKS EXHIBITION SERIES ❖</span>
+            <span class="footer-right">POSTER ${index + 1} OF 30</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function escapeHTML(str) {
+      if (!str) return '';
+      return str.replace(/[&<>'"]/g, 
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
+
+    function renderPosters(list) {
+      const container = document.getElementById('posterList');
+      container.innerHTML = list.map((guru) => {
+        const fullIndex = gurusData.findIndex(g => g.id === guru.id);
+        return createPosterHTML(guru, fullIndex >= 0 ? fullIndex : 0);
+      }).join('');
+    }
+
+    // Expose globally for Puppeteer script
+    window.onGuruChange = onGuruChange;
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

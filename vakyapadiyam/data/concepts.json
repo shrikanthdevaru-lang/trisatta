@@ -1,0 +1,34 @@
+[
+  {
+    "id": "shabda-brahman",
+    "term_deva": "शब्दब्रह्मन्",
+    "term_iast": "Śabda-Brahman",
+    "short_desc": "The Ultimate Reality as the Eternal Word.",
+    "definition": "The foundational concept of Bhartṛhari's philosophy (Śabdādvaita). It posits that the Ultimate Reality (Brahman) is essentially linguistic and conscious in nature. The universe is not created from nothing, nor is it a real physical transformation, but rather an apparent manifestation (vivarta) of the eternal Word (Śabda). Every object in reality is ultimately a manifestation of meaning.",
+    "image": "assets/images/bk-1-1.jpg"
+  },
+  {
+    "id": "sphota",
+    "term_deva": "स्फोट",
+    "term_iast": "Sphoṭa",
+    "short_desc": "The indivisible, meaning-bearing unit of language.",
+    "definition": "From the root 'sphuṭ' (to burst forth). Sphoṭa is the indivisible, eternal meaning-bearing entity of language. While spoken sounds (dhvani) are sequential and temporary, the Sphoṭa flashes in the mind as a unified whole, carrying the true meaning of a word or sentence. It is the bridge between the physical sound and the conceptual meaning.",
+    "image": "assets/images/hero.jpg"
+  },
+  {
+    "id": "vivarta",
+    "term_deva": "विवर्त",
+    "term_iast": "Vivarta",
+    "short_desc": "Apparent transformation of the One into the Many.",
+    "definition": "Apparent transformation. Bhartṛhari rejects the idea that Brahman actually changes into the world physically (pariṇāma). Instead, through its inherent powers (śakti), the one Śabda-Brahman appears as the manifold universe of objects and subjects, much like a rope appearing as a snake, without losing its essential unity. The Word manifests as the object.",
+    "image": "assets/images/bk-1-1.jpg"
+  },
+  {
+    "id": "pasyanti",
+    "term_deva": "पश्यन्ती वाक्",
+    "term_iast": "Paśyantī Vāk",
+    "short_desc": "The 'seeing' or visionary level of speech.",
+    "definition": "The second of the four levels of speech. It is the direct, intuitive grasp of meaning as an undivided whole, before it is sequenced into mental thought (Madhyamā) or spoken words (Vaikharī). It is the level of profound realization, often associated with the Sphoṭa itself.",
+    "image": "assets/images/hero.jpg"
+  }
+]

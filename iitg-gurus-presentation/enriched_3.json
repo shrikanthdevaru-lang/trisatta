@@ -1,0 +1,462 @@
+[
+  {
+    "id": 21,
+    "name": "Āryabhaṭa",
+    "era": "476–550 CE",
+    "vidyaSthana": "Gaṇita Śāstra, Jyotiṣa (Astronomy)",
+    "shloka": "अनुलोमगतिर्नौस्थः पश्यत्यचलं विलोमगं यद्वत्। अचलानि भानि तद्वत् समपश्चिमगानि लङ्कायाम्॥",
+    "shlokaTranslation": "Just as a man in a boat moving forward sees the stationary objects moving backward, so are the stationary stars seen by people on earth as moving exactly towards the west.",
+    "quote": "He who knows the motions of the earth and the planets reaches the absolute.",
+    "details": {
+      "lifeContext": "A brilliant mathematician operating in Kusumapura (modern Patna), the intellectual capital of the Gupta Empire. He wrote his groundbreaking magnum opus at the astonishingly young age of 23, possessing a rare ability to reduce vast cosmic mechanics to elegant algebraic formulations.",
+      "keyContributions": "In the Āryabhaṭīya, he boldly asserted that the Earth rotates on its axis, causing the illusion of stars moving. He correctly explained eclipses as shadows, calculated Pi to 3.1416, and formalized the sine (Jyā) and cosine functions, laying the foundation for modern trigonometry.",
+      "legacy": "Āryabhaṭa initiated the golden age of Indian mathematics. His works were translated into Arabic and Latin, significantly fertilizing both the Islamic Golden Age and the European Renaissance. India’s first satellite was named 'Aryabhata' in tribute to his genius."
+    },
+    "structuredContributions": [
+      {
+        "title": "Heliocentric Insight",
+        "description": "Boldly asserted that the Earth rotates on its axis, causing the illusion of stars moving."
+      },
+      {
+        "title": "Astronomical Calculations",
+        "description": "Correctly explained eclipses as shadows and laid down methods for measuring planetary movements."
+      },
+      {
+        "title": "Mathematics & Pi",
+        "description": "Calculated the value of Pi highly accurately to four decimal places (3.1416)."
+      },
+      {
+        "title": "Trigonometry",
+        "description": "Formalized the sine (Jyā) and cosine functions, laying the foundation for modern trigonometry."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Golden Age of Indian Math",
+        "description": "Initiated a golden era of brilliant mathematical astronomy in India."
+      },
+      {
+        "title": "Global Scientific Influence",
+        "description": "His works were translated into Arabic and Latin, significantly influencing global sciences and mathematics."
+      },
+      {
+        "title": "Modern Tribute",
+        "description": "India's first satellite was named 'Aryabhata' in profound tribute to his astronomical genius."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Varāhamihira",
+    "era": "505–587 CE",
+    "vidyaSthana": "Jyotiṣa, Vāstu Śāstra, Gaṇita",
+    "shloka": "सलिलमये शशिनि रवेर्दीधितयो मूर्च्छितास्तमो नैशम्। क्षपयन्ति दर्पणोदरनिहिता इव मन्दिरस्यान्तः॥",
+    "shlokaTranslation": "Just as the sun's rays reflected by a mirror in a room dispel darkness, so do the sun's rays striking the moon dispel the darkness of the night.",
+    "quote": "Science is a system of reasoning; without it, all statements are like a blind man's wanderings.",
+    "details": {
+      "lifeContext": "Born in Ujjain, the prime meridian of ancient Indian astronomy. He was one of the legendary 'Navaratnas' (Nine Gems) in the court of King Vikramāditya. He possessed a deeply cosmopolitan intellect, openly praising and synthesizing the scientific truths discovered by Greek (Yavana) astronomers.",
+      "keyContributions": "His Pañcasiddhāntikā masterfully summarized five major astronomical treatises of his time. His encyclopedic Bṛhat Saṃhitā covered a staggering array of topics, from planetary movements and eclipses to meteorology, architecture (Vāstu), ecology, and the discovery of optical reflection.",
+      "legacy": "Varāhamihira was a true polymath who bridged multiple scientific disciplines. His works became the absolute standard for Vedic astrology (Phalita Jyotiṣa) and observational astronomy, ensuring Ujjain's status as the scientific heart of ancient India."
+    },
+    "structuredContributions": [
+      {
+        "title": "Astronomical Synthesis",
+        "description": "Masterfully summarized five major astronomical treatises of his time in the Pañcasiddhāntikā."
+      },
+      {
+        "title": "Encyclopedic Knowledge",
+        "description": "Authored the encyclopedic Bṛhat Saṃhitā covering meteorology, architecture, and ecology."
+      },
+      {
+        "title": "Astrology Standards",
+        "description": "Established foundational standards for Vedic astrology (Phalita Jyotiṣa) and observational astronomy."
+      },
+      {
+        "title": "Intellectual Openness",
+        "description": "Openly praised and integrated scientific truths discovered by Greek (Yavana) astronomers."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Standard of Astrology",
+        "description": "His works remain the absolute standard and reference for traditional Vedic astrology."
+      },
+      {
+        "title": "Scientific Epicenter",
+        "description": "His work ensured Ujjain's status as the prime meridian and scientific heart of ancient India."
+      },
+      {
+        "title": "True Polymath",
+        "description": "Remembered globally as a true polymath bridging astronomy, sociology, and earth sciences."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Mādhava of Saṅgamagrāma",
+    "era": "c. 1340–1425 CE",
+    "vidyaSthana": "Gaṇita Śāstra (Calculus & Infinite Series)",
+    "shloka": "व्यासे वारिधिनिहते रूपहृते व्याससागराभिहते। त्रिशरादिविषमसंख्याभक्तमृणं स्वं पृथक्क्रमात् कुर्यात्॥",
+    "shlokaTranslation": "Multiply the diameter by 4. Subtract from it the diameter multiplied by 4 and divided by 3... (The Madhava-Leibniz infinite series for Pi).",
+    "quote": "Mathematics is the science of the infinite, and the infinite is the very nature of truth.",
+    "details": {
+      "lifeContext": "Working in the lush, serene environments of Kerala, Mādhava broke free from the limitations of finite, algebraic mathematics. He ventured into the deeply abstract realms of infinity and limits, sparking a quiet but profound scientific revolution.",
+      "keyContributions": "Centuries before Newton and Leibniz, Mādhava discovered infinite series for trigonometric functions (sine, cosine, arctangent). He formulated what is now known as the Gregory-Leibniz series and used it to calculate Pi to 11 decimal places with astonishing accuracy.",
+      "legacy": "Mādhava is the true conceptual father of mathematical analysis (calculus). The Kerala School of Mathematics he founded flourished for centuries, demonstrating that advanced computational mathematics was thriving in India long before the European Enlightenment."
+    },
+    "structuredContributions": [
+      {
+        "title": "Infinite Series Discovery",
+        "description": "Discovered infinite series for trigonometric functions centuries before European mathematicians."
+      },
+      {
+        "title": "Exact Pi Calculations",
+        "description": "Used his newly discovered series to calculate Pi to 11 decimal places with astonishing accuracy."
+      },
+      {
+        "title": "Foundations of Calculus",
+        "description": "Formulated early principles of mathematical analysis, limits, and transcendental equations."
+      },
+      {
+        "title": "Kerala School Foundation",
+        "description": "Established the brilliant Kerala School of Astronomy and Mathematics."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Conceptual Father of Calculus",
+        "description": "Recognized today as the true conceptual founder of mathematical analysis and calculus."
+      },
+      {
+        "title": "Shifting Math History",
+        "description": "His discoveries shifted the timeline of advanced mathematics to pre-Enlightenment India."
+      },
+      {
+        "title": "Continued Mathematical Tradition",
+        "description": "Sparked a rich scientific tradition in Kerala that continued to flourish for centuries."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Bharata Muni",
+    "era": "Antiquity",
+    "vidyaSthana": "Nāṭya Śāstra, Alaṃkāra Śāstra (Aesthetics)",
+    "shloka": "विभावानुभावव्यभिचारिसंयोगाद्रसनिष्पत्तिः॥",
+    "shlokaTranslation": "Rasa (aesthetic rapture) is produced from the combination of Determinants (vibhava), Consequents (anubhava), and Transitory States (vyabhicharibhava).",
+    "quote": "There is no maxim, no learning, no art or craft, no device, no action that is not found in the Natya.",
+    "details": {
+      "lifeContext": "Revered as a semi-divine sage, he was requested by Brahmā to create a 'Pañcama Veda' (Fifth Veda) utilizing audio-visual arts to make high spiritual truths accessible to all people (Sādhāraṇīkaraṇa), regardless of their Varna or education.",
+      "keyContributions": "He composed the Nāṭyaśāstra, a massive encyclopedia governing stage design, music, dance mudras, and acting. Most profoundly, he formulated the 'Rasa Siddhānta' (Rasa Theory), arguing that the ultimate purpose of art is to evoke a transcendental state of aesthetic bliss in the spectator.",
+      "legacy": "Bharata Muni is the absolute patriarch of all Indian classical performing arts (music, dance, theatre). His psychological and physiological analysis of human emotion (Bhāva) and its aesthetic culmination (Rasa) remains a globally studied masterpiece of art philosophy."
+    },
+    "structuredContributions": [
+      {
+        "title": "Natyashastra Authorship",
+        "description": "Composed the massive Natyashastra, an encyclopedia governing stage design, music, and acting."
+      },
+      {
+        "title": "Rasa Siddhanta",
+        "description": "Formulated the Rasa Theory on aesthetic bliss and the sophisticated evocation of human emotion."
+      },
+      {
+        "title": "The Fifth Veda",
+        "description": "Created a performative art form utilizing audio-visual arts to make high spiritual truths universally accessible."
+      },
+      {
+        "title": "Standardization of Arts",
+        "description": "Codified complex dance mudras, musical scales, and structural dramaturgical principles."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Patriarch of Indian Arts",
+        "description": "Remains the absolute authority for all Indian classical performing arts, including music and dance."
+      },
+      {
+        "title": "Global Aesthetics Masterpiece",
+        "description": "His psychological analysis of human emotion is a globally studied masterpiece of art philosophy."
+      },
+      {
+        "title": "Living Classical Tradition",
+        "description": "His ancient codifications form the strict foundational grammar practiced in Indian classical dances today."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Thiruvalluvar",
+    "era": "Antiquity",
+    "vidyaSthana": "Nīti Śāstra, Dharma, Kāvya",
+    "shloka": "अकारो मूलमक्षराणाम् आदिदेवो जगन्मूलम्॥",
+    "shlokaTranslation": "Just as the letter 'A' is the beginning of all alphabets, the eternal God is the beginning of the universe.",
+    "quote": "Wealth yields its true bounty only to those who possess the unerring scales of a righteous mind.",
+    "details": {
+      "lifeContext": "A highly venerated Tamil poet-saint, traditionally believed to have been a humble weaver in Mylapore. His verses reveal an extraordinarily deep understanding of statecraft, domestic life, and the universal human condition, transcending all sectarian boundaries.",
+      "keyContributions": "He authored the Tirukkuṟaḷ, a masterpiece of 1,330 couplets divided into three sections reflecting the Puruṣārthas: Aṟam (Dharma/Virtue), Poruḷ (Artha/Wealth), and Inbam (Kāma/Love). He brilliantly synthesized pragmatic realpolitik with absolute moral idealism and non-violence (Ahiṃsā).",
+      "legacy": "The Tirukkuṟaḷ is universally celebrated as the 'Tamil Veda'. It is one of the most widely translated non-religious works in the world. Thiruvalluvar remains an eternal guiding light for secular ethics and righteous living."
+    },
+    "structuredContributions": [
+      {
+        "title": "Author of Tirukkural",
+        "description": "Composed 1,330 masterful couplets reflecting the goals of human life: Dharma, Artha, and Kama."
+      },
+      {
+        "title": "Synthesis of Morality",
+        "description": "Brilliantly synthesized pragmatic realpolitik with absolute moral idealism and righteousness."
+      },
+      {
+        "title": "Universal Ethics",
+        "description": "Promoted casteless, universally applicable ethical guidelines transcending all sectarian boundaries."
+      },
+      {
+        "title": "Champion of Ahimsa",
+        "description": "Strongly advocated non-violence, truthfulness, and highly disciplined, righteous governance."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "The Tamil Veda",
+        "description": "His work is universally celebrated and revered across traditions as the quintessential 'Tamil Veda'."
+      },
+      {
+        "title": "Global Translation & Reach",
+        "description": "The Tirukkural is one of the most widely translated and admired non-religious works in the world."
+      },
+      {
+        "title": "Eternal Ethical Guide",
+        "description": "Remains an eternal guiding light for secular ethics, humanism, and righteous domestic living."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Mahāpuruṣa Śrīmanta Śaṅkaradeva",
+    "era": "1449–1568 CE",
+    "vidyaSthana": "Bhakti Darśana, Nām-Dharma, Kalā (Arts)",
+    "shloka": "कृष्णाय वासुदेवाय हरये परमात्मने। प्रणतः क्लेशनाशाय गोविन्दाय नमो नमः॥",
+    "shlokaTranslation": "Obeisances to Lord Krishna, the son of Vasudeva, the Supreme Soul; salutations to Govinda who destroys the afflictions of those who surrender.",
+    "quote": "Through pure devotion to the one Supreme Lord, all distinctions of caste and creed melt into the ecstasy of His name.",
+    "details": {
+      "lifeContext": "Born in Assam, he traveled across India, absorbing the deep currents of the Bhakti movement. Upon returning, he orchestrated a massive socio-cultural renaissance in the Northeast, using brilliant artistic innovations to overcome orthodox societal barriers.",
+      "keyContributions": "He founded the Ekasaraṇa Dharma, advocating pure, casteless devotion (Bhakti) to Lord Kṛṣṇa. To propagate this, he ingeniously created Sattriya (classical dance), Borgeet (devotional music), and Aṅkiyā Nāṭ (traditional theatre). He established Satras (monasteries) that functioned as vibrant socio-cultural hubs.",
+      "legacy": "Śaṅkaradeva is the ultimate cultural architect of Assam. He successfully synthesized local traditions with the pan-Indian Sanātana Dharma, creating a fiercely unique, egalitarian, and artistically rich culture that thrives in the Satras to this day."
+    },
+    "structuredContributions": [
+      {
+        "title": "Ekasarana Dharma",
+        "description": "Founded the Ekasarana tradition of pure, casteless, and absolute devotion (Bhakti) to Lord Krishna."
+      },
+      {
+        "title": "Artistic Innovations",
+        "description": "Created Sattriya classical dance, Borgeet devotional music, and Ankiya Nat traditional theatre."
+      },
+      {
+        "title": "Satra Institution",
+        "description": "Established vibrant Satras (monasteries) that functioned as the socio-cultural hubs of the community."
+      },
+      {
+        "title": "Literary Prolificacy",
+        "description": "Authored highly significant devotional literature like the Kirtan Ghosha and Bhakti Ratnakara."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Cultural Architect of Assam",
+        "description": "Orchestrated a massive socio-cultural renaissance, profoundly shaping the entire landscape of Assam."
+      },
+      {
+        "title": "Living Classical Heritage",
+        "description": "His Sattriya dance is recognized nationally as one of India's major classical dance forms."
+      },
+      {
+        "title": "Egalitarian Cultural Tradition",
+        "description": "Successfully created a fiercely unique, egalitarian, and artistically rich culture thriving to this day."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Ādi Śaṅkarācārya",
+    "era": "c. 8th Century CE",
+    "vidyaSthana": "Advaita Vedānta, Prasthānatrayī Bhāṣya",
+    "shloka": "ब्रह्म सत्यं जगन्मिथ्या जीवो ब्रह्मैव नापरः।",
+    "shlokaTranslation": "Brahman is the only absolute truth, the world is an illusion, and the individual soul is non-different from Brahman.",
+    "quote": "Knowing that I am different from the body, I need not neglect it. It is a vehicle that I use to transact with the world.",
+    "details": {
+      "lifeContext": "Born in Kālaḍi (Kerala), he mastered the Vedas in childhood and took Sannyāsa. In an astonishingly brief life of 32 years, he walked across the entire Indian subcontinent, engaging in fierce Śāstrārtha (debates) to revive Vedic philosophy against prevailing nihilism and ritualistic decay.",
+      "keyContributions": "He firmly established the doctrine of Advaita Vedānta (Absolute Non-Dualism)—proclaiming 'Brahma Satyam Jagan Mithya, Jivo Brahmaiva Na Aparah' (Brahman is truth, the world is an illusion, the individual soul is identical to Brahman). He wrote unparalleled, lucid commentaries on the Upaniṣads, Brahma Sūtras, and Bhagavad Gītā.",
+      "legacy": "Śaṅkara's impact is incalculable. He intellectually reunified a fragmented India and institutionalized Sanātana Dharma by establishing the four great Maṭhas (monasteries) in the four corners of the country. He is widely considered the greatest philosopher in Indian history."
+    },
+    "structuredContributions": [
+      {
+        "title": "Advaita Vedanta Doctrine",
+        "description": "Systematized and firmly established the rigorous philosophical framework of Absolute Non-Dualism."
+      },
+      {
+        "title": "Prasthanatrayi Bhashya",
+        "description": "Wrote unparalleled, highly lucid commentaries on the Upanishads, Brahma Sutras, and Bhagavad Gita."
+      },
+      {
+        "title": "Revival of Sanatana Dharma",
+        "description": "Revived Vedic philosophy across the Indian subcontinent through fierce and brilliant philosophical debates."
+      },
+      {
+        "title": "Institutionalization",
+        "description": "Established the four great Mathas (monasteries) in the four corners of India to preserve the spiritual tradition."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Intellectual Unification",
+        "description": "Intellectually reunified a fragmented India and revitalized the core of orthodox Hindu thought."
+      },
+      {
+        "title": "Greatest Indian Philosopher",
+        "description": "Widely and universally considered the greatest philosopher in the history of Indian civilization."
+      },
+      {
+        "title": "Preserved Vedic Lineage",
+        "description": "His Dashanami Sampradaya and monastic institutions continue to lead Hindu spiritual life today."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Śrī Rāmānujācārya",
+    "era": "1017–1137 CE",
+    "vidyaSthana": "Viśiṣṭādvaita Vedānta, Bhakti Darśana",
+    "shloka": "अशेषचिदचिद्वस्तुशेषिणे शेषशायिने। निर्मलानन्तकल्याणनिधये विष्णवे नमः॥",
+    "shlokaTranslation": "Salutations to Lord Vishnu, who reclines on Adishesha, the principal of all sentient and insentient entities, and the repository of endless auspicious attributes.",
+    "quote": "The Supreme Lord is an ocean of mercy; He will accept anyone who approaches Him with a pure and humble heart.",
+    "details": {
+      "lifeContext": "Born in Tamil Nadu, he disagreed with Śaṅkara's assertion that the universe is an illusion (Māyā). Driven by immense compassion, he famously broke his Guru's vow of secrecy by publicly shouting the sacred liberation mantra from a temple tower, willing to suffer hell to grant salvation to the masses.",
+      "keyContributions": "He propounded Viśiṣṭādvaita (Qualified Non-Dualism), arguing that the individual souls and the universe are real, integral attributes of the Supreme Brahman (Nārāyaṇa). He brilliantly synthesized the emotional Tamil Bhakti poetry of the Āḻvārs with the rigorous Sanskrit Vedānta. He also spearheaded massive social reforms, welcoming marginalized castes into temples.",
+      "legacy": "Rāmānuja provided the philosophical bedrock for the entire pan-Indian Bhakti movement. His Śrī Vaiṣṇava tradition remains immensely powerful today, standing as a monument to his towering intellect and his deeply egalitarian, compassionate heart."
+    },
+    "structuredContributions": [
+      {
+        "title": "Vishishtadvaita Doctrine",
+        "description": "Propounded Qualified Non-Dualism, arguing individual souls and the universe are real attributes of Brahman."
+      },
+      {
+        "title": "Synthesis of Traditions",
+        "description": "Brilliantly synthesized emotional Tamil Bhakti poetry of the Alvars with rigorous Sanskrit Vedanta."
+      },
+      {
+        "title": "Monumental Commentaries",
+        "description": "Authored the definitive Sri Bhashya (commentary on Brahma Sutras) and the deeply devotional Gita Bhashya."
+      },
+      {
+        "title": "Egalitarian Social Reforms",
+        "description": "Spearheaded massive social reforms by famously welcoming marginalized castes into the temple folds."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Bedrock of Bhakti Movement",
+        "description": "Provided the absolute philosophical bedrock for the entire pan-Indian devotional Bhakti movement."
+      },
+      {
+        "title": "Sri Vaishnava Tradition",
+        "description": "His spiritual lineage remains an immensely powerful, vibrant, and highly organized tradition today."
+      },
+      {
+        "title": "Compassionate Egalitarianism",
+        "description": "Remembered as a towering intellect blessed with a deeply compassionate and egalitarian spiritual heart."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Ācārya Abhinavagupta",
+    "era": "c. 950–1016 CE",
+    "vidyaSthana": "Trika Śaivism, Tantra Śāstra, Rasa Siddhānta",
+    "shloka": "यत्र यत्र मनो याति तत्र तत्र शिवस्तथा।",
+    "shlokaTranslation": "Wherever the mind wanders, there Shiva (the supreme consciousness) is present.",
+    "quote": "When the mind is fully absorbed in aesthetic rapture, one touches the very essence of the divine consciousness.",
+    "details": {
+      "lifeContext": "Born in Kashmir to an illustrious lineage of scholars, he possessed a ravenous intellect, studying under numerous Gurus across varying traditions. Legend dictates that having completed his life's work, he walked into a cave chanting hymns to Śiva with 1,200 disciples and merged into the Absolute.",
+      "keyContributions": "He synthesized the vast, esoteric traditions of Kashmir Śaivism into a cohesive philosophical masterpiece, the Tantrāloka. In the realm of aesthetics, his commentary on the Nāṭyaśāstra (Abhinavabhāratī) revolutionized art theory by introducing 'Śānta Rasa' (the emotion of spiritual tranquility) and proving that aesthetic rapture is akin to mystical realization.",
+      "legacy": "Abhinavagupta is arguably the most brilliant polymath in Indian history, seamlessly uniting the extremes of esoteric Tantra, rigorous non-dual philosophy, and highly refined art criticism. His psychological theories on consciousness and art are studied globally."
+    },
+    "structuredContributions": [
+      {
+        "title": "Synthesis of Kashmir Shaivism",
+        "description": "Synthesized the vast, esoteric traditions of Trika Shaivism into his cohesive philosophical masterpiece, the Tantraloka."
+      },
+      {
+        "title": "Aesthetic Revolution",
+        "description": "Introduced 'Shanta Rasa' (spiritual tranquility) and proved that aesthetic rapture is akin to mystical realization."
+      },
+      {
+        "title": "Extensive Art Commentaries",
+        "description": "Authored the Abhinavabharati, a revolutionary and definitive commentary on Bharata's Natyashastra."
+      },
+      {
+        "title": "Philosophy of Consciousness",
+        "description": "Developed profound psychological theories on consciousness, divine recognition (Pratyabhijna), and artistic expression."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "The Ultimate Polymath",
+        "description": "Arguably the most brilliant polymath in Indian history, seamlessly uniting esoteric Tantra, non-dualism, and art criticism."
+      },
+      {
+        "title": "Global Art Theory",
+        "description": "His profound psychological theories on aesthetics and consciousness are intensely studied by scholars worldwide."
+      },
+      {
+        "title": "Peak of Trika Shaivism",
+        "description": "Represents the absolute intellectual zenith and synthesis of the mystical Kashmir Shaiva tradition."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Āṇḍāl",
+    "era": "c. 8th Century CE",
+    "vidyaSthana": "Bhakti Yoga, Divya Prabandham",
+    "shloka": "नीलातुङ्गस्तनगिरितटीसुप्तमुद्बोध्य कृष्णं पारार्थ्यं स्वं श्रुतिशतशिरस्सिद्धमध्यापयन्ती।",
+    "shlokaTranslation": "She who awakened Lord Krishna sleeping on Nila's breast, and taught Him her absolute dependence on Him, which is established in the crest of all Vedas.",
+    "quote": "My heart knows no other love but that of the Lord; to Him alone, I offer the garland of my soul.",
+    "details": {
+      "lifeContext": "Found as an infant under a Tulasī plant by Saint Periyāḻvār. Growing up, her consciousness was entirely consumed by her love for Lord Kṛṣṇa. She refused to marry any mortal, famously wearing the flower garlands intended for the deity to check if she was a suitable bride. The Lord Himself commanded that He would only accept garlands worn by her.",
+      "keyContributions": "As the only female among the 12 Āḻvār saints, she composed the Tiruppāvai and the Nācciyār Tirumoḻi. Her exquisite Tamil poetry navigates the highest peaks of mystical bridal devotion (Madhura Bhāva), expressing visceral spiritual agony and the ecstasy of divine union.",
+      "legacy": "Āṇḍāl is worshipped as an incarnation of Bhūdevī (Mother Earth). Her Tiruppāvai is recited daily in millions of households and temples, especially during the sacred month of Mārgaḻi. She is the ultimate, eternal icon of absolute, unyielding devotion to the Divine."
+    },
+    "structuredContributions": [
+      {
+        "title": "Extraordinary Devotion",
+        "description": "Composed the deeply mystical Tiruppavai and Nacciyar Tirumoli at an astonishingly young age."
+      },
+      {
+        "title": "Bridal Mysticism",
+        "description": "Navigated the highest peaks of Madhura Bhava (bridal mysticism), expressing the ultimate ecstasy of divine union."
+      },
+      {
+        "title": "Exquisite Poet-Saint",
+        "description": "Authored exquisite Tamil poetry expressing visceral spiritual agony and absolute surrender to the Lord."
+      },
+      {
+        "title": "Uncompromising Spirituality",
+        "description": "Famously refused mortal marriage, wearing flower garlands intended for the deity to ensure she was his sole bride."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Incarnation of Bhudevi",
+        "description": "Worshiped universally within Sri Vaishnavism as the direct incarnation of Mother Earth (Bhudevi)."
+      },
+      {
+        "title": "Daily Sacred Recitation",
+        "description": "Her Tiruppavai is recited daily in millions of households and temples, especially during the sacred month of Margazhi."
+      },
+      {
+        "title": "Eternal Icon of Devotion",
+        "description": "Stands as the ultimate, eternal icon of absolute, unyielding devotion and bridal surrender to the Divine."
+      }
+    ]
+  }
+]

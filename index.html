@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>त्रिसत्ता · Trisattā — Verified Sanskrit Grammar AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+Devanagari:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════
+   TOKEN SYSTEM
+═══════════════════════════════════════════ */
+:root {
+  --ink:       #0B0E24;
+  --lapis:     #141830;
+  --lapis-hi:  #1C2244;
+  --saffron:   #E8892E;
+  --saff-lo:   rgba(232,137,46,.14);
+  --saff-gl:   rgba(232,137,46,.40);
+  --gold:      #C9AA3A;
+  --gold-lo:   rgba(201,170,58,.18);
+  --gold-dim:  rgba(201,170,58,.10);
+  --teal:      #1DBDB5;
+  --teal-lo:   rgba(29,189,181,.13);
+  --moon:      #EDE8DC;
+  --moon-mid:  rgba(237,232,220,.68);
+  --muted:     #78809E;
+  --para:      #34C784;
+  --vyav:      #F0C040;
+  --prat:      #E05060;
+  --br-gold:   rgba(201,170,58,.22);
+  --br-dim:    rgba(255,255,255,.06);
+  --f-deva:    'Noto Serif Devanagari','Mangal',serif;
+  --f-class:   'Cormorant Garamond','Georgia',serif;
+  --f-ui:      'Space Grotesk',system-ui,sans-serif;
+  --r-sm:  6px; --r-md: 12px; --r-lg: 20px; --r-xl: 40px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink);color:var(--moon);font-family:var(--f-ui);font-size:16px;line-height:1.6;scroll-behavior:smooth}
+body{min-height:100vh;overflow-x:hidden;position:relative}
+
+/* ═══════════════════════════════════════════
+   BACKGROUND — sacred geometry
+═══════════════════════════════════════════ */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+
+.bg-atm{
+  background:
+    radial-gradient(ellipse 85% 55% at 50% -5%, rgba(26,16,58,.9) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 88% 78%, rgba(29,189,181,.07) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 40% at 12% 85%, rgba(232,137,46,.06) 0%, transparent 55%),
+    linear-gradient(180deg,#0B0E24 0%,#0D1028 100%);
+}
+.bg-grid{
+  background-image:
+    linear-gradient(rgba(201,170,58,.032) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,170,58,.032) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+.mandala-a{
+  position:absolute;top:50%;left:50%;
+  width:min(920px,135vw);height:min(920px,135vw);
+  transform:translate(-50%,-50%);
+  opacity:.052;
+  animation:spin-cw 150s linear infinite;
+  will-change:transform;
+}
+.mandala-b{
+  position:absolute;top:50%;left:50%;
+  width:min(520px,78vw);height:min(520px,78vw);
+  transform:translate(-50%,-50%);
+  opacity:.042;
+  animation:spin-ccw 90s linear infinite;
+  will-change:transform;
+}
+@keyframes spin-cw {to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes spin-ccw{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@media(prefers-reduced-motion:reduce){
+  .mandala-a,.mandala-b{animation:none}
+  .halo{animation:none}
+}
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 1.5rem 5rem}
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+header{text-align:center;padding:5rem 1rem 3.5rem;position:relative}
+
+.halo{
+  position:absolute;top:43%;left:50%;
+  width:500px;height:270px;
+  background:radial-gradient(ellipse,rgba(232,137,46,.24) 0%,transparent 68%);
+  filter:blur(36px);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  animation:breathe 6s ease-in-out infinite;
+}
+@keyframes breathe{
+  0%,100%{opacity:.8;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}
+}
+
+/* ── The signature: giant Devanagari brand ── */
+.brand-deva{
+  font-family:var(--f-deva);
+  font-size:clamp(4.5rem,14vw,9.5rem);
+  font-weight:700;
+  color:var(--saffron);
+  line-height:1;
+  letter-spacing:.01em;
+  position:relative;z-index:1;
+  text-shadow:
+    0 0 55px rgba(232,137,46,.55),
+    0 0 120px rgba(232,137,46,.18),
+    0 2px 8px rgba(0,0,0,.65);
+  margin-bottom:.4rem;
+}
+.brand-latin{
+  font-family:var(--f-class);
+  font-size:clamp(.9rem,2.6vw,1.4rem);
+  font-weight:300;
+  letter-spacing:.24em;
+  color:var(--moon-mid);
+  text-transform:uppercase;
+  position:relative;z-index:1;
+  margin-bottom:1.5rem;
+}
+.rule{display:flex;align-items:center;gap:.9rem;max-width:320px;margin:0 auto 1.5rem}
+.rule::before,.rule::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-lo),transparent)}
+.rule-mark{width:5px;height:5px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px rgba(201,170,58,.65)}
+.tagline{
+  font-family:var(--f-class);font-style:italic;
+  font-size:clamp(.88rem,2.3vw,1.12rem);
+  font-weight:300;color:var(--muted);
+  max-width:510px;margin:0 auto 1.8rem;
+  line-height:1.8;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:linear-gradient(130deg,rgba(201,170,58,.1),rgba(232,137,46,.07));
+  border:1px solid var(--br-gold);
+  padding:.5rem 1.35rem;border-radius:var(--r-xl);
+  font-family:var(--f-ui);font-size:.875rem;font-weight:400;
+  color:var(--moon-mid);
+  backdrop-filter:blur(10px);
+  box-shadow:0 2px 18px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.badge strong{color:var(--gold);font-weight:600}
+.badge .trisul{font-size:1rem;filter:drop-shadow(0 0 5px rgba(232,137,46,.75))}
+
+/* trust legend */
+.trust-legend{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:1.25rem;margin-top:2.5rem;
+}
+.tl{display:flex;align-items:center;gap:.45rem;font-family:var(--f-ui);font-size:.78rem;color:var(--muted)}
+.tl-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tl-dot.g{background:var(--para);box-shadow:0 0 6px rgba(52,199,132,.65)}
+.tl-dot.a{background:var(--vyav);box-shadow:0 0 6px rgba(240,192,64,.65)}
+.tl-dot.r{background:var(--prat);box-shadow:0 0 6px rgba(224,80,96,.65)}
+
+/* ═══════════════════════════════════════════
+   INPUT PANEL
+═══════════════════════════════════════════ */
+.input-panel{
+  background:var(--lapis);
+  border:1px solid var(--br-gold);
+  border-radius:var(--r-lg);
+  padding:1.75rem;
+  box-shadow:0 8px 48px rgba(0,0,0,.42),0 0 0 1px rgba(255,255,255,.03);
+}
+.input-header-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:.75rem;
+}
+.input-label{
+  display:block;font-family:var(--f-class);font-style:italic;
+  font-size:1.05rem;font-weight:500;color:var(--gold);margin-bottom:0;
+}
+.voice-btn{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(232,137,46,.12);
+  border:1px solid rgba(232,137,46,.35);
+  border-radius:var(--r-xl);
+  padding:.32rem .95rem;
+  color:var(--saffron);
+  font-family:var(--f-ui);font-size:.8rem;font-weight:500;
+  cursor:pointer;transition:all .18s ease;
+  user-select:none;
+}
+.voice-btn:hover{
+  background:rgba(232,137,46,.25);
+  border-color:var(--saffron);
+  color:#fff;
+  transform:translateY(-1px);
+}
+.voice-btn.listening{
+  background:rgba(224,80,96,.24);
+  border-color:var(--prat);
+  color:#ff90a0;
+  animation:mic-pulse 1.3s infinite;
+}
+@keyframes mic-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(224,80,96,.55)}
+  50%{box-shadow:0 0 0 8px rgba(224,80,96,0)}
+}
+.textarea-wrap{
+  position:relative;
+  width:100%;
+}
+.mic-inside-btn{
+  position:absolute;
+  right:12px;
+  bottom:14px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:rgba(232,137,46,.18);
+  border:1px solid rgba(232,137,46,.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  cursor:pointer;
+  transition:all .2s cubic-bezier(.4,0,.2,1);
+  color:var(--saffron);
+  box-shadow:0 3px 12px rgba(0,0,0,.35);
+  z-index:2;
+}
+.mic-inside-btn:hover{
+  background:var(--saffron);
+  color:#fff;
+  transform:scale(1.1);
+  box-shadow:0 0 18px rgba(232,137,46,.65);
+}
+.mic-inside-btn.listening{
+  background:#E05060;
+  border-color:#ff90a0;
+  color:#fff;
+  animation:pulse-mic-btn 1.2s infinite;
+}
+@keyframes pulse-mic-btn{
+  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(224,80,96,.7)}
+  50%{transform:scale(1.12);box-shadow:0 0 0 10px rgba(224,80,96,0)}
+  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(224,80,96,0)}
+}
+.voice-indicator{
+  display:none;
+  align-items:center;
+  gap:.5rem;
+  font-family:var(--f-ui);
+  font-size:.78rem;
+  color:#ff90a0;
+  margin-top:.45rem;
+  padding:.3rem .75rem;
+  background:rgba(224,80,96,.12);
+  border:1px solid rgba(224,80,96,.3);
+  border-radius:var(--r-md);
+}
+.voice-indicator.on{display:flex}
+textarea{
+  display:block;width:100%;
+  background:rgba(11,14,36,.6);
+  border:1px solid rgba(201,170,58,.22);
+  border-radius:var(--r-md);
+  padding:1rem 1.2rem;
+  font-family:var(--f-deva);font-size:1.15rem;line-height:1.8;
+  color:var(--moon);resize:vertical;min-height:96px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+textarea::placeholder{color:rgba(237,232,220,.22);font-size:.95rem}
+textarea:focus{
+  border-color:rgba(232,137,46,.5);
+  box-shadow:0 0 0 3px rgba(232,137,46,.1);
+}
+.input-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.75rem;margin-top:1rem;flex-wrap:wrap;
+}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{
+  font-family:var(--f-ui);font-size:.76rem;font-weight:500;
+  padding:.28rem .85rem;
+  background:rgba(11,14,36,.55);
+  border:1px solid rgba(201,170,58,.26);
+  border-radius:var(--r-xl);color:var(--gold);cursor:pointer;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.chip:hover{background:var(--gold-dim);border-color:rgba(201,170,58,.5);color:var(--moon)}
+.btn-analyse{
+  font-family:var(--f-ui);font-size:.9rem;font-weight:600;letter-spacing:.05em;
+  padding:.6rem 1.8rem;white-space:nowrap;
+  background:var(--saffron);color:#fff;border:none;
+  border-radius:var(--r-md);cursor:pointer;
+  box-shadow:0 2px 20px rgba(232,137,46,.38),inset 0 1px 0 rgba(255,255,255,.16);
+  transition:transform .15s,box-shadow .15s,opacity .15s;
+}
+.btn-analyse:hover{transform:translateY(-1px);box-shadow:0 6px 30px rgba(232,137,46,.52),inset 0 1px 0 rgba(255,255,255,.16)}
+.btn-analyse:active{transform:translateY(0)}
+.btn-analyse:disabled{opacity:.42;cursor:not-allowed;transform:none}
+.hint{font-family:var(--f-ui);font-size:.7rem;color:var(--muted);margin-top:.6rem;opacity:.7}
+
+/* ═══════════════════════════════════════════
+   LOADING
+═══════════════════════════════════════════ */
+.loading-panel{
+  display:none;flex-direction:column;align-items:center;
+  gap:1.25rem;padding:3rem 1rem;
+}
+.loading-panel.on{display:flex}
+.loader-ring{
+  width:44px;height:44px;border-radius:50%;
+  border:2px solid var(--saff-lo);border-top-color:var(--saffron);
+  animation:spin .75s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-msg{font-family:var(--f-class);font-style:italic;font-size:1.1rem;color:var(--moon-mid)}
+.lsteps{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.lstep{
+  font-family:var(--f-ui);font-size:.75rem;
+  padding:.28rem .85rem;
+  background:var(--lapis);border:1px solid var(--br-dim);
+  border-radius:var(--r-xl);color:var(--muted);
+  transition:background .25s,border-color .25s,color .25s;
+}
+.lstep.on{background:var(--saff-lo);border-color:rgba(232,137,46,.45);color:var(--saffron)}
+
+/* ═══════════════════════════════════════════
+   ERROR
+═══════════════════════════════════════════ */
+.error-box{
+  display:none;margin-top:1rem;
+  background:rgba(224,80,96,.1);border:1px solid rgba(224,80,96,.35);
+  border-radius:var(--r-md);padding:1rem 1.25rem;
+  color:#f08090;font-family:var(--f-ui);font-size:.88rem;
+}
+.error-box.on{display:block}
+
+/* ═══════════════════════════════════════════
+   RESULTS
+═══════════════════════════════════════════ */
+#results{display:none;margin-top:1.5rem}
+
+/* trust banner */
+.trust-banner{
+  display:flex;align-items:flex-start;gap:1.25rem;
+  padding:1.5rem 1.75rem;border-radius:var(--r-lg);
+  margin-bottom:1rem;border:1px solid;position:relative;overflow:hidden;
+}
+.trust-banner.para{background:rgba(52,199,132,.06);border-color:rgba(52,199,132,.30)}
+.trust-banner.vyav{background:rgba(240,192,64,.06);border-color:rgba(240,192,64,.30)}
+.trust-banner.prat{background:rgba(224,80,96,.06); border-color:rgba(224,80,96,.30)}
+.t-icon{font-size:2rem;flex-shrink:0;margin-top:.1rem}
+.t-body{flex:1;min-width:0}
+.t-meta{font-family:var(--f-class);font-style:italic;font-size:.78rem;color:var(--muted);margin-bottom:.2rem}
+.t-level{font-family:var(--f-class);font-size:1.55rem;font-weight:600;line-height:1.1;margin-bottom:.25rem}
+.trust-banner.para .t-level{color:var(--para)}
+.trust-banner.vyav .t-level{color:var(--vyav)}
+.trust-banner.prat .t-level{color:var(--prat)}
+.t-conf{font-family:var(--f-ui);font-size:.82rem;color:var(--moon-mid);margin-bottom:.6rem}
+.score-chips{display:flex;gap:.5rem;flex-wrap:wrap}
+.sc{font-family:var(--f-ui);font-size:.72rem;font-weight:500;padding:.18rem .65rem;background:rgba(255,255,255,.06);border-radius:var(--r-xl);color:var(--moon-mid)}
+
+/* adhyāsa */
+.adhyasa-banner{
+  display:none;align-items:flex-start;gap:1rem;
+  padding:1.1rem 1.4rem;
+  background:rgba(240,192,64,.07);border:1px solid rgba(240,192,64,.3);
+  border-radius:var(--r-md);margin-bottom:1rem;
+}
+.adhyasa-banner.on{display:flex}
+.adh-icon{font-size:1.3rem;flex-shrink:0;margin-top:.05rem}
+.adh-title{font-family:var(--f-class);font-size:1rem;font-weight:600;color:var(--vyav);margin-bottom:.3rem}
+.adh-body{font-family:var(--f-ui);font-size:.83rem;color:var(--moon-mid);line-height:1.65}
+
+/* stats bar */
+.stats-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.stat-pill{
+  font-family:var(--f-ui);font-size:.78rem;
+  padding:.3rem .9rem;
+  background:var(--lapis);border:1px solid var(--br-dim);
+  border-radius:var(--r-xl);color:var(--muted);
+}
+.stat-pill strong{color:var(--teal);font-weight:600}
+
+/* sūtras panel */
+.ctx-panel{
+  background:var(--lapis);border:1px solid var(--br-gold);
+  border-radius:var(--r-md);overflow:hidden;margin-bottom:1rem;
+}
+.ctx-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1.25rem;cursor:pointer;user-select:none;
+  transition:background .15s;
+}
+.ctx-head:hover{background:rgba(255,255,255,.025)}
+.ctx-head-lbl{font-family:var(--f-ui);font-size:.85rem;font-weight:500;color:var(--moon-mid)}
+.ctx-tog{font-size:.78rem;color:var(--muted)}
+.ctx-body{display:none;padding:.25rem 1.25rem 1.25rem}
+.ctx-body.on{display:block}
+.sutra-list{
+  font-family:var(--f-deva);font-size:.9rem;color:var(--moon-mid);
+  line-height:2.2;border-top:1px solid var(--br-dim);padding-top:.85rem;
+}
+
+/* analysis card */
+.acard{
+  background:var(--lapis);border:1px solid var(--br-gold);
+  border-radius:var(--r-lg);overflow:hidden;margin-bottom:1rem;
+}
+.acard-head{
+  padding:.9rem 1.5rem;border-bottom:1px solid var(--br-gold);
+}
+.acard-title{font-family:var(--f-class);font-style:italic;font-size:1.1rem;font-weight:500;color:var(--gold)}
+.sec-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+}
+.sec-cell{padding:1.1rem 1.25rem;border-right:1px solid var(--br-dim);border-bottom:1px solid var(--br-dim)}
+.sec-cat{font-family:var(--f-ui);font-size:.67rem;font-weight:600;letter-spacing:.09em;color:var(--teal);text-transform:uppercase;margin-bottom:.2rem}
+.sec-deva{font-family:var(--f-deva);font-size:1.05rem;color:var(--saffron);margin-bottom:.35rem}
+.sec-body{font-family:var(--f-class);font-style:italic;font-size:.95rem;color:var(--moon);line-height:1.65;white-space:pre-wrap}
+.full-text{
+  padding:1.5rem;font-family:var(--f-class);font-size:1.05rem;
+  line-height:1.8;color:var(--moon);white-space:pre-wrap;
+}
+.explanation-box{
+  display:none;padding:1.2rem 1.4rem;
+  background:var(--teal-lo);border:1px solid rgba(29,189,181,.3);
+  border-radius:var(--r-md);margin-bottom:1rem;
+  font-family:var(--f-ui);font-size:.86rem;color:var(--moon-mid);line-height:1.65;
+}
+.explanation-box.on{display:block}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+footer{
+  text-align:center;margin-top:5rem;padding-top:2.5rem;
+  border-top:1px solid rgba(201,170,58,.15);position:relative;
+}
+footer::before{
+  content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  width:100px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.ft-deva{
+  font-family:var(--f-deva);font-size:2rem;
+  color:var(--saffron);text-shadow:0 0 30px rgba(232,137,46,.38);
+  margin-bottom:.45rem;
+}
+.ft-creator{
+  font-family:var(--f-class);font-style:italic;font-size:1rem;
+  color:var(--moon-mid);margin-bottom:1.1rem;
+}
+.ft-creator strong{color:var(--gold);font-style:normal;font-weight:600}
+.ft-claim{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);max-width:500px;margin:0 auto .9rem;line-height:1.7}
+.ft-stack{font-family:var(--f-ui);font-size:.74rem;color:rgba(120,130,160,.6);line-height:1.8}
+.ft-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:1.2rem;margin-top:1.4rem;padding-top:1.25rem;border-top:1px solid var(--br-dim)}
+.ft-item{display:flex;align-items:center;gap:.4rem;font-family:var(--f-ui);font-size:.75rem;color:var(--muted)}
+.ft-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:580px){
+  header{padding:3.5rem .5rem 2.5rem}
+  .halo{width:300px;height:180px}
+  .input-panel{padding:1.25rem}
+  .input-row{flex-direction:column;align-items:stretch}
+  .btn-analyse{width:100%;text-align:center}
+  .trust-banner{flex-direction:column;gap:.75rem}
+  .ft-legend{gap:.75rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Background layers ── -->
+<div class="bg bg-atm" aria-hidden="true"></div>
+<div class="bg bg-grid" aria-hidden="true"></div>
+<div class="bg" aria-hidden="true">
+  <!-- Outer rotating mandala — lotus + yantra -->
+  <svg class="mandala-a" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#C9AA3A" stroke-width=".5">
+      <circle cx="400" cy="400" r="390"/><circle cx="400" cy="400" r="325"/>
+      <circle cx="400" cy="400" r="260"/><circle cx="400" cy="400" r="195"/>
+      <circle cx="400" cy="400" r="130"/><circle cx="400" cy="400" r="65"/>
+      <!-- 8-petal padma -->
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(0 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(45 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(90 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(135 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(180 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(225 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(270 400 400)" opacity=".8"/>
+      <ellipse cx="400" cy="262" rx="52" ry="138" transform="rotate(315 400 400)" opacity=".8"/>
+      <!-- spokes -->
+      <g stroke="#E8892E" opacity=".42">
+        <line x1="400" y1="10" x2="400" y2="790"/>
+        <line x1="10" y1="400" x2="790" y2="400"/>
+        <line x1="98" y1="98" x2="702" y2="702"/>
+        <line x1="702" y1="98" x2="98" y2="702"/>
+      </g>
+      <!-- yantra triangles -->
+      <polygon points="400,38 738,637 62,637" stroke="#1DBDB5" opacity=".32"/>
+      <polygon points="400,762 62,163 738,163" stroke="#1DBDB5" opacity=".32"/>
+    </g>
+  </svg>
+  <!-- Inner counter-rotating -->
+  <svg class="mandala-b" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#E8892E" stroke-width=".45">
+      <circle cx="260" cy="260" r="252"/><circle cx="260" cy="260" r="190"/>
+      <circle cx="260" cy="260" r="128"/><circle cx="260" cy="260" r="66"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(0 260 260)" opacity=".6"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(60 260 260)" opacity=".6"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(120 260 260)" opacity=".6"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(180 260 260)" opacity=".6"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(240 260 260)" opacity=".6"/>
+      <ellipse cx="260" cy="148" rx="34" ry="92" transform="rotate(300 260 260)" opacity=".6"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ══ PAGE ══ -->
+<div class="wrap">
+
+  <!-- ── Hero ── -->
+  <header>
+    <div class="halo" aria-hidden="true"></div>
+    <h1 class="brand-deva">त्रिसत्ता</h1>
+    <p class="brand-latin">Trisattā &ensp;·&ensp; Verified Sanskrit Grammar AI</p>
+    <div class="rule" aria-hidden="true"><div class="rule-mark"></div></div>
+    <p class="tagline">
+      Pāṇinian analysis grounded in Aṣṭādhyāyī sūtras —<br>
+      hallucinations caught through Advaita trisattā epistemology
+    </p>
+    <div class="badge">
+      <span class="trisul" aria-hidden="true">🔱</span>
+      Conceived &amp; developed by <strong>Shrikanth Bandi</strong>
+      &ensp;—&ensp; AI &amp; Advaita Vedānta Pandit
+    </div>
+    <nav class="trust-legend" aria-label="Trust level legend">
+      <div class="tl"><span class="tl-dot g" aria-hidden="true"></span>Pāramārthika — verified</div>
+      <div class="tl"><span class="tl-dot a" aria-hidden="true"></span>Vyāvahārika — plausible</div>
+      <div class="tl"><span class="tl-dot r" aria-hidden="true"></span>Prātibhāsika — hallucinated</div>
+    </nav>
+  </header>
+
+  <!-- ── Input ── -->
+  <div class="input-panel">
+    <div class="input-header-row">
+      <label class="input-label" for="sloka-input">Sanskrit Śloka · श्लोकः</label>
+      <button type="button" id="voice-btn" class="voice-btn" onclick="toggleVoiceInput()" title="Voice Input (Speech to Text)">
+        <span id="voice-icon">🎙️</span> <span id="voice-txt">Voice Input</span>
+      </button>
+    </div>
+    <div class="textarea-wrap">
+      <textarea id="sloka-input" rows="3"
+        placeholder="Type, paste, or tap 🎙️ to speak a Sanskrit śloka…&#10;e.g. धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः"
+        spellcheck="false" autocomplete="off" aria-label="Sanskrit śloka input"></textarea>
+      <button type="button" id="mic-inside-btn" class="mic-inside-btn" onclick="toggleVoiceInput()" title="Voice-to-Text: Speak in Sanskrit or Hindi">
+        <span id="mic-inside-icon">🎙️</span>
+      </button>
+    </div>
+    <div id="voice-indicator" class="voice-indicator">
+      <span>🔴</span> <span id="voice-indicator-txt">Listening… Speak clearly in Sanskrit or Hindi</span>
+    </div>
+    <div class="input-row">
+      <div class="chips" aria-label="Example ślokas">
+        <button class="chip" onclick="setSloka('धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः')">BG 1.1</button>
+        <button class="chip" onclick="setSloka('काव्यशास्त्रविनोदेन कालो गच्छति धीमताम्')">Subhāṣita</button>
+        <button class="chip" onclick="setSloka('विद्या ददाति विनयं विनयाद् याति पात्रताम्')">Hitopadeśa</button>
+        <button class="chip" onclick="setSloka('अहिंसा परमो धर्मः धर्महिंसा तथैव च')">Dharmaśāstra</button>
+      </div>
+      <button class="btn-analyse" id="analyse-btn" onclick="analyse()">Analyse ↵</button>
+    </div>
+    <p class="hint" aria-hidden="true">Ctrl + Enter to analyse</p>
+  </div>
+
+  <!-- ── Loading ── -->
+  <div class="loading-panel" id="loading" aria-live="polite">
+    <div class="loader-ring" aria-hidden="true"></div>
+    <span class="loader-msg" id="loader-msg">Retrieving pramāṇa from Aṣṭādhyāyī…</span>
+    <div class="lsteps">
+      <div class="lstep" id="ls1">1 · Retrieving sūtras</div>
+      <div class="lstep" id="ls2">2 · Generating analysis</div>
+      <div class="lstep" id="ls3">3 · Trisattā verification</div>
+    </div>
+  </div>
+
+  <!-- ── Error ── -->
+  <div class="error-box" id="error-box" role="alert"></div>
+
+  <!-- ── Results ── -->
+  <section id="results" aria-label="Analysis results">
+
+    <div class="trust-banner" id="trust-banner">
+      <div class="t-icon" id="t-icon" aria-hidden="true"></div>
+      <div class="t-body">
+        <div class="t-meta">Trisattā trust assessment</div>
+        <div class="t-level" id="t-level"></div>
+        <div class="t-conf"  id="t-conf"></div>
+        <div class="score-chips" id="score-chips"></div>
+      </div>
+    </div>
+
+    <div class="adhyasa-banner" id="adhyasa-banner">
+      <div class="adh-icon" aria-hidden="true">⚠️</div>
+      <div>
+        <div class="adh-title">Adhyāsa detected — superimposition (vivartavāda)</div>
+        <div class="adh-body">
+          This analysis appears <em>vyāvahārika</em> (plausible) on the surface, but its
+          factual grounding score falls below the <em>pāramārthika</em> threshold.
+          The model may have superimposed an incorrect sūtra onto a valid-sounding claim.
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar" id="stats-bar"></div>
+
+    <div class="ctx-panel">
+      <div class="ctx-head" id="ctx-head" onclick="toggleCtx()"
+           role="button" tabindex="0" aria-expanded="false" aria-controls="ctx-body">
+        <span class="ctx-head-lbl">📜 Retrieved Sūtras — Pramāṇa Used</span>
+        <span class="ctx-tog" id="ctx-tog">▸ Show</span>
+      </div>
+      <div class="ctx-body" id="ctx-body"></div>
+    </div>
+
+    <div class="acard">
+      <div class="acard-head"><div class="acard-title">Pāṇinian Analysis</div></div>
+      <div class="sec-grid" id="sec-grid"></div>
+    </div>
+
+    <div class="acard">
+      <div class="acard-head"><div class="acard-title">Full Analysis Text</div></div>
+      <div class="full-text" id="full-text"></div>
+    </div>
+
+    <div class="explanation-box" id="exp-box"></div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="ft-deva" aria-hidden="true">त्रिसत्ता</div>
+    <p class="ft-creator">
+      Conceived &amp; developed by <strong>Shrikanth Bandi</strong> — AI &amp; Advaita Vedānta Pandit
+    </p>
+    <p class="ft-claim">
+      The world's first epistemically verified Sanskrit grammar AI,
+      grounded in Pāṇini's Aṣṭādhyāyī and Advaita trisattā doctrine.
+    </p>
+    <p class="ft-stack">
+      Advaita Vedānta trisattā · Pāṇini's Aṣṭādhyāyī · Nyāya pramāṇa theory · Gemini 3.6 Flash · FAISS semantic search
+    </p>
+    <div class="ft-legend">
+      <div class="ft-item"><span class="ft-dot" style="background:var(--para);box-shadow:0 0 6px rgba(52,199,132,.55)"></span>Pāramārthika</div>
+      <div class="ft-item"><span class="ft-dot" style="background:var(--vyav);box-shadow:0 0 6px rgba(240,192,64,.55)"></span>Vyāvahārika</div>
+      <div class="ft-item"><span class="ft-dot" style="background:var(--prat);box-shadow:0 0 6px rgba(224,80,96,.55)"></span>Prātibhāsika</div>
+      <div class="ft-item"><span aria-hidden="true" style="font-size:.8rem">⚠️</span>Adhyāsa</div>
+    </div>
+  </footer>
+
+</div><!-- /wrap -->
+
+<script>
+  /* ── Smart redirect: Netlify → tunnel (same-origin = no CORS issues) ── */
+  const TUNNEL_URL = "https://api.trycloudflare.com";
+  if (window.location.hostname.includes("netlify.app")) {
+    window.location.replace(TUNNEL_URL);
+  }
+  const API_BASE = window.location.origin;
+
+  const SECTION_META = {
+    "padaccheda_word_separation":       { cat: "Padaccheda",     deva: "पदच्छेदः" },
+    "sandhi_vigraha_sandhi_analysis":   { cat: "Sandhi",         deva: "सन्धिः" },
+    "samasa_vigraha_compound_analysis": { cat: "Samāsa",         deva: "समासः" },
+    "shabda_rupa_nominal_morphology":   { cat: "Śabda-rūpa",     deva: "शब्दरूपम्" },
+    "dhatu_rupa_verbal_morphology":     { cat: "Dhātu-rūpa",     deva: "धातुरूपम्" },
+    "karaka_vibhakti_case_relations":   { cat: "Kāraka",         deva: "कारकम्" },
+    "anvaya_prose_order":               { cat: "Anvaya",         deva: "अन्वयः" },
+    "slokartha_meaning":                { cat: "Ślokārtha",      deva: "श्लोकार्थः" },
+    "chandas_metre":                    { cat: "Chandas",        deva: "छन्दः" },
+    "alankara_figures_of_speech":       { cat: "Alaṅkāra",       deva: "अलङ्कारः" },
+  };
+
+  /* keyboard shortcut */
+  document.getElementById('sloka-input').addEventListener('keydown', e => {
+    if (e.ctrlKey && e.key === 'Enter') analyse();
+  });
+  document.getElementById('ctx-head').addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleCtx(); }
+  });
+
+  /* ── Voice Input (Speech-to-Text) ── */
+  let recognition = null;
+  let isRecording = false;
+
+  function toggleVoiceInput() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const vBtn = document.getElementById('voice-btn');
+    const vTxt = document.getElementById('voice-txt');
+    const vIcon = document.getElementById('voice-icon');
+    const micInside = document.getElementById('mic-inside-btn');
+    const micInsideIcon = document.getElementById('mic-inside-icon');
+    const indicator = document.getElementById('voice-indicator');
+    const input = document.getElementById('sloka-input');
+    const eb = document.getElementById('error-box');
+
+    if (!SpeechRecognition) {
+      eb.textContent = 'Voice recognition is not supported in this browser. Please try Google Chrome or Safari.';
+      eb.classList.add('on');
+      return;
+    }
+
+    function stopVoiceUI() {
+      isRecording = false;
+      if (vBtn) vBtn.classList.remove('listening');
+      if (vTxt) vTxt.textContent = 'Voice Input';
+      if (vIcon) vIcon.textContent = '🎙️';
+      if (micInside) micInside.classList.remove('listening');
+      if (micInsideIcon) micInsideIcon.textContent = '🎙️';
+      if (indicator) indicator.classList.remove('on');
+    }
+
+    if (isRecording && recognition) {
+      try { recognition.stop(); } catch(_) {}
+      stopVoiceUI();
+      return;
+    }
+
+    try {
+      recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      // Default to Hindi/Sanskrit Devanagari recognition for universal browser support
+      recognition.lang = 'hi-IN';
+
+      recognition.onstart = () => {
+        isRecording = true;
+        if (vBtn) vBtn.classList.add('listening');
+        if (vTxt) vTxt.textContent = 'Listening…';
+        if (vIcon) vIcon.textContent = '🔴';
+        if (micInside) micInside.classList.add('listening');
+        if (micInsideIcon) micInsideIcon.textContent = '⏹️';
+        if (indicator) indicator.classList.add('on');
+        eb.classList.remove('on');
+      };
+
+      recognition.onresult = (e) => {
+        let fullTranscript = '';
+        for (let i = 0; i < e.results.length; i++) {
+          fullTranscript += e.results[i][0].transcript + ' ';
+        }
+        if (fullTranscript.trim()) {
+          input.value = fullTranscript.trim();
+        }
+      };
+
+      recognition.onerror = (e) => {
+        console.warn('Speech recognition warning:', e.error);
+        stopVoiceUI();
+        if (e.error === 'not-allowed') {
+          eb.textContent = 'Microphone permission was denied. Please allow microphone access in your browser.';
+          eb.classList.add('on');
+        } else if (e.error === 'no-speech') {
+          // ignore silent timeout
+        } else {
+          eb.textContent = `Speech recognition notice: ${e.error}. Speak clearly into the microphone.`;
+          eb.classList.add('on');
+        }
+      };
+
+      recognition.onend = () => {
+        stopVoiceUI();
+        input.focus();
+      };
+
+      recognition.start();
+
+    } catch (err) {
+      console.error('Speech recognition start failed:', err);
+      stopVoiceUI();
+      eb.textContent = 'Could not access microphone. Please check browser permissions.';
+      eb.classList.add('on');
+    }
+  }
+
+  function setSloka(t) {
+    document.getElementById('sloka-input').value = t;
+    document.getElementById('sloka-input').focus();
+  }
+
+  function toggleCtx() {
+    const b = document.getElementById('ctx-body');
+    const h = document.getElementById('ctx-head');
+    const t = document.getElementById('ctx-tog');
+    const open = b.classList.toggle('on');
+    t.textContent = open ? '▾ Hide' : '▸ Show';
+    h.setAttribute('aria-expanded', open);
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  async function analyse() {
+    const val = document.getElementById('sloka-input').value.trim();
+    const eb = document.getElementById('error-box');
+    eb.classList.remove('on');
+
+    if (!val) {
+      eb.textContent = 'Enter a Sanskrit śloka in Devanāgarī before analysing.';
+      eb.classList.add('on');
+      return;
+    }
+
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('loading').classList.add('on');
+    document.getElementById('analyse-btn').disabled = true;
+
+    const ids  = ['ls1','ls2','ls3'];
+    const msgs = ['Retrieving pramāṇa from Aṣṭādhyāyī…','Generating Pāṇinian analysis…','Running Trisattā verification…'];
+    let step = 0;
+
+    ids.forEach(id => document.getElementById(id).classList.remove('on'));
+    document.getElementById(ids[0]).classList.add('on');
+    document.getElementById('loader-msg').textContent = msgs[0];
+
+    const stepInterval = setInterval(() => {
+      step = (step + 1) % ids.length;
+      ids.forEach(id => document.getElementById(id).classList.remove('on'));
+      document.getElementById(ids[step]).classList.add('on');
+      document.getElementById('loader-msg').textContent = msgs[step];
+    }, 1200);
+
+    try {
+      const res = await fetch(`${API_BASE}/analyse`, {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ sloka: val }),
+      });
+
+      clearInterval(stepInterval);
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || `Server returned HTTP ${res.status}`);
+      }
+
+      const data = await res.json();
+      renderLiveResult(data);
+
+    } catch (err) {
+      clearInterval(stepInterval);
+      document.getElementById('loading').classList.remove('on');
+      document.getElementById('analyse-btn').disabled = false;
+
+      /* Smart error: detect Cloudflare interstitial / network block */
+      const isNetworkError = err.message === 'Load failed' || err.message === 'Failed to fetch' || err.message === 'NetworkError when attempting to fetch resource.';
+      if (isNetworkError && API_BASE.includes('trycloudflare.com')) {
+        eb.innerHTML = `
+          <strong>⚡ One-time setup needed</strong><br>
+          Your browser needs to verify the backend tunnel once.<br><br>
+          👉 <a href="${API_BASE}/health" target="_blank" rel="noopener"
+                style="color:var(--saffron);text-decoration:underline;font-weight:600">
+                Click here to open the backend</a> (opens in a new tab)<br><br>
+          Then come back here and click <strong>Analyse ↵</strong> again. This only needs to be done once per session.
+        `;
+      } else {
+        eb.textContent = `Analysis failed: ${err.message}`;
+      }
+      eb.classList.add('on');
+    }
+  }
+
+  function renderLiveResult(data) {
+    document.getElementById('loading').classList.remove('on');
+    document.getElementById('analyse-btn').disabled = false;
+
+    /* ── Determine ontological trust level ── */
+    const lvlStr = (data.satta && data.satta.level) ? data.satta.level.toLowerCase() : 'vyāvahārika';
+    let level = 'vyav';
+    if (lvlStr.includes('param') || lvlStr.includes('pāram')) level = 'para';
+    else if (lvlStr.includes('prat') || lvlStr.includes('प्रात')) level = 'prat';
+
+    const icons = { para: '🟢', vyav: '🟡', prat: '🔴' };
+    const names = { 
+      para: 'Pāramārthika (L3) — Absolute Ground Truth', 
+      vyav: 'Vyāvahārika (L2) — Pragmatically Coherent', 
+      prat: 'Prātibhāsika (L1) — Likely Hallucinated' 
+    };
+
+    const tb = document.getElementById('trust-banner');
+    tb.className = `trust-banner ${level}`;
+    document.getElementById('t-icon').textContent  = icons[level];
+    document.getElementById('t-level').textContent = names[level];
+
+    const confPct = ((data.satta ? data.satta.confidence : 0.8) * 100).toFixed(1);
+    document.getElementById('t-conf').textContent  = `Confidence ${confPct}% · Nearest ground fact: "${escapeHtml(data.satta?.nearest_sutra || 'Aṣṭādhyāyī')}"`;
+
+    const sc = data.satta ? data.satta.scores : { cosine_similarity: 0, internal_consistency: 0, source_traceability: 0, composite: 0 };
+    document.getElementById('score-chips').innerHTML = `
+      <span class="sc">Similarity: ${(sc.cosine_similarity * 100).toFixed(0)}%</span>
+      <span class="sc">NLI: ${(sc.internal_consistency * 100).toFixed(0)}%</span>
+      <span class="sc">Traceability: ${(sc.source_traceability * 100).toFixed(0)}%</span>
+      <span class="sc">Composite: ${(sc.composite * 100).toFixed(0)}%</span>
+    `;
+
+    /* ── Adhyāsa superimposition detection ── */
+    if (data.satta && data.satta.adhyasa) {
+      document.getElementById('adhyasa-banner').classList.add('on');
+    } else {
+      document.getElementById('adhyasa-banner').classList.remove('on');
+    }
+
+    /* ── Stats bar ── */
+    const secCount = Object.keys(data.sections || {}).length;
+    const secElapsed = (data.elapsed_ms / 1000).toFixed(1);
+    document.getElementById('stats-bar').innerHTML = `
+      <span class="stat-pill"><strong>${secElapsed} s</strong> analysis time</span>
+      <span class="stat-pill"><strong>${secCount}</strong> Pāṇinian sections</span>
+      <span class="stat-pill"><strong>Gemini 3.6 Flash</strong> Anumāna</span>
+    `;
+
+    /* ── Sūtras panel ── */
+    document.getElementById('ctx-body').innerHTML = `
+      <div class="sutra-list" style="white-space: pre-wrap;">${escapeHtml(data.context_used || 'No primary sūtras retrieved.')}</div>
+    `;
+
+    /* ── Sections grid ── */
+    const secGrid = document.getElementById('sec-grid');
+    if (data.sections && Object.keys(data.sections).length > 0) {
+      let primaryHtml = '';
+      let deepHtml = '';
+
+      Object.entries(data.sections).forEach(([k, text]) => {
+        const meta = SECTION_META[k] || { 
+          cat: k.replace(/_/g, ' ').toUpperCase(), 
+          deva: 'व्याकरणम्' 
+        };
+        // Give the primary meaning cell a different style for emphasis
+        const isPrimary = k.includes('slokartha') || k.includes('meaning') || k.includes('anvaya');
+        const cellClass = isPrimary ? 'sec-cell primary-sec' : 'sec-cell';
+        const cell = `
+          <div class="${cellClass}">
+            <div class="sec-cat">${escapeHtml(meta.cat)}</div>
+            <div class="sec-deva">${escapeHtml(meta.deva)}</div>
+            <div class="sec-body">${escapeHtml(text)}</div>
+          </div>
+        `;
+        
+        if (isPrimary) {
+          primaryHtml += cell;
+        } else {
+          deepHtml += cell;
+        }
+      });
+      if (primaryHtml === '') {
+         primaryHtml = deepHtml;
+         deepHtml = '';
+      }
+
+      // Override container display to manage sub-grids
+      secGrid.style.display = 'block';
+      secGrid.innerHTML = `
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-family: var(--f-ui); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: var(--saffron); padding: 1rem 1.25rem 0.5rem; text-transform: uppercase;">✨ Meaning & Structure</div>
+          <div style="display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--br-dim);">
+            ${primaryHtml}
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+          <button id="deep-analysis-btn" class="voice-btn" style="padding: 0.75rem 1.5rem; display: inline-flex; gap: 0.5rem; align-items: center; border: 1px solid var(--saffron); background: rgba(226,170,123,0.05); cursor: pointer;" onclick="document.getElementById('deep-analysis-content').style.display='grid'; this.style.display='none';">
+            🔍 <span>Explore Deep Analysis (Vyākaraṇa)</span>
+          </button>
+        </div>
+        
+        <div id="deep-analysis-content" style="display: none; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); border-top: 1px solid var(--br-dim);">
+          ${deepHtml}
+        </div>
+      `;
+    } else {
+      secGrid.style.display = 'grid';
+      secGrid.innerHTML = `<div class="sec-cell" style="grid-column: 1 / -1;"><div class="sec-body">${escapeHtml(data.analysis || 'Analysis output')}</div></div>`;
+    }
+
+    /* ── Full text ── */
+    document.getElementById('full-text').textContent = data.analysis || '';
+
+    /* ── Explanation ── */
+    const eb = document.getElementById('exp-box');
+    eb.textContent = data.satta?.explanation || 'Analysis successfully completed.';
+    eb.classList.add('on');
+
+    const r = document.getElementById('results');
+    r.style.display = 'block';
+    r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKS Presentation: Gurus & Scholars</title>
+    <style>
+        :root {
+            --bg-color: #FDFBF7; /* Ivory/Parchment */
+            --primary: #BF360C; /* Terracotta */
+            --primary-light: #FBE9E7;
+            --secondary: #1A237E; /* Deep Indigo */
+            --text-main: #2C3E50;
+            --text-muted: #546E7A;
+            --border: #E0E0E0;
+            --font-heading: 'Georgia', serif;
+            --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 0.9rem;
+            color: #C5CAE9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar - Navigation */
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-header {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            border-bottom: 1px solid var(--border);
+            border-top: 1px solid var(--border);
+        }
+
+        .guru-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .guru-item:hover {
+            background-color: #F5F5F5;
+            padding-left: 2rem;
+        }
+
+        .guru-item.active {
+            background-color: var(--primary);
+            color: white;
+            border-left: 6px solid var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 3rem 4rem;
+            overflow-y: auto;
+            background-image: radial-gradient(var(--border) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 8px solid var(--primary);
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .guru-title {
+            font-family: var(--font-heading);
+            color: var(--secondary);
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guru-domain {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .description {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .works-list {
+            list-style: none;
+        }
+
+        .works-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .works-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .work-title {
+            font-weight: 600;
+            color: var(--secondary);
+            font-style: italic;
+        }
+
+        /* IITG Branding overlay */
+        .iitg-badge {
+            text-align: right;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Indian Knowledge Systems (IKS)</h1>
+            <div class="subtitle">Philosophers, Scientists, & Seers of Bhāratavarṣa</div>
+        </div>
+        <div class="iitg-badge">
+            <div>Presented at</div>
+            <strong>IIT Guwahati</strong>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <!-- Populated by JavaScript -->
+        </div>
+
+        <div class="content-area">
+            <div class="content-card" id="content-card">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const guruData = [
+            {
+                category: "Vedic Seers & Epics (Śruti & Itihāsa)",
+                gurus: [
+                    {
+                        name: "Bhagavān Vedavyāsa",
+                        domain: "Itihāsa & Vedānta",
+                        desc: "Kṛṣṇa Dvaipāyana, universally revered as Vedavyāsa, is the foundational pillar of Hindu textual tradition. He is credited with the monumental task of compiling and dividing the single Veda into four distinct corpuses (Ṛg, Yajur, Sāma, and Atharva) for preservation in the Kali Yuga. He is the preceptor of the epistemological transition from Śruti (heard) to Smṛti (remembered) traditions.",
+                        works: [
+                            { title: "The Mahābhārata", desc: "The longest epic poem in history, functioning as the fifth Veda." },
+                            { title: "Brahmasūtras", desc: "The foundational text of the Vedānta Darśana, logically systematizing Upanishadic thought." },
+                            { title: "The 18 Mahāpurāṇas", desc: "Including the Śrīmad Bhāgavatam, which distill Vedic philosophy through narrative." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Vālmīki",
+                        domain: "Kāvya & Itihāsa",
+                        desc: "Revered as the Ādikavi (the first poet), Maharṣi Vālmīki invented the śloka meter, transforming profound grief (śoka) into classical poetry (śloka). His linguistic formulation created the template for all subsequent Sanskrit classical literature.",
+                        works: [
+                            { title: "Rāmāyaṇa", desc: "The foundational epic consisting of 24,000 verses detailing the life and dharma of Śrī Rāma." },
+                            { title: "Yoga Vāsiṣṭha (Attributed)", desc: "A profound philosophical text exploring consciousness, illusion, and liberation through a dialogue between Vasiṣṭha and Rāma." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Vasiṣṭha",
+                        domain: "Vedic Hymns & Dharma",
+                        desc: "One of the Saptarṣis (Seven Great Sages), Vasiṣṭha represents the pinnacle of Brāhmaṇical wisdom and equanimity. As the Kula-guru (family preceptor) of the Ikṣvāku dynasty, he guided generations of kings in rājadharma (statecraft) and spiritual liberation.",
+                        works: [
+                            { title: "Ṛgveda Maṇḍala 7", desc: "The principal seer of the 7th Maṇḍala of the Rigveda." },
+                            { title: "Vasiṣṭha Dharmasūtra", desc: "A foundational text on Dharmaśāstra governing social and ethical duties." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Viśvāmitra",
+                        domain: "Vedic Hymns & Mantra Śāstra",
+                        desc: "A symbol of immense willpower and ascetic rigor, Viśvāmitra transitioned from a Kṣatriya king to a Brahmarṣi through intense tapasya. He is the seer of the most universally chanted mantra in the Hindu tradition, emphasizing the democratization of divine knowledge.",
+                        works: [
+                            { title: "Ṛgveda Maṇḍala 3", desc: "The principal seer of the 3rd Maṇḍala." },
+                            { title: "The Gāyatrī Mantra", desc: "(Rigveda 3.62.10) An invocation to the solar deity Savitṛ for intellectual illumination." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Yājñavalkya",
+                        domain: "Upaniṣadic Philosophy & Jurisprudence",
+                        desc: "The intellectual giant of the Upaniṣadic age. Yājñavalkya is the central figure of the Bṛhadāraṇyaka Upaniṣad, where he formulates the earliest clear articulations of Neti Neti (not this, not this), the doctrine of Karma, and the nature of the immortal Ātman.",
+                        works: [
+                            { title: "Śukla Yajurveda", desc: "The 'White' Yajurveda, obtained directly from Sūrya (the Sun god)." },
+                            { title: "Bṛhadāraṇyaka Upaniṣad", desc: "The oldest and largest Upanishad (as the primary preceptor)." },
+                            { title: "Yājñavalkya Smṛti", desc: "A major text on Hindu law, jurisprudence, and statecraft." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Bharadvāja",
+                        domain: "Vedic Hymns & Āyurveda",
+                        desc: "One of the most prolific seers of the Vedic age, Bharadvāja is unique for his foundational contributions to both spiritual hymns and early medical science. In the Charaka Saṃhitā, he is depicted as the scholar who traveled to Indra to learn Āyurveda for the benefit of humanity.",
+                        works: [
+                            { title: "Ṛgveda Maṇḍala 6", desc: "The principal seer of the 6th Maṇḍala." },
+                            { title: "Bharadvāja Śikṣā", desc: "A treatise on Sanskrit phonetics and pronunciation." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Atri",
+                        domain: "Vedic Hymns",
+                        desc: "A revered Saptarṣi, Atri's lineage is associated with profound hymns to Agni, Indra, and the Aśvins. Together with his wife Anasūyā, he represents the ideal of household asceticism and is considered the progenitor of Dattātreya (the synchronized paradigm of Brahma, Vishnu, and Shiva).",
+                        works: [
+                            { title: "Ṛgveda Maṇḍala 5", desc: "The principal seer of the 5th Maṇḍala, containing 87 hymns." },
+                            { title: "Atri Smṛti", desc: "A text outlining codes of conduct and dharma." }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Rishikas (Women Scholars)",
+                gurus: [
+                    {
+                        name: "Gārgī Vācaknavī",
+                        domain: "Brahmavidyā & Debate",
+                        desc: "A highly respected Brahmavādinī (speaker of Brahman) in the Vedic period. In the court of King Janaka, she was the only scholar who dared to challenge the formidable sage Yājñavalkya with complex metaphysical questions about the fundamental fabric of reality.",
+                        works: [
+                            { title: "Bṛhadāraṇyaka Upaniṣad (Chapter 3)", desc: "Her profound philosophical debates on the ontological basis of the universe (asking 'upon what is space woven?')." },
+                            { title: "Ṛgvedic Hymns", desc: "Attributed as a seer for specific hymns awakening higher consciousness." }
+                        ]
+                    },
+                    {
+                        name: "Maitreyī",
+                        domain: "Advaitic Philosophy",
+                        desc: "Described in the Bṛhadāraṇyaka Upaniṣad as a 'seeker of absolute truth' rather than material wealth. Her dialogue with her husband Yājñavalkya forms one of the earliest and most profound expositions on the nature of love, demonstrating that all love is ultimately for the sake of the Self (Ātman).",
+                        works: [
+                            { title: "Maitreyī Brāhmaṇa", desc: "(Within the Bṛhadāraṇyaka Upaniṣad) The dialogue establishing that immortality cannot be achieved through material wealth." }
+                        ]
+                    },
+                    {
+                        name: "Lopāmudrā",
+                        domain: "Vedic Poetry & Śrīvidyā",
+                        desc: "A prominent Ṛṣikā and the wife of Sage Agastya. She is celebrated not only for her contributions to the Rigveda but also for her critical role in the dissemination of the Śrīvidyā tradition (worship of the Divine Mother).",
+                        works: [
+                            { title: "Ṛgveda 1.179", desc: "A philosophical hymn exploring the harmony between asceticism (tapas) and marital duty (kāma)." },
+                            { title: "Hādi Vidyā", desc: "A core mantra structure in the Śaktism/Śrīvidyā tantric tradition." }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Darśanikas (Philosophers & Grammarians)",
+                gurus: [
+                    {
+                        name: "Maharṣi Pāṇini",
+                        domain: "Vyākaraṇa (Linguistics)",
+                        desc: "The father of linguistics. Operating centuries before modern computational linguistics, Pāṇini formalized the Sanskrit language into a comprehensive, algorithm-like set of rules. His meta-language and generative grammar concepts closely parallel modern computer programming structures.",
+                        works: [
+                            { title: "Aṣṭādhyāyī", desc: "The definitive treatise on Sanskrit grammar comprising 3,959 algebraic rules (sūtras)." },
+                            { title: "Dhātupāṭha", desc: "A lexicon of verbal roots." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Patañjali",
+                        domain: "Yoga & Vyākaraṇa",
+                        desc: "A polymath who synthesized the psychological and physical practices of meditation into a coherent system. Tradition credits him with purifying the mind through Yoga, speech through Grammar, and the body through Ayurveda.",
+                        works: [
+                            { title: "Yogasūtras", desc: "The foundational text of classical Yoga, outlining the 8-limbed (Aṣṭāṅga) path." },
+                            { title: "Mahābhāṣya", desc: "The 'Great Commentary' on Pāṇini's grammar, expanding linguistic philosophy." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Kapila",
+                        domain: "Sāṃkhya Darśana",
+                        desc: "The founder of the Sāṃkhya school of philosophy, one of the oldest frameworks of Indian thought. Kapila posited a strictly dualistic universe comprising Puruṣa (pure consciousness) and Prakṛti (primordial matter/nature), deeply influencing Yoga, Ayurveda, and the Gītā.",
+                        works: [
+                            { title: "Sāṃkhyasūtras", desc: "The foundational aphorisms establishing the 25 tattvas (principles) of reality." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Gautama (Nyāya)",
+                        domain: "Nyāya (Logic & Epistemology)",
+                        desc: "Also known as Akṣapāda, Gautama formulated the Nyāya system, establishing the rigorous rules of debate, logic, and epistemology. His framework for obtaining valid knowledge (Pramāṇa) became the standard analytical methodology used by all subsequent Indian philosophers.",
+                        works: [
+                            { title: "Nyāyasūtras", desc: "The foundational text on logic, detailing inference, perception, and logical fallacies." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Kaṇāda",
+                        domain: "Vaiśeṣika (Ontology & Atomism)",
+                        desc: "An ancient scientist and philosopher who formulated one of the earliest atomic theories of the universe. Kaṇāda hypothesized that everything in the physical universe is made of indivisible particles called 'paramāṇu' and categorized all of reality into six fundamental padārthas (categories).",
+                        works: [
+                            { title: "Vaiśeṣikasūtras", desc: "The foundational text detailing atomic theory, mechanics of motion, and ontological categories." }
+                        ]
+                    },
+                    {
+                        name: "Maharṣi Jaimini",
+                        domain: "Pūrva Mīmāṃsā",
+                        desc: "A student of Vedavyāsa who established the Mīmāṃsā school of philosophy. Jaimini focused on the rigorous hermeneutics and exegesis of the Vedas. His analytical rules for interpreting ancient texts heavily influenced traditional Hindu jurisprudence.",
+                        works: [
+                            { title: "Mīmāṃsāsūtras", desc: "A monumental work investigating the nature of Dharma and the precise mechanics of Vedic rituals." }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Śāstra, Vijñāna & Gaṇita (Science & Math)",
+                gurus: [
+                    {
+                        name: "Maharṣi Baudhāyana",
+                        domain: "Gaṇita & Śulba Śāstra",
+                        desc: "An ancient mathematician and priest who authored rules for constructing geometrically precise fire altars. Centuries before Pythagoras, Baudhāyana explicitly stated the theorem relating the sides and hypotenuse of a right-angled triangle. He also calculated the square root of 2 with remarkable precision to five decimal places. His work demonstrates how advanced geometric principles in ancient India were deeply intertwined with ritualistic and spiritual practices.",
+                        activity: "Geometry with Ropes: Using just a piece of string (śulba) and chalk on the ground, try to construct a perfect square and then a circle of the exact same area, recreating the classic geometric puzzles of the Śulbasūtras.",
+                        works: [
+                            { title: "Baudhāyana Śulbasūtra", desc: "Contains geometric algorithms, including the 'Pythagorean' theorem and methods for circling the square." }
+                        ]
+                    },
+                    {
+                        name: "Ācārya Chanakya (Kauṭilya)",
+                        domain: "Arthaśāstra & Nīti",
+                        desc: "A legendary scholar at Takshashila, royal advisor, and the master strategist behind the founding of the Mauryan Empire. His deeply pragmatic approach to statecraft, economics, espionage, and warfare remains one of the greatest treatises on political science ever written. He conceptualized the 'Saptanga' (seven-limbed) theory of a state, emphasizing a robust economy, strong intelligence networks, and a welfare-driven monarchy to ensure the prosperity of the empire.",
+                        activity: "Strategic Roleplay: Divide into 'kingdoms' and negotiate trade treaties and alliances based on Chanakya's Mandala theory (the enemy of my enemy is my friend), balancing resources and security.",
+                        works: [
+                            { title: "Arthaśāstra", desc: "A comprehensive manual on statecraft, economic policy, law, and military strategy." },
+                            { title: "Cāṇakya Nīti", desc: "A collection of aphorisms on ethics, morality, and practical wisdom." }
+                        ]
+                    },
+                    {
+                        name: "Ācārya Charaka",
+                        domain: "Āyurveda (Medicine)",
+                        desc: "The principal contributor to the ancient Indian system of medicine, Ayurveda. Charaka transformed early medical knowledge into a rational, empirical science rather than one based purely on faith. He emphasized preventive medicine, the profound connection between mind and body, personalized dietary science, and the strict ethical responsibilities of a physician. His texts remain actively studied by Ayurvedic practitioners worldwide.",
+                        activity: "Herbal Identification: Explore a local garden or kitchen to identify common herbs (like turmeric, ginger, holy basil) and research their medicinal properties and balancing effects according to Ayurvedic principles.",
+                        works: [
+                            { title: "Charaka Saṃhitā", desc: "The foundational text of internal medicine, detailing anatomy, diagnostics, and herbal pharmacology." }
+                        ]
+                    },
+                    {
+                        name: "Ācārya Suśruta",
+                        domain: "Śalya Cikitsā (Surgery)",
+                        desc: "Revered globally as the 'Father of Surgery' and the 'Father of Plastic Surgery.' Operating around 600 BCE in Kashi (Varanasi), he pioneered complex reconstructive procedures, rhinoplasty, cataract extraction, and described over 300 surgical procedures alongside 120 surgical instruments. He even utilized giant ants as natural surgical staples to close intestinal wounds, showcasing profound ingenuity in ancient medical practices.",
+                        activity: "Clay Reconstruction: Using modeling clay or play-dough, simulate Suśruta's ancient rhinoplasty by carefully carving a 'leaf-shaped' flap from a proxy 'cheek' and grafting it to reconstruct a damaged 'nose'.",
+                        works: [
+                            { title: "Suśruta Saṃhitā", desc: "A monumental surgical compendium detailing operative techniques, anatomy, and surgical tools." }
+                        ]
+                    },
+                    {
+                        name: "Āryabhaṭa",
+                        domain: "Khagola Śāstra & Gaṇita",
+                        desc: "The towering genius of classical Indian mathematics and astronomy. At just 23 years old, he correctly identified that the Earth rotates on its own axis and orbits the sun, explained the true scientific cause of solar and lunar eclipses, and calculated the value of Pi (π) to four decimal places (3.1416). He also invented a unique alphabetic system for expressing large astronomical numbers.",
+                        activity: "Shadow Tracking: Set up a simple sundial using a vertical stick (gnomon). Track the length and angle of the shadow over a few hours to calculate the local time, mirroring early astronomical observations.",
+                        works: [
+                            { title: "Āryabhaṭīya", desc: "A highly condensed masterpiece covering arithmetic, algebra, plane trigonometry, and spherical astronomy." },
+                            { title: "Ārya-siddhānta", desc: "A lost work known only through references, detailing astronomical computations." }
+                        ]
+                    },
+                    {
+                        name: "Varāhamihira",
+                        domain: "Khagola & Vāstu Śāstra",
+                        desc: "A polymath in the court of Vikramaditya. He synthesized indigenous astronomical traditions with Greek and Roman astronomy, recognizing the universality of scientific inquiry. His encyclopedic works covered diverse subjects ranging from earthquakes, architecture, and water-divining to gemology, ecology, and meteorology, illustrating a holistic approach to understanding the natural world.",
+                        activity: "Ecological Mapping: Based on his writings about flora and water sources, conduct a micro-survey of your school or home environment to map out how plant growth indicates soil moisture and underlying water.",
+                        works: [
+                            { title: "Pañcasiddhāntikā", desc: "A summary of five major astronomical treatises of his time." },
+                            { title: "Bṛhat Saṃhitā", desc: "An encyclopedic work on architecture (Vāstu), astrology, agriculture, and planetary motions." }
+                        ]
+                    },
+                    {
+                        name: "Mādhava of Saṅgamagrāma",
+                        domain: "Calculus & Infinite Series",
+                        desc: "The founder of the famed Kerala School of Astronomy and Mathematics. Centuries before Newton and Leibniz, Mādhava discovered the infinite series expansions for trigonometric functions like sine, cosine, arctangent, and pi. By bridging discrete algebra with infinite processes, he laid the foundational concepts of modern calculus and mathematical analysis, a monumental leap in the history of global mathematics.",
+                        activity: "Infinite Pi Approximations: Use a spreadsheet or calculator to manually compute the first 10 terms of Mādhava's infinite series for Pi (the Mādhava-Leibniz series) and observe how the value slowly converges to 3.14159.",
+                        works: [
+                            { title: "Veṇvāroha", desc: "A work describing methods for calculating the exact positions of the moon." },
+                            { title: "Sphuṭacandrāpti", desc: "Mathematical treatises establishing Taylor-Maclaurin series precursors." }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Kalā, Sahitya & Bhakti (Arts & Devotion)",
+                gurus: [
+                    {
+                        name: "Bharata Muni",
+                        domain: "Nāṭya (Dramaturgy & Aesthetics)",
+                        desc: "The foundational theoretician of Indian arts. He proposed the Rasa Theory—the idea that the primary goal of performance art is to evoke specific emotional states (rasa) in the audience. His work governs classical Indian dance, music, and theater to this day.",
+                        works: [
+                            { title: "Nāṭyaśāstra", desc: "An exhaustive encyclopedic treatise detailing acting techniques, stagecraft, music scales, and aesthetics." }
+                        ]
+                    },
+                    {
+                        name: "Thiruvalluvar",
+                        domain: "Ethics & Tamil Literature",
+                        desc: "A revered Tamil poet and philosopher. His work transcends religious boundaries, focusing deeply on universal ethics, morality in statecraft, and the purity of human love. He is celebrated as a universal teacher of humanity.",
+                        works: [
+                            { title: "Tirukkural", desc: "A masterpiece of Tamil literature consisting of 1,330 couplets covering Aram (virtue), Porul (wealth), and Inbam (love)." }
+                        ]
+                    },
+                    {
+                        name: "Mahāpuruṣa Śrīmanta Śaṅkaradeva",
+                        domain: "Bhakti, Art, & Social Reform",
+                        desc: "A visionary polymath of Assam (highly relevant to IIT Guwahati). He initiated the Ekasarana Dharma (neo-Vaishnavite movement) which united diverse communities in the Northeast through art, music, and devotion. He pioneered the Sattriya dance and the Bhaona (theatrical performances).",
+                        works: [
+                            { title: "Kirtan Ghosha", desc: "The central religious text of his movement, meant for congregational singing." },
+                            { title: "Borgeet", desc: "Devotional songs composed in Brajavali forming a distinct classical music tradition." },
+                            { title: "Ankiya Nat", desc: "One-act plays establishing a rich dramatic tradition in Assam." }
+                        ]
+                    },
+                    {
+                        name: "Ādi Śaṅkarācārya",
+                        domain: "Advaita Vedānta",
+                        desc: "A towering philosophical genius who revitalized Sanātana Dharma in the 8th century. Traveling the length and breadth of India, he consolidated the doctrine of Advaita (non-dualism), arguing that the ultimate reality (Brahman) and the individual soul (Ātman) are identical.",
+                        works: [
+                            { title: "Prasthānatrayī Bhāṣya", desc: "Masterful commentaries on the Upaniṣads, Brahmasūtras, and the Bhagavad Gītā." },
+                            { title: "Vivekacūḍāmaṇi", desc: "An introductory treatise analyzing the path to self-realization." },
+                            { title: "Soundarya Lahari", desc: "A profound literary and tantric hymn to the Divine Mother." }
+                        ]
+                    },
+                    {
+                        name: "Śrī Rāmānujācārya",
+                        domain: "Viśiṣṭādvaita Vedānta",
+                        desc: "The great 11th-century theologian who synthesized intellectual philosophy with intense emotional devotion (Bhakti). He proposed Viśiṣṭādvaita (qualified non-dualism), arguing that the world and souls are real and form the 'body' of the Supreme Lord (Nārāyaṇa).",
+                        works: [
+                            { title: "Śrībhāṣya", desc: "His magnum opus, a detailed commentary on the Brahmasūtras refuting strict non-dualism." },
+                            { title: "Vedārthasaṅgraha", desc: "An independent treatise summarizing the core philosophy of the Upaniṣads." },
+                            { title: "Gītābhāṣya", desc: "A devotional and philosophical commentary on the Bhagavad Gītā." }
+                        ]
+                    },
+                    {
+                        name: "Ācārya Abhinavagupta",
+                        domain: "Kashmir Śaivism & Aesthetics",
+                        desc: "One of the most brilliant minds of classical India. A philosopher, mystic, and aesthetician, he synthesized the non-dualistic Trika system of Kashmir Śaivism. He also significantly expanded Bharata Muni's Rasa theory to include 'Śānta' (peace) as the ultimate aesthetic experience.",
+                        works: [
+                            { title: "Tantrāloka", desc: "A massive, encyclopedic synthesis of all Tantric and Śaiva philosophies." },
+                            { title: "Abhinavabhāratī", desc: "The most authoritative commentary on the Nāṭyaśāstra." },
+                            { title: "Dhvanyālokalocana", desc: "A commentary on literary aesthetics establishing 'Dhvani' (suggestion) as the soul of poetry." }
+                        ]
+                    },
+                    {
+                        name: "Āṇḍāl",
+                        domain: "Śrīvaiṣṇava Bhakti",
+                        desc: "The only female Āḻvār (Tamil Vaishnava saint). Her poetry is characterized by an intense, passionate, and unyielding devotion to Lord Vishnu (Ranganatha). Rejecting earthly marriage, she saw herself entirely as the divine bride, deeply influencing South Indian temple traditions.",
+                        works: [
+                            { title: "Tiruppavai", desc: "A collection of 30 Tamil verses sung during the month of Margazhi to wake and worship the Lord." },
+                            { title: "Nachiyar Tirumozhi", desc: "A set of 143 verses expressing profound mystical longing and devotion for the Divine." }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        let activeIndex = { cat: 0, guru: 0 };
+
+        function initApp() {
+            renderSidebar();
+            renderContent(0, 0);
+        }
+
+        function renderSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.innerHTML = '';
+
+            guruData.forEach((categoryObj, catIdx) => {
+                const header = document.createElement('div');
+                header.className = 'category-header';
+                header.innerText = categoryObj.category;
+                sidebar.appendChild(header);
+
+                categoryObj.gurus.forEach((guru, guruIdx) => {
+                    const item = document.createElement('div');
+                    item.className = 'guru-item';
+                    item.innerText = guru.name;
+                    item.onclick = () => {
+                        activeIndex = { cat: catIdx, guru: guruIdx };
+                        updateActiveState();
+                        renderContent(catIdx, guruIdx);
+                    };
+                    sidebar.appendChild(item);
+                });
+            });
+            updateActiveState();
+        }
+
+        function updateActiveState() {
+            const items = document.querySelectorAll('.guru-item');
+            let counter = 0;
+            guruData.forEach((categoryObj, catIdx) => {
+                categoryObj.gurus.forEach((guru, guruIdx) => {
+                    if (catIdx === activeIndex.cat && guruIdx === activeIndex.guru) {
+                        items[counter].classList.add('active');
+                    } else {
+                        items[counter].classList.remove('active');
+                    }
+                    counter++;
+                });
+            });
+        }
+
+        function renderContent(catIdx, guruIdx) {
+            const guru = guruData[catIdx].gurus[guruIdx];
+            const card = document.getElementById('content-card');
+            
+            // trigger animation
+            card.style.animation = 'none';
+            card.offsetHeight; /* trigger reflow */
+            card.style.animation = null; 
+
+            let worksHTML = guru.works.map(work => 
+                `<li><span class="work-title">${work.title}</span> — ${work.desc}</li>`
+            ).join('');
+
+            let activityHTML = guru.activity ? `
+                <div class="section-title">Interactive Activity</div>
+                <p class="description"><strong>${guru.activity.split(':')[0]}:</strong>${guru.activity.substring(guru.activity.indexOf(':') + 1)}</p>
+            ` : '';
+
+            card.innerHTML = `
+                <div class="guru-domain">${guru.domain}</div>
+                <h2 class="guru-title">${guru.name}</h2>
+                <div class="section-title">Life & Philosophy</div>
+                <p class="description">${guru.desc}</p>
+                
+                ${activityHTML}
+
+                <div class="section-title">Complete Major Works</div>
+                <ul class="works-list">
+                    ${worksHTML}
+                </ul>
+            `;
+        }
+
+        // Initialize on load
+        window.onload = initApp;
+    </script>
+</body>
+</html>

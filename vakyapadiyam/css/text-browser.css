@@ -1,0 +1,243 @@
+/* ============================================================
+   VĀKYAPADĪYAM — Text Browser Styles
+   ============================================================ */
+
+body.browser-layout {
+  height: 100vh;
+  overflow: hidden; /* Prevent body scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex: 1;
+  margin-top: 64px; /* Navbar height */
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+/* ── Sidebars ── */
+.sidebar-left,
+.sidebar-right {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(13, 10, 40, 0.6);
+  border-right: 1px solid var(--clr-border);
+  z-index: 10;
+}
+.sidebar-right {
+  border-right: none;
+  border-left: 1px solid var(--clr-border);
+  width: 380px;
+}
+
+/* ── Left Sidebar: Navigation ── */
+.kanda-selector {
+  padding: var(--sp-md);
+  border-bottom: 1px solid var(--clr-border);
+}
+.glass-select {
+  width: 100%;
+  background: var(--clr-glass-2);
+  color: var(--clr-text);
+  border: 1px solid var(--clr-border-2);
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+.glass-select option {
+  background: var(--clr-bg-2);
+  color: var(--clr-text);
+}
+
+.verse-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--sp-md) 0;
+}
+.verse-item {
+  padding: 12px var(--sp-md);
+  cursor: pointer;
+  display: flex;
+  gap: var(--sp-sm);
+  transition: background var(--t-fast);
+  border-left: 3px solid transparent;
+}
+.verse-item:hover {
+  background: var(--clr-glass);
+}
+.verse-item.active {
+  background: var(--clr-glass-2);
+  border-left-color: var(--clr-gold);
+}
+.verse-item-num {
+  color: var(--clr-gold);
+  font-weight: 600;
+  min-width: 30px;
+}
+.verse-item-text {
+  font-family: var(--font-deva);
+  color: var(--clr-text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.verse-item.active .verse-item-text {
+  color: var(--clr-text);
+}
+
+/* ── Main Content Area ── */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--sp-2xl);
+  background: radial-gradient(circle at center, rgba(123, 94, 167, 0.05) 0%, transparent 70%);
+  display: flex;
+  justify-content: center;
+}
+
+.verse-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.verse-image-wrapper {
+  margin-bottom: var(--sp-2xl);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--clr-border);
+  position: relative;
+  aspect-ratio: 16/9;
+}
+.verse-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.verse-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,6,26,0.8), transparent 40%);
+}
+.verse-meta {
+  position: absolute;
+  bottom: var(--sp-md);
+  left: var(--sp-md);
+}
+
+/* Clickable Sanskrit Words */
+.sanskrit-verse {
+  text-align: center;
+  margin-bottom: var(--sp-xl);
+}
+.sanskrit-word {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 4px;
+  border-radius: 4px;
+  transition: all var(--t-base);
+  border-bottom: 1px dashed rgba(201, 169, 110, 0.3);
+}
+.sanskrit-word:hover,
+.sanskrit-word.active {
+  color: var(--clr-gold-light);
+  background: rgba(201, 169, 110, 0.15);
+  border-bottom-color: var(--clr-gold);
+  text-shadow: 0 0 10px rgba(201,169,110,0.5);
+  transform: translateY(-2px);
+}
+
+.verse-iast {
+  text-align: center;
+  margin-bottom: var(--sp-xl);
+  color: var(--clr-text-2);
+  line-height: 1.8;
+}
+
+.verse-translation {
+  background: var(--clr-glass);
+  padding: var(--sp-lg);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--clr-border);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+  margin-bottom: var(--sp-md);
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+.verse-hindi {
+  text-align: center;
+  color: var(--clr-text-muted);
+  font-family: var(--font-deva);
+  font-size: 1.1rem;
+}
+
+/* ── Right Sidebar: Tika Panel ── */
+.panel-header {
+  padding: var(--sp-lg) var(--sp-lg) var(--sp-md);
+  border-bottom: 1px solid var(--clr-border);
+}
+.tabs {
+  margin: 0 var(--sp-lg);
+}
+.tika-content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 var(--sp-lg) var(--sp-lg);
+}
+
+.tika-card {
+  background: var(--clr-glass);
+  border-radius: var(--r-md);
+  border: 1px solid var(--clr-border);
+  padding: var(--sp-md);
+  margin-bottom: var(--sp-md);
+}
+.tika-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-sm);
+  padding-bottom: var(--sp-sm);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.tika-author {
+  font-weight: 600;
+  color: var(--clr-purple-2);
+  font-size: 0.9rem;
+}
+
+.word-meaning {
+  background: rgba(201, 169, 110, 0.05);
+  border: 1px solid var(--clr-border-2);
+  padding: var(--sp-md);
+  border-radius: var(--r-md);
+  margin-bottom: var(--sp-lg);
+}
+.word-grammar {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-gold);
+  margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .app-container { flex-direction: column; overflow: auto; }
+  .sidebar-left { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--clr-border); flex: none;}
+  .verse-list { max-height: 200px; }
+  .sidebar-right { width: 100%; height: auto; border-left: none; border-top: 1px solid var(--clr-border); flex: none; min-height: 400px;}
+  .main-content { overflow: visible; padding: var(--sp-lg); flex: none;}
+}

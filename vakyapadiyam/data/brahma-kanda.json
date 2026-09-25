@@ -1,0 +1,601 @@
+{
+  "kanda": "brahma",
+  "kandaName": "ब्रह्मकाण्ड",
+  "kandaNameIAST": "Brahmakāṇḍa",
+  "kandaNameEnglish": "Book of Brahman",
+  "description": "The first book establishes the metaphysical foundation — Śabda-Brahman (the Word as Ultimate Reality). It introduces Bhartṛhari's doctrine that the entire universe is a manifestation of the primordial Word.",
+  "totalVerses": 155,
+  "verses": [
+    {
+      "id": "bk-1-1",
+      "number": 1,
+      "sanskrit": "अनादिनिधनं ब्रह्म शब्दतत्त्वं यदक्षरम् ।\nविवर्तते ऽर्थभावेन प्रक्रिया जगतो यतः ॥",
+      "iast": "anādinidhanaṃ brahma śabdatattvaṃ yadakṣaram |\nvivartate 'rthabhāvena prakriyā jagato yataḥ ||",
+      "english": "That Brahman, which is without beginning or end, whose very essence is the Word (śabdatattva), which is the indestructible imperishable, which manifests through objects — from That proceeds the creation of the world.",
+      "hindi": "वह ब्रह्म जो अनादि और अनन्त है, जो शब्दतत्त्व है, जो अक्षर (अविनाशी) है, जो अर्थभाव से विवर्तित होता है — उसी से जगत् की प्रक्रिया (सृष्टि) होती है।",
+      "words": [
+        {
+          "word": "अनादिनिधनम्",
+          "iast": "anādinidhanaṃ",
+          "meaning": "without beginning or end; eternal",
+          "grammar": "adj, acc. sg. neut.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "अनादि — आदिरहितम्, निधनरहितम् च — इति नित्यत्वं सूचितम् ।",
+              "hindi": "अनादि — जिसका आदि नहीं, निधन — जिसका अन्त नहीं; इस प्रकार शब्दब्रह्म की नित्यता सूचित की गई है।",
+              "english": "Anādi means without beginning, nidhana means without end — thus the eternal nature of Śabda-Brahman is indicated."
+            },
+            "helaraja": {
+              "sanskrit": "न विद्यते आदिर्यस्य तत् अनादि, न विद्यते निधनं यस्य तत् च — द्वन्द्वसमासः ।",
+              "hindi": "जिसका आदि न हो वह अनादि, जिसका निधन (नाश) न हो वह अनिधन — यह द्वन्द्व समास है।",
+              "english": "That which has no beginning is anādi, that which has no end is anidhana — this is a dvandva compound."
+            },
+            "iyer": {
+              "english": "The compound anādinidhana indicates the eternal and imperishable nature of Brahman. Unlike finite created objects, Śabda-Brahman transcends time and change."
+            }
+          },
+          "extra": {
+            "sanskrit": "शब्दब्रह्मणः नित्यत्वं न केवलं कालदृष्ट्या अपि तु स्वरूपदृष्ट्या अपि वर्तते। उत्पत्तिविनाशरहितमेव परमार्थसत्यम्।",
+            "hindi": "यहाँ अनादिनिधन पद से यह स्पष्ट किया गया है कि शब्दब्रह्म की उत्पत्ति या विनाश नहीं होता। यह न केवल समय के पार है, बल्कि स्वरूप से भी शाश्वत है।",
+            "english": "In Indian philosophy, something that has a beginning must have an end. By stating the Word is 'anādi-nidhana', Bhartṛhari immediately elevates language from a human convention to the status of the eternal Absolute."
+          }
+        },
+        {
+          "word": "ब्रह्म",
+          "iast": "brahma",
+          "meaning": "the Absolute, Brahman; here identified with Śabda (Word)",
+          "grammar": "noun, nom. sg. neut.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "ब्रह्म इति — बृहत् वा बृंहयति वा इति ब्रह्म । शब्दतत्त्वरूपं ब्रह्म उच्यते ।",
+              "hindi": "ब्रह्म — जो बड़ा है अथवा जो विस्तार करता है, वह ब्रह्म है। यहाँ शब्दतत्त्वरूप ब्रह्म कहा गया है।",
+              "english": "Brahman — that which is vast or that which expands. Here it refers to Brahman in its form as Śabda-tattva (Word-essence)."
+            },
+            "helaraja": {
+              "sanskrit": "वेदान्ते परं ब्रह्म उच्यते, अत्र तु शाब्दब्रह्म — वैयाकरणदर्शने विशिष्टम् ।",
+              "hindi": "वेदान्त में परब्रह्म कहा जाता है, किन्तु यहाँ वैयाकरण-दर्शन में शाब्दब्रह्म की विशिष्ट उपासना है।",
+              "english": "While Vedānta speaks of Para-Brahman, here in the grammarian's philosophy, Śābda-Brahman is the specific focus of contemplation."
+            }
+          },
+          "extra": {
+            "sanskrit": "अत्र वेदान्तिनां निरुपाधिकब्रह्म न विवक्षितम्, अपि तु सर्वशक्तियुक्तं वाक्स्वरूपं ब्रह्म।",
+            "hindi": "भर्तृहरि का 'ब्रह्म' वेदान्तियों के निर्गुण ब्रह्म से भिन्न है; यह वह चेतना है जो स्वयं को भाषा और विचारों के रूप में अभिव्यक्त करती है।",
+            "english": "Unlike Advaita Vedānta where Brahman is completely without attributes (Nirguṇa), Bhartṛhari's Brahman is inherently dynamic. Its very nature is to express itself as meaning and language."
+          }
+        },
+        {
+          "word": "शब्दतत्त्वम्",
+          "iast": "śabdatattvaṃ",
+          "meaning": "whose essence is Word/Sound; the Word-essence",
+          "grammar": "noun, nom. sg. neut. (bahuvrīhi)",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "शब्दः एव तत्त्वं यस्य तत् शब्दतत्त्वम् — बहुव्रीहिः । सर्वस्य जगतः मूलं शब्दः इति भर्तृहरेः सिद्धान्तः ।",
+              "hindi": "जिसका तत्त्व (सार) शब्द ही है — यह बहुव्रीहि समास है।",
+              "english": "Śabda-tattva is a bahuvrīhi compound meaning 'whose essence is Word.'"
+            }
+          },
+          "extra": {
+            "sanskrit": "शब्द एव परमसत्ता। जगति यत्किञ्चित् प्रतीयते तत् सर्वं शब्दात्मकमेव।",
+            "hindi": "इस दर्शन के अनुसार विचार और भाषा अविभाज्य हैं। बिना शब्द के किसी भी तत्त्व का ज्ञान असम्भव है।",
+            "english": "This is the core thesis of Śabdādvaita: language and consciousness are identical. We cannot know anything without language, hence the ultimate reality of all objects is the Word itself."
+          }
+        },
+        {
+          "word": "यत्",
+          "iast": "yat",
+          "meaning": "which",
+          "grammar": "rel. pron., nom. sg. neut.",
+          "tikas": {},
+          "extra": {
+            "sanskrit": "यत् इति सर्वनाम अक्षरब्रह्मणः परामर्शार्थम्।",
+            "hindi": "यहाँ 'यत्' सर्वनाम का प्रयोग उस अक्षर ब्रह्म की ओर संकेत करने के लिए किया गया है।",
+            "english": "The relative pronoun 'yat' directly connects the preceding descriptive attributes to the core substance 'akṣaram'."
+          }
+        },
+        {
+          "word": "अक्षरम्",
+          "iast": "akṣaram",
+          "meaning": "imperishable, indestructible; also means 'syllable'",
+          "grammar": "noun/adj, nom. sg. neut.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "अक्षरम् — न क्षरति, न नश्यति इति अक्षरम् — नित्यशब्दवादः अत्र प्रतिष्ठापितः ।",
+              "hindi": "अक्षर — जो क्षरित (नष्ट) नहीं होता, वह अक्षर है। यहाँ नित्य-शब्द-वाद की स्थापना की गई है।",
+              "english": "Akṣara means that which does not perish. The theory of the eternal Word (nitya-śabda-vāda) is established here."
+            }
+          },
+          "extra": {
+            "sanskrit": "अक्षरशब्दः श्लेषार्थे प्रयुक्तः — न क्षरति इति अक्षरम् (अविनाशि), तथा च वर्णात्मकः शब्दः (अ उ म् इत्यादि)।",
+            "hindi": "'अक्षर' शब्द यहाँ श्लेष (double meaning) के रूप में है: पहला अर्थ है जो कभी नष्ट नहीं होता, और दूसरा अर्थ है भाषा की इकाई (syllable) जैसे ॐ।",
+            "english": "Bhartṛhari employs a brilliant pun on 'akṣara'. Philosophically it means 'imperishable', but grammatically it means 'syllable' (like Om), beautifully fusing metaphysics and grammar."
+          }
+        },
+        {
+          "word": "विवर्तते",
+          "iast": "vivartate",
+          "meaning": "manifests, appears, undergoes apparent transformation",
+          "grammar": "verb, 3rd sg. pres. ātm.",
+          "tikas": {
+            "helaraja": {
+              "sanskrit": "परिणामं विना प्रतीतिमात्रेण जगत्स्फुरणं विवर्तः — रज्जौ सर्पवत् ।",
+              "hindi": "बिना वास्तविक परिणाम के, केवल प्रतीति से जगत् का प्रकट होना विवर्त है — जैसे रस्सी में सर्प की प्रतीति।",
+              "english": "Vivarta is the appearance of the world without real transformation, like the perception of a snake in a rope."
+            }
+          },
+          "extra": {
+            "sanskrit": "एकस्य तत्त्वस्य अतात्त्विकोऽन्यथाप्रथा विवर्तः। ब्रह्म स्वस्वरूपम् अज्ञात्वा नानारूपेण भासते।",
+            "hindi": "सांख्य दर्शन के 'परिणामवाद' (जहाँ दूध दही में सचमुच बदल जाता है) के विपरीत, यहाँ 'विवर्त' है — ब्रह्म बिना बदले ही जगत् के रूप में दिखाई देता है।",
+            "english": "A vital philosophical distinction: unlike Sāṃkhya's 'pariṇāma' (real transformation like milk to curd), 'vivarta' means the original substance never changes, yet produces the illusion of multiplicity."
+          }
+        },
+        {
+          "word": "अर्थभावेन",
+          "iast": "arthabhāvena",
+          "meaning": "through the appearance of objects/meanings",
+          "grammar": "noun, inst. sg. masc.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "अर्थाः — पदार्थाः, भावाः — प्रतीतयः; शब्दतत्त्वं अर्थरूपेण प्रतीयते जगति ।",
+              "hindi": "अर्थ = पदार्थ (वस्तुएँ), भाव = प्रतीति; शब्दतत्त्व ही जगत् में अर्थरूप से प्रतीत होता है।",
+              "english": "Artha means objects of meaning, bhāva means appearance. Śabda-tattva manifests as the objects of the world."
+            }
+          },
+          "extra": {
+            "sanskrit": "अर्थस्य भावः अर्थभावः, तेन। शब्दादेव अर्थस्य उत्पत्तिः, न तु शब्दार्थयोः पृथक्सत्ता।",
+            "hindi": "वस्तुएँ और कुछ नहीं बल्कि शब्दों के अर्थ का ही भौतिक रूप हैं। शब्द से ही अर्थ का प्राकट्य होता है।",
+            "english": "This shows the cognitive mapping of the universe. What we call physical 'objects' (artha) are merely the semantic correlates (meanings) of the eternal Word expressing itself outwardly."
+          }
+        },
+        {
+          "word": "प्रक्रिया",
+          "iast": "prakriyā",
+          "meaning": "the process of creation, manifestation",
+          "grammar": "noun, nom. sg. fem.",
+          "tikas": {},
+          "extra": {
+            "sanskrit": "प्रक्रिया नाम सृष्टेः व्यापारः।",
+            "hindi": "प्रक्रिया का अर्थ यहाँ सृष्टि के सतत विकास या व्यापार से है।",
+            "english": "Prakriyā emphasizes that creation is not a one-time past event, but an ongoing process or dynamics of manifestation."
+          }
+        },
+        {
+          "word": "जगतः",
+          "iast": "jagataḥ",
+          "meaning": "of the world",
+          "grammar": "noun, gen. sg. neut.",
+          "tikas": {},
+          "extra": {
+            "sanskrit": "गच्छति इति जगत्। यत् नित्यं परिवर्तते तत् जगत्।",
+            "hindi": "जो निरन्तर गतिशील और परिवर्तनशील है, उसे जगत् कहते हैं।",
+            "english": "The root 'gam' (to move) gives us 'jagat'. It represents the ever-changing phenomenal world, contrasted with the changeless Brahman."
+          }
+        },
+        {
+          "word": "यतः",
+          "iast": "yataḥ",
+          "meaning": "from which",
+          "grammar": "indec. (ablative sense)",
+          "tikas": {},
+          "extra": {
+            "sanskrit": "यस्मात् कारणात् इत्यर्थः। उपादानकारणं निमित्तकारणं च ब्रह्मैव।",
+            "hindi": "यहाँ 'यतः' स्पष्ट करता है कि वह शब्दब्रह्म ही इस सृष्टि का एकमात्र उपादान और निमित्त कारण है।",
+            "english": "'Yataḥ' indicates the source. It confirms Brahman as both the material and efficient cause of the universe."
+          }
+        }
+      ],
+      "conceptTags": [
+        "śabda-brahman",
+        "vivartavāda",
+        "nityatva",
+        "creation"
+      ],
+      "image": "assets/images/bk-1-1.jpg",
+      "imagePrompt": "Cosmic primordial sound Om emanating as golden light waves that transform into the entire universe — galaxies, stars, and Earth forming from Sanskrit syllables, dark indigo cosmic background, ancient manuscript meets modern digital art"
+    },
+    {
+      "id": "bk-1-2",
+      "number": 2,
+      "sanskrit": "एकमेव यदाम्नातं भिन्नशक्तिव्यपाश्रयात् ।\nअपृथक्त्वेऽपि शक्तीनां यतः पृथक्तिव उच्यते ॥",
+      "iast": "ekameva yadāmnātaṃ bhinnaśaktivyapāśrayāt |\napṛthaktve 'pi śaktīnāṃ yataḥ pṛthaktiva ucyate ||",
+      "english": "That which the scriptures declare to be one alone — on account of the support of various powers, though these powers are not separate from it, it is said to be differentiated.",
+      "hindi": "जो एक ही है (शास्त्र द्वारा घोषित), वह विभिन्न शक्तियों के आश्रय से विभेदित कहा जाता है — यद्यपि वे शक्तियाँ उससे पृथक् नहीं हैं।",
+      "words": [
+        {
+          "word": "एकमेव",
+          "iast": "ekameva",
+          "meaning": "one alone, absolutely one",
+          "grammar": "numeral + emphatic particle",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "एकमेव — अद्वितीयम्; शब्दब्रह्म एकमेव परमार्थतः — नानात्वं व्यवहारिकम् ।",
+              "hindi": "एकमेव — अद्वितीय; परमार्थ में शब्दब्रह्म एक ही है — नानात्व केवल व्यावहारिक है।",
+              "english": "Ekameva — absolutely one, non-dual. In ultimate reality Śabda-Brahman is one; multiplicity is only empirical."
+            },
+            "iyer": {
+              "english": "The adverb eva (alone, only) emphasizes absolute unity. This non-dualism is foundational to Śabdādvaita philosophy."
+            }
+          }
+        },
+        {
+          "word": "भिन्नशक्तिव्यपाश्रयात्",
+          "iast": "bhinnaśaktivyapāśrayāt",
+          "meaning": "due to the support of differentiated powers",
+          "grammar": "abl. sg. tatpuruṣa compound",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "शक्तयः — व्याकरणे कारकशक्तयः, अर्थशक्तयः च; ताः भिन्नाः इव प्रतीयन्ते किन्तु ब्रह्मणः अभिन्नाः ।",
+              "hindi": "शक्तियाँ — व्याकरण में कारक-शक्तियाँ और अर्थ-शक्तियाँ; वे भिन्न प्रतीत होती हैं किन्तु ब्रह्म से अभिन्न हैं।",
+              "english": "The powers (śaktis) refer to the grammatical potencies — kāraka-śaktis, artha-śaktis etc. They appear differentiated but are not separate from Brahman."
+            },
+            "iyer": {
+              "english": "Bhinnaśakti — the differentiated powers that enable language to function. Grammar, meaning, syntax are all expressions of the one Śabda-Brahman's infinite potency."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "śabdādvaita",
+        "śakti",
+        "unity-in-diversity"
+      ],
+      "image": "assets/images/karikas/bk-1-2.jpg",
+      "imagePrompt": "A single golden orb of light diffracting into thousands of different colored rays of light, each ray representing a different power or śakti, all returning to the same source, cosmic dark background, Sanskrit manuscript aesthetic"
+    },
+    {
+      "id": "bk-1-3",
+      "number": 3,
+      "sanskrit": "अध्याहितकलं सत्त्वं यस्मिन् सर्वमिदं ततम् ।\nतस्मिन्नाविशतः सर्वे ह्रियमाणास्तु शक्तयः ॥",
+      "iast": "adhyāhitakalaṃ sattvaṃ yasmin sarvamidaṃ tatam |\ntasminnāviśataḥ sarve hriyamāṇāstu śaktayaḥ ||",
+      "english": "That Being in which the power of differentiation is inherent, in which all this is pervaded — into That all powers enter when they are being withdrawn.",
+      "hindi": "वह सत्त्व (ब्रह्म) जिसमें विभाजन-शक्ति (कला) स्थापित है, जिसमें यह सब व्याप्त है — उसी में प्रलय के समय सभी शक्तियाँ लीन हो जाती हैं।",
+      "words": [
+        {
+          "word": "सत्त्वम्",
+          "iast": "sattvaṃ",
+          "meaning": "Being, existence, the ultimate entity",
+          "grammar": "noun, nom. sg. neut.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "सत्त्वम् — सत् + त्व; परमसत्ता, शब्दब्रह्म एव अत्र विवक्षितम् ।",
+              "hindi": "सत्त्व = परम सत्ता; यहाँ शब्दब्रह्म ही अभिप्रेत है।",
+              "english": "Sattva here means the ultimate Being or existence — Śabda-Brahman itself."
+            },
+            "iyer": {
+              "english": "Sattva indicates the ground of all being. Unlike the Sāṃkhya use of the term, here it refers to Śabda-Brahman as the substratum of all manifestation."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "śabda-brahman",
+        "śakti",
+        "dissolution"
+      ],
+      "image": "assets/images/karikas/bk-1-3.jpg",
+      "imagePrompt": "All rays of light converging back into a single brilliant point of golden light, like a cosmic withdrawal, stars and galaxies being absorbed, Sanskrit syllables dissolving into pure luminous consciousness"
+    },
+    {
+      "id": "bk-1-4",
+      "number": 4,
+      "sanskrit": "यस्तर्कप्रतिसंहारी दृष्टः सामयिकः क्रमः ।\nव्यवहारेण सत्येन व्याहृतः प्रतिभाति सः ॥",
+      "iast": "yastarkkapratisaṃhārī dṛṣṭaḥ sāmayikaḥ kramaḥ |\nvyavahāreṇa satyena vyāhṛtaḥ pratibhāti saḥ ||",
+      "english": "The sequence which appears in reasoning and is dissolved (by reasoning) — that conventional sequence, when spoken through true discourse, appears (as it really is).",
+      "hindi": "जो क्रम (अनुक्रम) तर्क से प्रतीत होता है और तर्क से ही निराकृत होता है — वही सामयिक (व्यावहारिक) क्रम, सत्य व्यवहार से कहे जाने पर, प्रकाशित होता है।",
+      "words": [
+        {
+          "word": "तर्कप्रतिसंहारी",
+          "iast": "tarkapratisaṃhārī",
+          "meaning": "that which dissolves/negates logical sequence",
+          "grammar": "adj, nom. sg. masc.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "तर्केण प्रतीतः, तर्केण एव विनाशितः — इत्यनित्यं तर्कमात्रजनितं ज्ञानम् ।",
+              "hindi": "तर्क से प्रतीत और तर्क से ही नष्ट — यह दर्शाता है कि तर्कजनित ज्ञान अनित्य है।",
+              "english": "What is generated by logic is destroyed by logic — thus showing the transitory nature of purely logical knowledge."
+            },
+            "iyer": {
+              "english": "Tarkapratisaṃhārī points to the inadequacy of pure logic to grasp ultimate truth. This verse introduces the importance of āgama (scriptural testimony) alongside reasoning."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "tarka",
+        "āgama",
+        "vyavahāra"
+      ],
+      "image": "assets/images/karikas/bk-1-4.jpg",
+      "imagePrompt": "Abstract philosophical debate visualized as two intertwining streams of light — one representing logic/tarka, one representing scriptural revelation/agama — merging into a unified golden truth, Sanskrit symbols floating, dark cosmic background"
+    },
+    {
+      "id": "bk-1-5",
+      "number": 5,
+      "sanskrit": "पश्यन्ती च परा चैव मध्यमा च ततः परम् ।\nवैखरी च ततोऽप्यन्या चत्वारि वाक्पदानि तु ॥",
+      "iast": "paśyantī ca parā caiva madhyamā ca tataḥ param |\nvaikharī ca tato 'pyanyā catvāri vākpadāni tu ||",
+      "english": "Paśyantī, Parā, Madhyamā, and Vaikharī — these are the four stages/levels of Speech (Vāk).",
+      "hindi": "परा, पश्यन्ती, मध्यमा, और वैखरी — ये वाक् के चार पद (स्तर) हैं।",
+      "words": [
+        {
+          "word": "परा",
+          "iast": "parā",
+          "meaning": "the Supreme/Transcendent level of speech — pure undifferentiated consciousness",
+          "grammar": "noun/adj, nom. sg. fem.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "परा वाक् — अव्यक्ता, निरंशा, ब्रह्मस्वरूपिणी; मूलाधारे स्थिता इति तन्त्रदर्शने ।",
+              "hindi": "परावाक् — अव्यक्त, अखण्ड, ब्रह्मस्वरूपिणी; तन्त्र-दर्शन में यह मूलाधार में स्थित मानी गई है।",
+              "english": "Parā vāk — the unmanifest, undivided form of speech that is identical with Brahman; located in the mūlādhāra in Tantric philosophy."
+            },
+            "helaraja": {
+              "sanskrit": "परा — अतिशयेन रा = ददाति, सर्वं ददाति; सर्वशक्तिसमन्विता ब्रह्मवाक् ।",
+              "hindi": "परा — जो सबसे परे है और सब कुछ प्रदान करती है; सर्वशक्तिसमन्विता ब्रह्मवाक् ।",
+              "english": "Parā — that which is supreme and gives everything; the speech-power identified with Brahman, encompassing all śaktis."
+            },
+            "iyer": {
+              "english": "Parā is the first and highest level — pure undifferentiated linguistic consciousness. It is not yet speech but the ground from which all speech emerges."
+            }
+          }
+        },
+        {
+          "word": "पश्यन्ती",
+          "iast": "paśyantī",
+          "meaning": "the Seeing level — intuitive, pre-verbal vision of meaning",
+          "grammar": "noun (pres. part. fem.), nom. sg.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "पश्यन्ती — यया वक्ता अर्थं पश्यति, अभेदेन द्रष्टव्यम्; इयं स्फोटस्वरूपा ।",
+              "hindi": "पश्यन्ती — जिसके द्वारा वक्ता अर्थ को देखता है (अनुभव करता है), यह अभेद-दृष्टि की स्थिति है; यह स्फोट-स्वरूपा है।",
+              "english": "Paśyantī — through which the speaker 'sees' the meaning intuitively, in an undivided whole. This level corresponds to the sphota."
+            },
+            "helaraja": {
+              "sanskrit": "पश्यन्ती — अर्थं अखण्डं पश्यति; न क्रमः, न भेदः — अव्यवहितं ज्ञानम् ।",
+              "hindi": "पश्यन्ती — अर्थ को अखण्ड (अविभाजित) रूप में देखती है; कोई क्रम नहीं, कोई भेद नहीं — यह तत्काल, निर्विभाग ज्ञान है।",
+              "english": "Paśyantī sees meaning as undivided whole — no sequence, no differentiation; this is immediate, undivided cognition."
+            },
+            "iyer": {
+              "english": "Paśyantī is the visionary level of speech where meaning is grasped as a whole before being articulated. It is the level of the poet's inspiration and the saint's revelation."
+            }
+          }
+        },
+        {
+          "word": "मध्यमा",
+          "iast": "madhyamā",
+          "meaning": "the Middle level — mental/internal speech, thinking",
+          "grammar": "noun/adj, nom. sg. fem.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "मध्यमा — मनसि स्थिता वाक्; बाह्येन्द्रियसहायं विना मानसोच्चारणम् ।",
+              "hindi": "मध्यमा — मन में स्थित वाक्; बाह्य इन्द्रियों की सहायता के बिना मन में उच्चारण।",
+              "english": "Madhyamā — speech residing in the mind; the internal articulation without the help of external sense organs."
+            },
+            "iyer": {
+              "english": "Madhyamā is internal mental speech — the level of thought and inner dialogue. It is sequential unlike Paśyantī but not yet externalized like Vaikharī."
+            }
+          }
+        },
+        {
+          "word": "वैखरी",
+          "iast": "vaikharī",
+          "meaning": "the Corporeal/Expressed level — audible speech",
+          "grammar": "noun, nom. sg. fem.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "वैखरी — विखरं गतेति; बाह्ये प्रकटिता वाक्, श्रोत्रग्राह्या, कालक्रमेण उच्चार्यमाणा ।",
+              "hindi": "वैखरी — बाहर प्रकट हुई वाक्; कानों से सुनी जाने वाली, कालक्रम से उच्चारित।",
+              "english": "Vaikharī — the externalized speech, audible to the ear, uttered sequentially in time."
+            },
+            "helaraja": {
+              "sanskrit": "वैखरी — विशेषेण खरं (स्पष्टं) करोति इति; स्पष्टशब्दात्मिका वाक् ।",
+              "hindi": "वैखरी — जो स्पष्ट रूप से प्रकट करती है; स्पष्ट ध्वनि-रूप वाक्।",
+              "english": "Vaikharī — that which makes clearly manifest; speech in its clear, audible, articulate form."
+            },
+            "iyer": {
+              "english": "Vaikharī is the gross physical speech — the level of ordinary communication. It is furthest from the source (Parā) and most accessible to ordinary consciousness."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "four-levels-of-vak",
+        "para",
+        "pashyanti",
+        "madhyama",
+        "vaikhari",
+        "sphota"
+      ],
+      "image": "assets/images/karikas/bk-1-5.jpg",
+      "imagePrompt": "Four concentric rings of light emanating from a single point — innermost pure white (Para), then golden (Pashyanti), then amber (Madhyama), outermost blue-violet (Vaikhari) — representing the four levels of speech, with Sanskrit labels, cosmic dark background"
+    },
+    {
+      "id": "bk-1-6",
+      "number": 6,
+      "sanskrit": "तदेकं परमं ब्रह्म चिच्छक्त्यनुगतं सदा ।\nज्ञानमात्रस्वरूपेण जगदात्मनि दृश्यते ॥",
+      "iast": "tadekam paramaṃ brahma cicchaktyanugataṃ sadā |\njñānamātrasvarūpeṇa jagadātmani dṛśyate ||",
+      "english": "That one Supreme Brahman, ever accompanied by the power of consciousness (cit-śakti), is seen in its own Self as the world in the form of pure knowledge.",
+      "hindi": "वह एक परमब्रह्म, जो सदा चित्शक्ति से युक्त है, ज्ञानमात्र-स्वरूप से अपने ही आत्मस्वरूप में जगत् के रूप में दृष्टिगत होता है।",
+      "words": [
+        {
+          "word": "चिच्छक्तिः",
+          "iast": "cicchaktiḥ",
+          "meaning": "the power of consciousness, cognitive power",
+          "grammar": "noun, nom. sg. fem. (compound: cit + śakti)",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "चित् — शुद्धचैतन्यम्; शक्तिः — सामर्थ्यम्; शब्दब्रह्मणः सर्वज्ञता एव चिच्छक्तिः ।",
+              "hindi": "चित् = शुद्ध चेतना; शक्ति = सामर्थ्य; शब्दब्रह्म की सर्वज्ञता ही चिच्छक्ति है।",
+              "english": "Cit is pure consciousness; śakti is power. The omniscience of Śabda-Brahman itself is the cit-śakti."
+            },
+            "iyer": {
+              "english": "Cicchakti — the cognitive power inherent in Brahman. Unlike inert matter, Śabda-Brahman is self-luminous, self-knowing, and the ground of all knowledge."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "cit-śakti",
+        "jñāna",
+        "brahman",
+        "non-dualism"
+      ],
+      "image": "assets/images/karikas/bk-1-6.jpg",
+      "imagePrompt": "A luminous eye of pure consciousness gazing at a reflection of the universe within itself — gold and white light, the universe mirrored in the eye of Brahman, Sanskrit Om symbol at center, deep indigo cosmic background"
+    },
+    {
+      "id": "bk-1-7",
+      "number": 7,
+      "sanskrit": "यः सर्वविद्भगवान् सर्वं यस्य ज्ञाने व्यवस्थितम् ।\nपरमार्थमतिश्चासौ सर्वज्ञः सर्वदर्शनः ॥",
+      "iast": "yaḥ sarvavid bhagavān sarvaṃ yasya jñāne vyavasthitam |\nparamārthamatiścāsau sarvajñaḥ sarvadarśanaḥ ||",
+      "english": "The Lord who is all-knowing, in whose knowledge everything is established — He has the highest wisdom; He is omniscient, the seer of all.",
+      "hindi": "जो भगवान् सर्वज्ञ हैं, जिनके ज्ञान में सब कुछ स्थित है — उनकी बुद्धि परमार्थ को जानती है; वे सर्वज्ञ और सर्वदर्शी हैं।",
+      "words": [
+        {
+          "word": "सर्वविद्",
+          "iast": "sarvavid",
+          "meaning": "all-knowing, omniscient",
+          "grammar": "adj/noun, nom. sg. masc. (bahuvrihi)",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "सर्वं वेत्ति इति सर्वविद् — ब्रह्मणः सर्वज्ञत्वं नित्यम्, न कर्मजन्यम् ।",
+              "hindi": "जो सब जानता है वह सर्वविद् — ब्रह्म की सर्वज्ञता नित्य है, कर्मजन्य नहीं।",
+              "english": "Sarvavid — one who knows all. Brahman's omniscience is eternal, not acquired through action."
+            },
+            "iyer": {
+              "english": "This verse establishes Śabda-Brahman's cognitive omniscience. Unlike human knowing which is partial and sequential, Brahman's knowledge is total, simultaneous, and foundational."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "omniscience",
+        "brahman",
+        "paramārtha"
+      ],
+      "image": "assets/images/karikas/bk-1-7.jpg",
+      "imagePrompt": "An all-seeing divine consciousness represented as thousands of eyes of light arranged in a cosmic mandala, each eye reflecting a different aspect of the universe, gold and ethereal blue, Sanskrit mantras forming the border"
+    },
+    {
+      "id": "bk-1-8",
+      "number": 8,
+      "sanskrit": "स नित्यः सर्वविद् ब्रह्मा लोकस्रष्टा प्रजापतिः ।\nशब्दतत्त्वाद् अनपेतः सर्वं तत्त्वं यदुच्यते ॥",
+      "iast": "sa nityaḥ sarvavid brahmā lokasraṣṭā prajāpatiḥ |\nśabdatatttvād anapetaḥ sarvaṃ tattvaṃ yadūcyate ||",
+      "english": "He is the eternal, omniscient Brahmā, the creator of worlds, the Lord of creatures — He never departs from Śabda-tattva. Whatever reality is spoken of, all that is He.",
+      "hindi": "वह नित्य, सर्वज्ञ ब्रह्मा, लोकों का स्रष्टा, प्रजापति — शब्दतत्त्व से कभी पृथक् नहीं होता। जो भी तत्त्व कहा जाता है, वह सब वही है।",
+      "words": [
+        {
+          "word": "शब्दतत्त्वाद् अनपेतः",
+          "iast": "śabdatattvād anapetaḥ",
+          "meaning": "not departing from Śabda-tattva; inseparable from the Word-essence",
+          "grammar": "abl. + adj, nom. sg. masc.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "अनपेतः — विगतो न; शब्दतत्त्वेन सह सदैव सम्बद्धः — इति शाब्दब्रह्मणः अनन्यत्वम् ।",
+              "hindi": "अनपेत = जो पृथक् नहीं हुआ; शब्दतत्त्व से सदैव सम्बद्ध — यह शाब्दब्रह्म की अनन्यता है।",
+              "english": "Anapeta — not departed, inseparable. The Creator is never distinct from Śabda-tattva — this affirms the non-duality of Brahman and Word."
+            },
+            "iyer": {
+              "english": "This crucial statement identifies the Vedic Prajāpati (Lord of creation) with Śabda-Brahman. Creation is an act of speech — the Creator never steps outside of linguistic being."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "creation",
+        "śabda-brahman",
+        "Prajāpati",
+        "Brahmā"
+      ],
+      "image": "assets/images/karikas/bk-1-8.jpg",
+      "imagePrompt": "The creator deity Brahma seated on a lotus, his four mouths emanating Sanskrit syllables that become stars and galaxies, the Word and the world as one continuous creation, golden cosmic light, ancient and modern art fusion"
+    },
+    {
+      "id": "bk-1-9",
+      "number": 9,
+      "sanskrit": "भेदानां परमार्थत्वे सर्वं सत्यं प्रसज्यते ।\nएकत्वेनाभिसंबन्धे प्रतिबन्धः स एव हि ॥",
+      "iast": "bhedānāṃ paramārthatve sarvaṃ satyaṃ prasajyate |\nekatvenaabhisaṃbandhe pratibaṃdhaḥ sa eva hi ||",
+      "english": "If differences were ultimately real, everything would be ultimately real. If everything is connected through unity, that very connection is the obstruction (to ultimate realization).",
+      "hindi": "यदि भेद परमार्थतः सत्य हों, तो सब कुछ परमार्थतः सत्य हो जाएगा। यदि एकत्व से सम्बन्ध हो, तो वही सम्बन्ध (मुक्ति में) बाधा है।",
+      "words": [
+        {
+          "word": "भेदानां परमार्थत्वे",
+          "iast": "bhedānāṃ paramārthatve",
+          "meaning": "if differences were ultimately real",
+          "grammar": "gen. pl. + loc. sg. (sati-saptami construction)",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "भेदः — द्वैतम्, नानात्वम्; परमार्थः — उत्कृष्टसत्ता; भेदस्य परमार्थत्वे मोक्षः असम्भवः स्यात् ।",
+              "hindi": "भेद = द्वैत, नानात्व; परमार्थ = परम सत्ता; यदि भेद परमार्थ सत्य हो तो मोक्ष असम्भव हो जाएगा।",
+              "english": "Bheda means duality, multiplicity. If differences were ultimately real, liberation would be impossible since there would be no unity to return to."
+            },
+            "iyer": {
+              "english": "Bhartṛhari here argues against absolute pluralism (as held by Mīmāṃsakas and others). If difference is ultimately real, then there is no deeper unity — and no path to mokṣa."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "bheda",
+        "abheda",
+        "paramārtha",
+        "mokṣa"
+      ],
+      "image": "assets/images/karikas/bk-1-9.jpg",
+      "imagePrompt": "Philosophical duality and unity visualized — two opposite forces (light and shadow, many and one) pulling apart and being held together by a golden thread of consciousness, abstract conceptual art, dark background with Sanskrit syllables"
+    },
+    {
+      "id": "bk-1-10",
+      "number": 10,
+      "sanskrit": "वेदाध्ययनसम्पन्नो व्याकरणे च कोविदः ।\nनिश्चयाद् वाक्यपादज्ञो मोक्षमार्गेण गच्छति ॥",
+      "iast": "vedādhyayanasampanno vyākaraṇe ca kovidaḥ |\nniścayād vākyapādajño mokṣamārgeṇa gacchati ||",
+      "english": "One who is accomplished in Vedic study, expert in grammar, and knows with certainty the Vākyapāda (the science of sentence and word) — that person goes by the path of liberation.",
+      "hindi": "जो वेदाध्ययन में सम्पन्न है, व्याकरण में निपुण है, और वाक्यपाद को निश्चित रूप से जानता है — वह मोक्षमार्ग पर चलता है।",
+      "words": [
+        {
+          "word": "वाक्यपादज्ञः",
+          "iast": "vākyapādajñaḥ",
+          "meaning": "one who knows the science of Vākyapāda (sentence and word)",
+          "grammar": "noun (compound), nom. sg. masc.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "वाक्यपाद — वाक्यम् च पादम् (शब्द) च; इदमेव व्याकरणशास्त्रस्य परिचयम्; वाक्यपदीयस्य नाम अत्र सूच्यते ।",
+              "hindi": "वाक्यपाद = वाक्य और पद (शब्द); यही व्याकरणशास्त्र का परिचय है; यहाँ वाक्यपदीय का नाम सूचित किया गया है।",
+              "english": "Vākyapāda — sentence (vākya) and word (pāda). This is the subject matter of grammar. Notably, the name of this very text — Vākyapadīya — is here indicated."
+            },
+            "iyer": {
+              "english": "This verse contains the implicit title of the text. Vākyapāda-jña — one who knows the Vākyapadīya — will attain liberation. Grammar study is thus elevated to a spiritual discipline."
+            }
+          }
+        },
+        {
+          "word": "मोक्षमार्गेण",
+          "iast": "mokṣamārgeṇa",
+          "meaning": "by the path of liberation",
+          "grammar": "noun (compound), inst. sg. masc.",
+          "tikas": {
+            "punyaraja": {
+              "sanskrit": "व्याकरणं मोक्षशास्त्रम् — इति भर्तृहरेः महत् दावा; शब्दब्रह्मज्ञानेन अपवर्गः लभ्यते ।",
+              "hindi": "व्याकरण मोक्षशास्त्र है — यह भर्तृहरि का महान् दावा है; शब्दब्रह्म-ज्ञान से ही मोक्ष प्राप्त होता है।",
+              "english": "Grammar is a science of liberation (mokṣaśāstra) — this is Bhartṛhari's grand claim. Knowledge of Śabda-Brahman leads to final liberation."
+            },
+            "helaraja": {
+              "sanskrit": "मोक्षः — बन्धनान्मुक्तिः; व्याकरणाध्ययनेन शब्दब्रह्मज्ञानं, तेन च मोक्षः — इत्येषा परम्परा ।",
+              "hindi": "मोक्ष = बन्धन से मुक्ति; व्याकरण-अध्ययन से शब्दब्रह्म का ज्ञान, उससे मोक्ष — यही परम्परा है।",
+              "english": "Mokṣa is liberation from bondage. Through grammar study → knowledge of Śabda-Brahman → liberation: this is the tradition."
+            },
+            "iyer": {
+              "english": "This verse encapsulates the soteriology of the Vākyapadīya. Grammar is not merely academic study but a path of spiritual realization — the grammarian becomes a liberated sage."
+            }
+          }
+        }
+      ],
+      "conceptTags": [
+        "mokṣa",
+        "grammar-as-liberation",
+        "veda",
+        "vyākaraṇa"
+      ],
+      "image": "assets/images/karikas/bk-1-10.jpg",
+      "imagePrompt": "A Sanskrit scholar ascending a luminous stairway of Sanskrit syllables and grammar rules that transforms into a path of golden light leading to a radiant horizon of liberation, ancient manuscript texture, cosmic indigo sky"
+    }
+  ]
+}

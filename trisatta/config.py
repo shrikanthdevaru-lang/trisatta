@@ -43,7 +43,9 @@ ADHYASA_LOW:  float = 0.40
 ADHYASA_HIGH: float = 0.65
 
 # ── Model identifiers ─────────────────────────────────────────────────────────
-EMBEDDING_MODEL:    str = "sentence-transformers/all-MiniLM-L6-v2"
+# SWADESHI UPGRADE: Replaced English-only 'MiniLM' with a Multilingual 
+# model natively trained on Sanskrit, Hindi, and 50+ languages.
+EMBEDDING_MODEL:    str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 NLI_MODEL:          str = "cross-encoder/nli-MiniLM2-L6-H768"
 
 # ── Corpus settings ───────────────────────────────────────────────────────────

@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1,
+    "name": "Bhagavān Vedavyāsa",
+    "era": "Dvāpara Yuga",
+    "vidyaSthana": "Veda-Vibhājana, Itihāsa, Vedānta Darśana",
+    "shloka": "व्यासाय विष्णुरूपाय व्यासरूपाय विष्णवे । नमो वै ब्रह्मनिधये वासिष्ठाय नमो नमः ॥",
+    "shlokaTranslation": "Salutations to Vyasa who is the form of Vishnu and to Vishnu who is the form of Vyasa. Salutations to the repository of Brahman, the descendant of Vasistha.",
+    "quote": "He who is completely free from the illusion of 'I' and 'mine' is established in the absolute.",
+    "details": {
+      "lifeContext": "Born as Kṛṣṇa Dvaipāyana, he is revered as an aṃśāvatāra (partial incarnation) of Lord Viṣṇu. Arriving at the twilight of the Dvāpara Yuga, he foresaw the decline of human memory and spiritual capacity (prajñā) in the approaching Kali Yuga. Thus, he undertook the monumental task of preserving the eternal cosmic revelations.",
+      "keyContributions": "His greatest physical contribution to the Paramparā (lineage) was the classification of the single, vast body of Śruti into the four saṃhitās: Ṛg, Yajur, Sāma, and Atharva. To make this esoteric knowledge accessible to all, he composed the Mahābhārata (the Pañcama Veda or Fifth Veda), and synthesized the profound Upaniṣadic philosophy into the Brahma Sūtras.",
+      "legacy": "Vedavyāsa stands as the absolute Jagadguru (universal teacher). The festival of Guru Pūrṇimā is celebrated as Vyāsa Pūrṇimā in his honor. He established the bedrock of Sanātana Dharma, ensuring that the light of Vedic wisdom remains indestructible across epochs."
+    },
+    "structuredContributions": [
+      {
+        "title": "Vedic Classification",
+        "description": "Classified the single body of Veda into four sections: Rig, Yajur, Sama, and Atharva."
+      },
+      {
+        "title": "Mahābhārata Composition",
+        "description": "Authored the great epic Mahābhārata, making complex wisdom accessible to all."
+      },
+      {
+        "title": "Brahma Sūtras",
+        "description": "Synthesized profound Upanishadic philosophy into the structured Brahma Sūtras."
+      },
+      {
+        "title": "Purāṇic Literature",
+        "description": "Compiled the 18 Mahāpurāṇas, including the revered Śrīmad Bhāgavatam."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "The Ultimate Guru",
+        "description": "Revered as the absolute Jagadguru, celebrated annually on Guru Pūrṇimā."
+      },
+      {
+        "title": "Preserver of Knowledge",
+        "description": "Ensured the survival of eternal Vedic wisdom for future generations."
+      },
+      {
+        "title": "Bedrock of Dharma",
+        "description": "Laid the unshakeable foundation for Sanātana Dharma through his vast literary corpus."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Maharṣi Vālmīki",
+    "era": "Tretā Yuga",
+    "vidyaSthana": "Kāvya Śāstra, Itihāsa, Dharma Śāstra",
+    "shloka": "कूजन्तं रामरामेति मधुरं मधुराक्षरम् । आरुह्य कविताशाखां वन्दे वाल्मीकिकोकिलम् ॥",
+    "shlokaTranslation": "I salute Valmiki, the cuckoo, who sits on the branch of the tree of poetry, singing sweetly the sweet syllables 'Rama, Rama'.",
+    "quote": "To be happy always is something which is difficult to achieve. That is to say, happiness and sorrow alternate in one’s life and there cannot be uninterrupted happiness alone.",
+    "details": {
+      "lifeContext": "Legend speaks of his transformation through intense Tapas (austerity). By chanting the sacred Tāraka Mantra (Rāma), his previously obscured consciousness (tamas) was completely purified, elevating him to the state of a Brahmarṣi. His absolute absorption in meditation was so profound that an anthill (valmīka) grew over him.",
+      "keyContributions": "He is the Ādi Kavi (First Poet). Struck by karuṇā (compassion) upon seeing a grieving bird, his sorrow (śoka) transformed into the first metrical verse (śloka) in the Anuṣṭubh meter. Using this divine meter, he composed the Rāmāyaṇa, establishing the supreme ideals of Dharma, satya (truth), and Maryādā (righteous limits).",
+      "legacy": "Vālmīki’s Rāmāyaṇa is the archetypal template for all subsequent classical Indian literature (Mahākāvya). He provided the ultimate Pramāṇa (measure) for human conduct, profoundly shaping the socio-spiritual consciousness of the entire Indian subcontinent."
+    },
+    "structuredContributions": [
+      {
+        "title": "First Metrical Verse",
+        "description": "Discovered the Anuṣṭubh meter from spontaneous compassion, creating the first Śloka."
+      },
+      {
+        "title": "Composition of Rāmāyaṇa",
+        "description": "Authored the Rāmāyaṇa, the foremost Itihāsa setting ideals of Dharma."
+      },
+      {
+        "title": "Establishment of Maryādā",
+        "description": "Delineated the boundaries of righteous conduct and truth through Lord Rama's character."
+      },
+      {
+        "title": "Pioneer of Kāvya",
+        "description": "Became the Ādi Kavi (First Poet), creating the template for classical Sanskrit poetry."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Literary Archetype",
+        "description": "Provided the foundational structure for all subsequent Indian Mahākāvyas."
+      },
+      {
+        "title": "Moral Compass",
+        "description": "Deeply shaped the socio-spiritual consciousness and ethics of the Indian subcontinent."
+      },
+      {
+        "title": "Divine Transformation",
+        "description": "Stands as the ultimate example of personal transformation through Tapas and Mantra."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Maharṣi Vasiṣṭha",
+    "era": "Vedic Period",
+    "vidyaSthana": "Mantra Draṣṭā (Śruti), Rāja-Dharma, Advaita",
+    "shloka": "वसिष्ठं कुम्भसंभवं वन्दे तपस्वाध्यायनिरतम् ।",
+    "shlokaTranslation": "I bow to Vasistha, born of a pitcher, absorbed in austerity and self-study.",
+    "quote": "The mind alone is the cause of all objects in the world. When the mind stops, the world also stops.",
+    "details": {
+      "lifeContext": "A mind-born son of Brahmā (Mānasa Putra) and one of the Saptarṣis. He embodied perfectly harmonized Sattva Guṇa (purity and peace). Even when confronted by the immense martial power (Kṣātra-bala) of King Viśvāmitra, Vasiṣṭha demonstrated that spiritual radiance (Brahma-Tejas) is invincible.",
+      "keyContributions": "He is a primary Mantra Draṣṭā (seer of mantras) for the 7th Maṇḍala of the Ṛgveda. As the Kulaguru (royal preceptor) of the Sūryavaṃśa (Solar Dynasty), he established the principles of Rāja-Dharma (righteous governance). He also imparted profound non-dualistic wisdom to Lord Rāma to cure his spiritual existential crisis.",
+      "legacy": "Vasiṣṭha represents the supreme ideal of a Brahmarṣi—one who actively participates in the world for Lokasaṃgraha (universal welfare) while remaining perfectly anchored in Brahman. His teachings in the Yoga Vāsiṣṭha are considered an ultimate text on Jñāna Yoga."
+    },
+    "structuredContributions": [
+      {
+        "title": "Mantra Draṣṭā",
+        "description": "Served as the primary seer for the 7th Maṇḍala of the Rigveda."
+      },
+      {
+        "title": "Rāja-Dharma Advocate",
+        "description": "Guided the Solar Dynasty as Kulaguru, establishing principles of righteous governance."
+      },
+      {
+        "title": "Advaitic Philosophy",
+        "description": "Imparted profound non-dualistic wisdom to Lord Rama, recorded in the Yoga Vasiṣṭha."
+      },
+      {
+        "title": "Embodiment of Sattva",
+        "description": "Demonstrated the supremacy of spiritual radiance (Brahma-Tejas) over physical might."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Ideal Brahmarṣi",
+        "description": "Represents the perfect balance of active worldly participation and spiritual anchoring."
+      },
+      {
+        "title": "Jñāna Yoga Pinnacle",
+        "description": "His teachings remain an ultimate, foundational text for seekers of knowledge and liberation."
+      },
+      {
+        "title": "Invincibility of Spirit",
+        "description": "Proved that true power lies in peace, purity, and spiritual realization, not force."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Maharṣi Viśvāmitra",
+    "era": "Vedic Period",
+    "vidyaSthana": "Mantra Draṣṭā (Śruti), Astra Vidya, Tapas",
+    "shloka": "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् ॥",
+    "shlokaTranslation": "We meditate on the adorable glory of the radiant sun; may he inspire our intelligence.",
+    "quote": "Through the power of will and austerity, one can conquer their own nature and attain the divine.",
+    "details": {
+      "lifeContext": "Born as a powerful Kṣatriya king, he realized the limitations of material and martial power after a humbling defeat by Maharṣi Vasiṣṭha's spiritual aura. Through unimaginably fierce Tapas, he forced his own evolution, transcending his inherent nature to attain the rare status of a Brahmarṣi.",
+      "keyContributions": "He is the celebrated seer of the 3rd Maṇḍala of the Ṛgveda. His supreme contribution to humanity is the revelation of the Gāyatrī Mantra, the ultimate Vedic invocation to Savitṛ (the Divine Sun) for the illumination of human intellect (Dhī). He also mastered and transmitted celestial sciences (Astra Vidyā and Bala-Atibala).",
+      "legacy": "Viśvāmitra is the ultimate testament to the transformative power of human will (Icchā Śakti) and Tapas. The Gāyatrī Mantra he revealed remains the most universally chanted Śruti across the Hindu world, serving as the daily spiritual anchor for millions."
+    },
+    "structuredContributions": [
+      {
+        "title": "Gāyatrī Mantra",
+        "description": "Revealed the most universally chanted Vedic invocation for illuminating human intellect."
+      },
+      {
+        "title": "Rigvedic Seer",
+        "description": "Served as the celebrated Mantra Draṣṭā for the 3rd Maṇḍala of the Rigveda."
+      },
+      {
+        "title": "Mastery of Astra Vidyā",
+        "description": "Mastered and transmitted advanced celestial and martial sciences to Lord Rama."
+      },
+      {
+        "title": "Tapas and Transformation",
+        "description": "Transcended his inherent warrior nature through fierce austerity to become a Brahmarṣi."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Universal Daily Prayer",
+        "description": "The Gāyatrī Mantra remains the daily spiritual anchor for millions across the Hindu world."
+      },
+      {
+        "title": "Power of Human Will",
+        "description": "Stands as the ultimate testament to human evolution and the power of Icchā Śakti."
+      },
+      {
+        "title": "Synthesis of Power and Spirit",
+        "description": "Bridged the gap between martial prowess and supreme spiritual enlightenment."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Maharṣi Yājñavalkya",
+    "era": "Upaniṣadic Period",
+    "vidyaSthana": "Vedānta Darśana, Dharma Śāstra, Yajña Vidhāna",
+    "shloka": "याज्ञवल्क्यं मुनिश्रेष्ठं वेदवेदाङ्गपारगम् ।",
+    "shlokaTranslation": "Yajnavalkya, the best of sages, master of the Vedas and their auxiliary disciplines.",
+    "quote": "It is not for the sake of the husband that the husband is loved, but for the sake of the Self.",
+    "details": {
+      "lifeContext": "A fiercely brilliant intellectual rebel. Finding his guru's teachings tainted by ego, he vomited the learned Yajurveda. Through intense Sūrya-Upāsanā (worship of the Sun), he received a pristine, luminous revelation of the Vedas, creating the Śukla Yajurveda tradition.",
+      "keyContributions": "In the court of King Janaka, he reigned supreme in Brahmodya (philosophical debates). He articulated the most advanced concepts of Atman and Brahman in the Bṛhadāraṇyaka Upaniṣad, famously using the 'Neti Neti' (Not this, Not this) method to describe the absolute reality. He also codified laws of social conduct.",
+      "legacy": "Yājñavalkya laid the absolute philosophical bedrock for Advaita Vedānta. His insights into Karma, rebirth, and the nature of consciousness heavily inform all subsequent Indian philosophies. The Yājñavalkya Smṛti remains a foundational pillar of traditional Hindu jurisprudence."
+    },
+    "structuredContributions": [
+      {
+        "title": "Śukla Yajurveda",
+        "description": "Received a pristine revelation of the Vedas directly from the Sun, founding a new tradition."
+      },
+      {
+        "title": "Advaitic Articulation",
+        "description": "Expounded advanced concepts of Atman and Brahman using the 'Neti Neti' analytical method."
+      },
+      {
+        "title": "Bṛhadāraṇyaka Upaniṣad",
+        "description": "Served as the primary philosophical voice in one of the most profound Upanishadic texts."
+      },
+      {
+        "title": "Dharma and Jurisprudence",
+        "description": "Codified comprehensive laws of social conduct and law in the Yājñavalkya Smṛti."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Bedrock of Vedānta",
+        "description": "Laid the absolute philosophical foundation for later Advaita Vedānta."
+      },
+      {
+        "title": "Legal Framework",
+        "description": "His Smṛti remains a foundational and heavily referenced pillar of traditional Hindu jurisprudence."
+      },
+      {
+        "title": "Supreme Intellectual Rebel",
+        "description": "Exemplifies the pursuit of pure knowledge unhindered by dogma or flawed authority."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Gārgī Vācaknavī",
+    "era": "Upaniṣadic Period",
+    "vidyaSthana": "Brahmavidyā, Tattva-darśana",
+    "shloka": "गार्गी वाचक्नवी ब्रह्मवादिनी ज्ञानतत्परा ।",
+    "shlokaTranslation": "Gargi Vacaknavi, the expounder of Brahman, devoted to true knowledge.",
+    "quote": "Across what is space woven, warp and woof?",
+    "details": {
+      "lifeContext": "A celebrated Brahmavādinī (female expounder of Brahman). She chose the path of lifelong philosophical inquiry over the traditional life of a householder. Her intellectual prowess earned her a prominent seat in the grand philosophical congress of King Janaka.",
+      "keyContributions": "She famously interrogated Maharṣi Yājñavalkya on the ontological fabric of reality. By asking 'what is space woven like warp and woof upon?', she pushed the debate to the very limits of human language, forcing the articulation of the imperishable, unmanifest Brahman (Akṣara).",
+      "legacy": "Gārgī shatters modern misconceptions about gender roles in ancient India. She is the eternal archetype of female intellectual rigor and spiritual agency, proving that the highest realms of Brahmavidyā (knowledge of the Absolute) are accessible solely through inner purity and intellect, irrespective of gender."
+    },
+    "structuredContributions": [
+      {
+        "title": "Brahmavidyā Discourse",
+        "description": "Participated as a leading intellect in King Janaka's grand philosophical congress."
+      },
+      {
+        "title": "Interrogation of Reality",
+        "description": "Relentlessly questioned the ontological fabric of reality, pushing boundaries of thought."
+      },
+      {
+        "title": "Articulation of the Unmanifest",
+        "description": "Forced the debate to articulate the imperishable, unmanifest Brahman (Akṣara)."
+      },
+      {
+        "title": "Advancement of Advaita",
+        "description": "Made profound contributions to the early development of non-dualistic philosophy."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Female Intellectual Archetype",
+        "description": "Shatters misconceptions and stands as the eternal symbol of female spiritual and intellectual agency."
+      },
+      {
+        "title": "Accessibility of Truth",
+        "description": "Proved that highest realization relies solely on inner purity, irrespective of gender."
+      },
+      {
+        "title": "Rigorous Inquiry",
+        "description": "Her method of questioning remains a gold standard for philosophical debate and truth-seeking."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Maitreyī",
+    "era": "Upaniṣadic Period",
+    "vidyaSthana": "Brahmavidyā, Jñāna Yoga",
+    "shloka": "येनाहं नामृता स्यां किमहं तेन कुर्याम् ।",
+    "shlokaTranslation": "What should I do with that by which I do not become immortal?",
+    "quote": "Will this wealth make me immortal?",
+    "details": {
+      "lifeContext": "A legendary Brahmavādinī and the philosophical wife of Sage Yājñavalkya. When her husband prepared to renounce the world and divide his material wealth, Maitreyī famously rejected it, asking the ultimate question: 'Will this wealth make me immortal (Amṛta)?'",
+      "keyContributions": "Her rejection of materialism prompted Yājñavalkya to deliver a profound discourse on the nature of love and reality. He taught her that everything—husband, wealth, gods—is loved not for its own sake, but for the sake of the Self (Atman).",
+      "legacy": "Maitreyī’s dialogue is a cornerstone of Upaniṣadic philosophy. It beautifully intertwines human psychology with supreme metaphysics, establishing that the search for permanence and unconditional love is ultimately the search for the divine Self."
+    },
+    "structuredContributions": [
+      {
+        "title": "Rejection of Materialism",
+        "description": "Famously rejected worldly wealth in favor of the pursuit of ultimate spiritual immortality."
+      },
+      {
+        "title": "Catalyst for Wisdom",
+        "description": "Her profound questions prompted Sage Yajnavalkya's greatest discourse on love and reality."
+      },
+      {
+        "title": "Psychology of Love",
+        "description": "Helped establish the philosophical tenet that all love is ultimately directed toward the Self."
+      },
+      {
+        "title": "Upanishadic Dialogue",
+        "description": "Central figure in one of the most important philosophical dialogues of the Bṛhadāraṇyaka Upaniṣad."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Cornerstone of Philosophy",
+        "description": "Her dialogue remains a foundational text intertwining human psychology and metaphysics."
+      },
+      {
+        "title": "Pursuit of the Permanent",
+        "description": "Symbolizes the eternal human quest for permanence over transient material gains."
+      },
+      {
+        "title": "Voice of the Soul",
+        "description": "Established that the search for unconditional love is indistinguishable from the search for the Divine."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lopāmudrā",
+    "era": "Vedic Period",
+    "vidyaSthana": "Mantra Draṣṭā (Śruti), Śrī Vidyā Tantra",
+    "shloka": "रतिं च तपसा सह संयोज्य लोपामुद्रा विजहार ।",
+    "shlokaTranslation": "Harmonizing pleasure with austerity, Lopamudra lived joyfully.",
+    "quote": "Even the greatest spiritual pursuits must find harmony with one's duties to family and the world.",
+    "details": {
+      "lifeContext": "A prominent Ṛṣikā (female seer) and the wife of Sage Agastya. Raised as a princess, she embraced extreme austerity upon marriage. However, she famously intervened to remind her husband that true Dharma requires the harmonization of both spiritual asceticism and biological/familial duties.",
+      "keyContributions": "She is the seer of a highly significant hymn in the Ṛgveda (1.179) that articulates the synthesis of Kāma (desire) and Tapas (austerity). Crucially, in the esoteric Tantric tradition, she is credited with propagating the Hādi Vidyā, a major branch of the highly secretive Śrī Vidyā worship of the Divine Mother.",
+      "legacy": "Lopāmudrā perfectly embodies the ideal of Gṛhastha Dharma (the householder's path). Her legacy lives on not just in orthodox Vedic chanting, but deeply within the mystical Śrī Chakra Upāsanā traditions across India today."
+    },
+    "structuredContributions": [
+      {
+        "title": "Rigvedic Seer",
+        "description": "Revealed a highly significant hymn (1.179) articulating the synthesis of desire and austerity."
+      },
+      {
+        "title": "Śrī Vidyā Tantra",
+        "description": "Credited with propagating the Hādi Vidyā, a secretive branch of Divine Mother worship."
+      },
+      {
+        "title": "Harmonization of Duties",
+        "description": "Intervened to balance strict spiritual asceticism with biological and familial responsibilities."
+      },
+      {
+        "title": "Voice of the Householder",
+        "description": "Championed the integration of material and spiritual life in the Vedic tradition."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Ideal of Gṛhastha Dharma",
+        "description": "Perfectly embodies and validates the spiritual potential of the householder's path."
+      },
+      {
+        "title": "Mystical Traditions",
+        "description": "Her esoteric teachings continue to thrive deeply within modern Śrī Chakra Upāsanā traditions."
+      },
+      {
+        "title": "Balance of Life",
+        "description": "Remains a timeless symbol of harmonizing worldly existence with supreme spiritual attainment."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Maharṣi Bharadvāja",
+    "era": "Vedic Period",
+    "vidyaSthana": "Āyurveda, Vaimānika Śāstra, Mantra Draṣṭā",
+    "shloka": "भरद्वाजाय मुनये आयुर्वेदोपदेशिने नमः ।",
+    "shlokaTranslation": "Salutations to the sage Bharadvaja, the instructor of Ayurveda.",
+    "quote": "Knowledge is infinite. To serve humanity and alleviate suffering is the greatest application of wisdom.",
+    "details": {
+      "lifeContext": "One of the venerable Saptarṣis. According to the Taittirīya Brāhmaṇa, he possessed an insatiable thirst for knowledge, studying the Vedas across three lifetimes. Upon realizing that the Vedas are infinite (Anantā vai Vedāḥ), he turned his focus toward alleviating human suffering.",
+      "keyContributions": "He is the principal seer of the 6th Maṇḍala of the Ṛgveda. In the Caraka Saṃhitā, he is identified as the sage who traveled to Indra to receive the science of Āyurveda and brought it to the earthly realm. Traditions also heavily link him to the compilation of ancient aeronautics (Vaimānika Śāstra).",
+      "legacy": "Bharadvāja represents the archetype of a scientist-sage in IKS. He seamlessly bridged the gap between divine revelation (Śruti) and practical, applied sciences (Upaveda), ensuring that spiritual knowledge also served the physical well-being of humanity."
+    },
+    "structuredContributions": [
+      {
+        "title": "Rigvedic Seer",
+        "description": "Served as the principal seer for the 6th Maṇḍala of the Rigveda."
+      },
+      {
+        "title": "Pioneer of Ayurveda",
+        "description": "Traveled to celestial realms to receive medical science and brought it to humanity."
+      },
+      {
+        "title": "Vaimānika Śāstra",
+        "description": "Traditionally linked to the ancient compilation and study of aeronautics and mechanics."
+      },
+      {
+        "title": "Ritual and Science",
+        "description": "Compiled the Bharadvāja Śrauta Sūtra, detailing complex Vedic rituals."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "The Scientist-Sage",
+        "description": "Represents the ultimate archetype of bridging divine revelation with practical, applied sciences."
+      },
+      {
+        "title": "Alleviation of Suffering",
+        "description": "His pursuit of knowledge was uniquely directed toward ensuring the physical well-being of mankind."
+      },
+      {
+        "title": "Infinite Curiosity",
+        "description": "His legendary realization that 'Vedas are infinite' inspires eternal humility in the pursuit of truth."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Maharṣi Atri",
+    "era": "Vedic Period",
+    "vidyaSthana": "Mantra Draṣṭā (Śruti), Jyotiṣa Śāstra",
+    "shloka": "अत्रये मुनिश्रेष्ठाय दत्तात्रेयपित्रे नमः ।",
+    "shlokaTranslation": "Salutations to Atri, the best of sages, the father of Dattatreya.",
+    "quote": "Perfect devotion and harmony between a husband and wife can summon the divine itself.",
+    "details": {
+      "lifeContext": "A mind-born son of Brahmā. He and his exceptionally pious wife, Anasūyā, represent the zenith of Dharma. Their collective Tapas was so immense that the Trideva (Brahmā, Viṣṇu, Śiva) tested them, resulting in the birth of the supreme Yogī, Lord Dattātreya.",
+      "keyContributions": "Atri is the seer of the 5th Maṇḍala of the Ṛgveda. He made foundational contributions to Vedāṅga Jyotiṣa (Vedic astrology and astronomy), possessing deep knowledge of celestial mechanics and eclipses to ensure Yājñas were performed at perfectly auspicious times.",
+      "legacy": "The Atri gotra is one of the most prominent Brahmin lineages in India. His legacy is one of absolute devotion, mastery over the perception of cosmic time (Kāla), and the establishment of a lineage that produced some of India's greatest ascetics."
+    },
+    "structuredContributions": [
+      {
+        "title": "Rigvedic Seer",
+        "description": "Served as the primary seer for the 5th Maṇḍala of the Rigveda."
+      },
+      {
+        "title": "Vedāṅga Jyotiṣa",
+        "description": "Made foundational contributions to Vedic astrology, astronomy, and celestial mechanics."
+      },
+      {
+        "title": "Mastery of Time",
+        "description": "Calculated eclipses and cosmic events to ensure rituals were performed at auspicious moments."
+      },
+      {
+        "title": "Epitome of Dharma",
+        "description": "Alongside his wife Anasuya, demonstrated an unparalleled level of purity, devotion, and austerity."
+      }
+    ],
+    "structuredLegacy": [
+      {
+        "title": "Prominent Lineage",
+        "description": "Established the Atri gotra, one of the most widespread and respected Brahmin lineages."
+      },
+      {
+        "title": "Birth of Dattatreya",
+        "description": "Their immense Tapas resulted in the birth of Lord Dattatreya, the supreme Yogi."
+      },
+      {
+        "title": "Cosmic Awareness",
+        "description": "His mastery over the perception of cosmic time (Kāla) remains foundational for Hindu observances."
+      }
+    ]
+  }
+]
